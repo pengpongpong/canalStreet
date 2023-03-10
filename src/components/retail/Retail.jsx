@@ -2,7 +2,7 @@ import React from 'react'
 
 function Retail() {
   return (
-    <div>Retail</div>
+    <div className='landing' style={{left: "120px"}}>Retail</div>
   )
 }
 

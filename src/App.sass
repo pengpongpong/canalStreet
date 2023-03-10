@@ -12,59 +12,61 @@ main
     overflow-y: auto
     overflow-x: hidden
 
-.mainNav
-    height: 100%
-    min-width: 60px
-    width: 60px
-    will-change: width
-    position: relative
-    cursor: pointer
-    &:nth-child(2)
-        background-color: #5ea3ec
-    &:nth-child(3)
-        background-color: #f64444
-    &:nth-child(4)
-        background-color: #ffb400
-        display: block
-
-.transitionContainer
+.navContainer
+    display: flex
     position: fixed
     top: 0
     height: 100%
     width: 100%
     overflow: hidden
 
-.mainNav
+.navLink
+    padding-top: 1rem
     height: 100%
-    min-width: 60px
-    will-change: transform
-    position: absolute
-    transform: translate3d(0px, 0px, 0px)
-    width: calc(100vw - 180px)
+    width: 60px
+    will-change: width
+    position: relative
     overflow: hidden
+    transition: width .5s ease-in-out
     &:nth-child(1)
-        left: 0
+        background-color: white
+        border: 0px solid black
+        animation: navStartAnimation .6s linear
+        p, span
+            opacity: 0
     &:nth-child(2)
         background-color: #5ea3ec
-        left: 60px
-        width: 60px  
-        cursor: pointer
-        z-index: 7
+        animation: navStartAnimation .5s linear
     &:nth-child(3)
         background-color: #f64444
-        left: calc(100% - 120px)
-        &:hover
-            transform: translateX(calc(-100% + 60px))
-            transition: transform 2s
+        animation: navStartAnimation .4s linear
     &:nth-child(4)
         background-color: #ffb400
-        left: calc(100% - 60px)
+        animation: navStartAnimation .3s linear
+        text-align: center
+    span
+        display: block
+        position: relative
+        transform: rotate(90deg)
+        top: 50%
+        left: 0
+
+.open
+    width: calc(100vw - 180px)
 
 .landing
     position: relative
     width: calc(100vw - 180px)
     display: grid
     place-content: center
-    z-index: 6
     height: 100vh
     color: black
+
+.foodmain
+    background-color: #5ea3ec
+
+@keyframes navStartAnimation 
+    from
+        transform: translateY(-100%)
+    to
+        transform: translateY(0)
