@@ -2,7 +2,9 @@ import React from 'react'
 
 function Retail() {
   return (
-    <div className='landing' style={{left: "120px"}}>Retail</div>
+    <div className='landing' style={{left: "120px"}}>
+      <p>test</p>
+    </div>
   )
 }
 

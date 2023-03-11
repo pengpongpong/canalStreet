@@ -12,7 +12,7 @@ function App() {
       path: "/",
       element: (
         <>
-          <Navbar />
+          <Navbar backgroundColor="#fff" homeClass={true} />
           <Home />
         </>
       ),
@@ -21,7 +21,7 @@ function App() {
       path: "/food",
       element: (
         <>
-          <Navbar />
+          <Navbar backgroundColor="#5ea3ec" foodClass={true} />
           <Food />
         </>
       ),
@@ -30,7 +30,7 @@ function App() {
       path: "/retail",
       element: (
         <>
-          <Navbar />
+          <Navbar backgroundColor="#f64444" retailClass={true}/>
           <Retail />
         </>
       ),
@@ -39,7 +39,7 @@ function App() {
       path: "/community",
       element: (
         <>
-          <Navbar />
+          <Navbar backgroundColor="#ffb400" communityClass={true}/>
           <Community />
         </>
       ),

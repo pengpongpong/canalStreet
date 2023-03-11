@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=PT+Mono&display=swap')
+
+$headline-font: 'EB Garamond', serif
+$paragraph-font: 'PT Mono', monospace
+
 *
     box-sizing: border-box
     margin: 0
@@ -6,6 +11,7 @@
 body
     background-color: white
     position: relative
+    font-family: $headline-font
 
 main
     position: relative
@@ -21,19 +27,19 @@ main
     overflow: hidden
 
 .navLink
-    padding-top: 1rem
+    padding-top: 4rem
     height: 100%
     width: 60px
     will-change: width
     position: relative
     overflow: hidden
     transition: width .5s ease-in-out
+    font-size: 1.4rem
+    letter-spacing: 2px
+    z-index: 5
     &:nth-child(1)
         background-color: white
-        border: 0px solid black
         animation: navStartAnimation .6s linear
-        p, span
-            opacity: 0
     &:nth-child(2)
         background-color: #5ea3ec
         animation: navStartAnimation .5s linear
@@ -44,29 +50,108 @@ main
         background-color: #ffb400
         animation: navStartAnimation .3s linear
         text-align: center
+    p
+        text-align: center
     span
         display: block
-        position: relative
-        transform: rotate(90deg)
+        position: absolute
+        transform: translateY(-50%) translateX(-50%) rotate(90deg)
+        transform-origin: center
         top: 50%
-        left: 0
+        left: 50%
+    &:visited
+        color: black
 
 .open
     width: calc(100vw - 180px)
+    p, span
+        opacity: 0
 
 .landing
     position: relative
     width: calc(100vw - 180px)
+    color: black
+    overflow: hidden
+
+.homePage
     display: grid
     place-content: center
     height: 100vh
-    color: black
+    font-weight: 100
+    padding-left: 4rem
+    width: 68%
+    display: flex
+    align-items: center
+    -ms-overflow-style: none
+    scrollbar-width: none
+    &::-webkit-scrollbar
+        scrollbar-width: none
+        -ms-overflow-style: none
+        display: none
+    p
+        font-size: 5rem
+        line-height: 6rem
+        animation: textOpacity 2s ease forwards
+        a
+            color: black
+            font-weight: 100
+            text-decoration: none
+            padding-bottom: 4px
+            background-image: repeating-linear-gradient(-45deg,#ffb400,#ffb400 1px,transparent 0,transparent 12px),repeating-linear-gradient(45deg,#ffb400,#ffb400 1px,transparent 0,transparent 12.2px)
+            background-size: 15px 10px
+            background-position: 0 103%,2px 103%
+            background-repeat: repeat-x
+            animation: underline 40s infinite
+            animation-timing-function: ease
+            animation-timing-function: linear
 
-.foodmain
-    background-color: #5ea3ec
+.imageContainer
+    width: 100%
+    height: 100vh
+    background: url("./assets/images/homeImage.jpg") top left
+    background-size: cover
+    will-change: opacity
+    opacity: 0
+    transition: opacity 2s
 
-@keyframes navStartAnimation 
+.descriptionContainer
+    padding: 10rem 6rem
+    h1
+        font-size: 8rem
+        font-weight: 100
+        width: 50%
+        margin-bottom: 4rem
+
+.descriptions
+    display: flex
+    justify-content: space-between
+    &__card
+        width: 25rem
+        height: 35rem
+        img
+            width: 100%
+            height: 100%
+        p
+            margin-top: 2rem
+            font-family: $paragraph-font
+
+
+@keyframes navStartAnimation
     from
         transform: translateY(-100%)
     to
         transform: translateY(0)
+
+@keyframes underline
+    from
+        background-position-x: left
+    to
+        background-position-x: right
+
+@keyframes textOpacity
+    0%
+        opacity: 0
+    40%
+        opacity: 0
+    100%
+        opacity: 1

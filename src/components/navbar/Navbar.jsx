@@ -1,17 +1,16 @@
+import classNames from "classnames";
 import React from "react";
 import { Link } from "react-router-dom";
 
-/*   transitionPages.forEach((obj) => {
-    obj.classList.remove("open");
-    obj.childNodes.forEach((obj) => (obj.style.opacity = "1"));
-    if (obj.classList.contains(currentNav)) {
-      obj.classList.add("open");
-      obj.childNodes.forEach((obj) => (obj.style.opacity = "0"));
-    }
-  }); */
-
-function Navbar() {
+function Navbar({
+  backgroundColor,
+  homeClass,
+  retailClass,
+  communityClass,
+  foodClass,
+}) {
   const transitionPages = document.querySelectorAll(".navLink");
+
   const currentUrl = document.URL;
   const regEx = /\w*$/;
   const matchUrl = currentUrl.match(regEx)[0];
@@ -21,77 +20,50 @@ function Navbar() {
     currentNav = e.target.id;
   };
 
-  
-  console.log(matchUrl);
-  if (matchUrl === "food") {
-    currentNav = matchUrl;
-
-    transitionPages.forEach((obj) => {
-      obj.classList.remove("open");
-      obj.childNodes.forEach((obj) => (obj.style.opacity = "1"));
-      if (obj.classList.contains(currentNav)) {
-        obj.classList.add("open");
-        obj.childNodes.forEach((obj) => (obj.style.opacity = "0"));
+  if (transitionPages) {
+    transitionPages.forEach((page) => {
+      page.classList.remove("open");
+      /* page.childNodes.forEach((el) => (el.style.color = "1")); */
+      if (page.classList.contains(currentNav)) {
+        page.classList.add("open");
+        /* page.childNodes.forEach((obj) => (obj.style.opacity = "0")); */
       }
     });
-
-    return (
-      <header>
-        <nav className="navContainer" onClick={handleNavPage}>
-          <Link id="home" className="navLink home" to="/">
-            <p>餐饮</p>
-            <span>home</span>
-          </Link>
-          <Link id="food" className="navLink food open" to="/food">
-            <p>餐饮</p>
-            <span>Food</span>
-          </Link>
-          <Link id="retail" className="navLink retail" to="/retail">
-            <p>餐饮</p>
-            <span>Retail</span>
-          </Link>
-          <Link id="community" className="navLink community" to="/community">
-            <p>餐饮</p>
-            <span>Community</span>
-          </Link>
-        </nav>
-      </header>
-    );
-  } else {
-    currentNav = "home";
-
-    transitionPages.forEach((obj) => {
-      obj.classList.remove("open");
-      obj.childNodes.forEach((obj) => (obj.style.opacity = "1"));
-      if (obj.classList.contains(currentNav)) {
-        obj.classList.add("open");
-        obj.childNodes.forEach((obj) => (obj.style.opacity = "0"));
-      }
-    });
-
-    return (
-      <header>
-        <nav className="navContainer" onClick={handleNavPage}>
-          <Link id="home" className="navLink home open" to="/">
-            <p>餐饮</p>
-            <span>home</span>
-          </Link>
-          <Link id="food" className="navLink food" to="/food">
-            <p>餐饮</p>
-            <span>Food</span>
-          </Link>
-          <Link id="retail" className="navLink retail" to="/retail">
-            <p>餐饮</p>
-            <span>Retail</span>
-          </Link>
-          <Link id="community" className="navLink community" to="/community">
-            <p>餐饮</p>
-            <span>Community</span>
-          </Link>
-        </nav>
-      </header>
-    );
   }
+
+/*   currentNav = matchUrl; */
+
+  const homeStyle = classNames({ "navLink home": true }, { open: homeClass });
+  const foodStyle = classNames({ "navLink food": true }, { open: foodClass });
+  const retailStyle = classNames({ "navLink retail": true }, { open: retailClass });
+  const communityStyle = classNames({ "navLink community": true }, { open: communityClass });
+
+  return (
+    <header>
+      <nav
+        className="navContainer"
+        style={{ backgroundColor: backgroundColor }}
+        onClick={handleNavPage}
+      >
+        <Link id="home" className={homeStyle} to="/">
+          <p>餐饮</p>
+          <span>home</span>
+        </Link>
+        <Link id="food" className={foodStyle} to="/food">
+          <p>餐饮</p>
+          <span>Food</span>
+        </Link>
+        <Link id="retail" className={retailStyle} to="/retail">
+          <p>餐饮</p>
+          <span>Retail</span>
+        </Link>
+        <Link id="community" className={communityStyle} to="/community">
+          <p>餐饮</p>
+          <span>Community</span>
+        </Link>
+      </nav>
+    </header>
+  );
 }
 
 export default Navbar;

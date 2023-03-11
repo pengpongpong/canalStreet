@@ -2,7 +2,9 @@ import React from 'react'
 
 function Food() {
   return (
-    <div className='landing foodmain' style={{left: "60px"}}>Food</div>
+    <div className='landing' style={{left: "60px"}}>
+      <h3>test</h3>
+    </div>
   )
 }
 
