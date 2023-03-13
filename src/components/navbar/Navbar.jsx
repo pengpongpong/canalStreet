@@ -9,7 +9,7 @@ function Navbar({
   communityClass,
   foodClass,
 }) {
-  const transitionPages = document.querySelectorAll(".navLink");
+  const transitionPages = document.querySelectorAll(".nav__item");
 
   const currentUrl = document.URL;
   const regEx = /\w*$/;
@@ -17,50 +17,67 @@ function Navbar({
   let currentNav;
   const handleNavPage = (e) => {
     e.preventDefault();
-    currentNav = e.target.id;
+    /* currentNav = e.target.id; */
   };
-
+/* 
   if (transitionPages) {
     transitionPages.forEach((page) => {
       page.classList.remove("open");
-      /* page.childNodes.forEach((el) => (el.style.color = "1")); */
+
       if (page.classList.contains(currentNav)) {
         page.classList.add("open");
-        /* page.childNodes.forEach((obj) => (obj.style.opacity = "0")); */
       }
     });
-  }
+  } */
 
-/*   currentNav = matchUrl; */
+  /*   currentNav = matchUrl; */
 
-  const homeStyle = classNames({ "navLink home": true }, { open: homeClass });
-  const foodStyle = classNames({ "navLink food": true }, { open: foodClass });
-  const retailStyle = classNames({ "navLink retail": true }, { open: retailClass });
-  const communityStyle = classNames({ "navLink community": true }, { open: communityClass });
+  const homeStyle = classNames(
+    { "nav__item home": true },
+    { "nav__item--open": homeClass }
+  );
+  const foodStyle = classNames(
+    { "nav__item food": true },
+    { "nav__item--open": foodClass }
+  );
+  const retailStyle = classNames(
+    { "nav__item retail": true },
+    { "nav__item--open": retailClass }
+  );
+  const communityStyle = classNames(
+    { "nav__item community": true },
+    { "nav__item--open": communityClass }
+  );
 
   return (
     <header>
-      <nav
-        className="navContainer"
-        style={{ backgroundColor: backgroundColor }}
-        onClick={handleNavPage}
-      >
-        <Link id="home" className={homeStyle} to="/">
-          <p>餐饮</p>
-          <span>home</span>
-        </Link>
-        <Link id="food" className={foodStyle} to="/food">
-          <p>餐饮</p>
-          <span>Food</span>
-        </Link>
-        <Link id="retail" className={retailStyle} to="/retail">
-          <p>餐饮</p>
-          <span>Retail</span>
-        </Link>
-        <Link id="community" className={communityStyle} to="/community">
-          <p>餐饮</p>
-          <span>Community</span>
-        </Link>
+      <nav className="nav" onClick={handleNavPage}>
+        <ul className="nav__list" style={{ backgroundColor: backgroundColor }}>
+          <li className={homeStyle} id="home">
+            <Link className="nav__anchor" to="/">
+              <p className="nav__headline">餐饮</p>
+              <span className="nav__text">home</span>
+            </Link>
+          </li>
+          <li className={foodStyle} id="food">
+            <Link className="nav__anchor" to="/food">
+              <p className="nav__headline">餐饮</p>
+              <span className="nav__text">Food</span>
+            </Link>
+          </li>
+          <li className={retailStyle} id="retail">
+            <Link className="nav__anchor" to="/retail">
+              <p className="nav__headline">餐饮</p>
+              <span className="nav__text">Retail</span>
+            </Link>
+          </li>
+          <li className={communityStyle} id="community">
+            <Link className="nav__anchor" to="/community">
+              <p className="nav__headline">餐饮</p>
+              <span className="nav__text">Community</span>
+            </Link>
+          </li>
+        </ul>
       </nav>
     </header>
   );
