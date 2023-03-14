@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import email from "/src/assets/images/email.svg";
+import facebook from "/src/assets/images/facebook.svg";
+import instagram from "/src/assets/images/instagram.svg";
+import emailSend from "/src/assets/images/emailSend.svg";
 
 function Home() {
   window.addEventListener("scroll", () => {
@@ -104,19 +108,38 @@ function Home() {
       <section className="socials">
         <ul className="socials__list">
           <li className="socials__item">
-            <p>Email us</p>
+            <Link className="socials__anchor" to="/">
+              <img className="socials__logo" src={email}></img>
+              <p className="socials__text">Email us</p>
+            </Link>
           </li>
           <li className="socials__item">
-            <p>Follow us on facebook</p>
+            <Link className="socials__anchor" to="/">
+              <img className="socials__logo" src={facebook}></img>
+              <p className="socials__text">Follow us on facebook</p>
+            </Link>
           </li>
           <li className="socials__item">
-            <p>Follow us on instagram</p>
+            <Link className="socials__anchor" to ="/">
+              <img className="socials__logo" src={instagram}></img>
+              <p className="socials__text">Follow us on instagram</p>
+            </Link>
           </li>
         </ul>
       </section>
-      <section className="newsletter"></section>
-
-      <footer></footer>
+      <section className="newsletter">
+        <h3 className="newsletter__headline">Stay up to date with our newsletter</h3>
+        <input className="newsletter__emailInput" type="email" placeholder="Email"/>
+        <img className="newsletter__emailButton" src={emailSend} role="button"/>
+      </section>
+      <footer className="footer">
+        <div className="footer__textContainer">
+          <p>Copyright Canal Street Market 2022</p>
+          <a href="">Privacy Policy</a>
+          <a href="">Vendor Login</a>
+        </div>
+        <p>Site by Phuong</p>
+      </footer>
     </section>
   );
 }

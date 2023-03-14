@@ -94,7 +94,7 @@ main
         font-size: 5rem
         font-weight: 100
         line-height: 6rem
-        animation: textOpacity 2s ease forwards
+        animation: textOpacity 2.5s linear forwards
     &__anchor
         color: black
         font-weight: 100
@@ -216,6 +216,7 @@ main
     &__box
         width: 50%
         height: 20rem
+        cursor: pointer
         background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0)
         background-position: 0 0,0 100%,0 0,100% 0
         background-repeat: repeat-x,repeat-x,repeat-y,repeat-y
@@ -227,8 +228,9 @@ main
 .vendor
     display: grid
     place-items: center
+    margin: 3rem 4rem
     padding: 3rem 0
-    background-image: repeating-linear-gradient(-74deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 0,transparent 4px),repeating-linear-gradient(-74deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 0,transparent 4px)
+    background-image: repeating-linear-gradient(-73deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 0,transparent 4px),repeating-linear-gradient(-73deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 0,transparent 4px)
     background-position: 0 0,0 100%
     background-size: 100% 12px,100% 12px
     background-repeat: repeat-x,repeat-x,repeat-y,repeat-y
@@ -259,7 +261,7 @@ main
         list-style: none
     &__item
         width: 100%
-        padding: 2rem 3rem
+        padding: 3rem 3rem
         font-family: $paragraph-font
         font-size: .9rem
         text-align: center
@@ -267,6 +269,66 @@ main
         background-position: 0 0,0 100%,0 0,100% 0
         background-repeat: repeat-x,repeat-x,repeat-y,repeat-y
         background-size: 30px 1px,30px 1px,1px 30px,1px 30px
+        cursor: pointer
+        &:hover
+            animation: .8s infinite normal boxDashedUnderlineAnimation
+            animation-timing-function: linear
+    &__anchor
+        text-decoration: none
+        &:visited
+            color: black
+    &__logo
+        width: 2.5rem
+        margin-bottom: .5rem
+    &__text
+        width: 35%
+        margin: 0 auto
+        line-height: 1.3rem
+
+.newsletter
+    display: flex
+    justify-content: space-between
+    margin: 3rem 4rem 2rem 4rem
+    padding: 2rem 4rem
+    font-family: $paragraph-font
+    position: relative
+    background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(70deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0)
+    background-position: 0 0,0 100%,0 0,100% 0
+    background-repeat: repeat-x,repeat-x,repeat-y,repeat-y
+    background-size: 30px 1px,30px 1px,1px 30px,1px 30px
+    &:hover
+        animation: .8s infinite normal boxDashedUnderlineAnimation
+    &__headline
+        font-size: 1.5rem
+        font-weight: 100
+        width: 22%
+    &__emailInput
+        width: 50%
+        padding: 1rem 2rem
+        border: 1px solid black
+        font-family: $paragraph-font
+        &::placeholder
+            color: black 
+            opacity: 1
+        &:focus
+            outline: none
+    &__emailButton
+        position: absolute
+        right: 6rem
+        bottom: 40%
+
+.footer
+    margin-bottom: 4rem
+    padding: 0 4rem
+    display: flex
+    justify-content: space-between
+    font-family: $paragraph-font
+    font-size: .8rem
+    &__textContainer
+        display: flex
+        gap: 6rem
+
+
 
 @keyframes boxDashedUnderlineAnimation
     0%
@@ -298,7 +360,7 @@ main
 @keyframes textOpacity
     0%
         opacity: 0
-    40%
+    50%
         opacity: 0
     100%
         opacity: 1

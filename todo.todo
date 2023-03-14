@@ -1,1 +1,5 @@
-☐ container faber bei start setzen based on url
+home-page:
+    ☐ add new vendor form
+    ☐ refactor footer to component and then add policy page
+    ☐ add logo to home nav
+    ☐ add mobile nav animation
