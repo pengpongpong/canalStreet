@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import email from "/src/assets/images/email.svg";
-import facebook from "/src/assets/images/facebook.svg";
-import instagram from "/src/assets/images/instagram.svg";
-import emailSend from "/src/assets/images/emailSend.svg";
+import Footer from "/src/components/footer/Footer"
+import Events from "../events/Events";
 
 function Home() {
+
   window.addEventListener("scroll", () => {
     const bgImage = document.getElementById("bgContainer");
     const descriptions = document.querySelector(".descriptions__list");
@@ -18,6 +17,20 @@ function Home() {
     }
     /*     console.log(window.scrollY) */
   });
+
+  const eventsData =
+    [
+      { date: "12/02", event: "Small Business Retail Pop Up Weekend!" },
+      {
+        date: "02/07", event:
+          "New Balance x Paperboy Paris by Greenhouse @ Canal Street Market"
+      },
+      {
+        date: "12/11",
+        event: "Hack City 12/11<"
+      }
+    ]
+
 
   return (
     <section className="pageContainer">
@@ -73,25 +86,9 @@ function Home() {
           <h2 className="eventsBanner__headline">Market Events</h2>
           <span className="eventsBanner__logo">活動</span>
         </div>
-        <ul className="homeEvents__list">
-          <li className="homeEvents__item">
-            <p className="homeEvents__date">12/02</p>
-            <p className="homeEvents__headline">
-              Small Business Retail Pop Up Weekend!
-            </p>
-          </li>
-          <li className="homeEvents__item">
-            <p className="homeEvents__date">02/07</p>
-            <p className="homeEvents__headline">
-              New Balance x Paperboy Paris by Greenhouse @ Canal Street Market
-            </p>
-          </li>
-          <li className="homeEvents__item">
-            <p className="homeEvents__date">12/11</p>
-            <p className="homeEvents__headline">Hack City 12/11</p>
-          </li>
-        </ul>
-        <button className="homeEvents__button">see all</button>
+        <Events
+          data={eventsData}
+          bgColor="#fff" />
       </section>
       <section className="address">
         <div className="address__box">
@@ -101,45 +98,7 @@ function Home() {
           <img className="address__map" src="src/assets/images/map.jpg"></img>
         </div>
       </section>
-      <section className="vendor">
-        <h3 className="vendor__headline">Interested in becoming a vendor?</h3>
-        <button className="vendor__button">click here</button>
-      </section>
-      <section className="socials">
-        <ul className="socials__list">
-          <li className="socials__item">
-            <Link className="socials__anchor" to="/">
-              <img className="socials__logo" src={email}></img>
-              <p className="socials__text">Email us</p>
-            </Link>
-          </li>
-          <li className="socials__item">
-            <Link className="socials__anchor" to="/">
-              <img className="socials__logo" src={facebook}></img>
-              <p className="socials__text">Follow us on facebook</p>
-            </Link>
-          </li>
-          <li className="socials__item">
-            <Link className="socials__anchor" to ="/">
-              <img className="socials__logo" src={instagram}></img>
-              <p className="socials__text">Follow us on instagram</p>
-            </Link>
-          </li>
-        </ul>
-      </section>
-      <section className="newsletter">
-        <h3 className="newsletter__headline">Stay up to date with our newsletter</h3>
-        <input className="newsletter__emailInput" type="email" placeholder="Email"/>
-        <img className="newsletter__emailButton" src={emailSend} role="button"/>
-      </section>
-      <footer className="footer">
-        <div className="footer__textContainer">
-          <p>Copyright Canal Street Market 2022</p>
-          <a href="">Privacy Policy</a>
-          <a href="">Vendor Login</a>
-        </div>
-        <p>Site by Phuong</p>
-      </footer>
+      <Footer />
     </section>
   );
 }

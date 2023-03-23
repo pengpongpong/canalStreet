@@ -4,7 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import Home from "./components/home/Home";
 import Food from "./components/food/Food"
 import Retail from "./components/retail/Retail"
-import Community from "./components/community/community";
+import Community from "./components/community/Community";
 
 function App() {
   const router = createBrowserRouter([

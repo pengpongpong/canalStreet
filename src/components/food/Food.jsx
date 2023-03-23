@@ -1,62 +1,125 @@
 import React from 'react'
+import { Link } from "react-router-dom"
+import Footer from "/src/components/footer/Footer"
 
 function Food() {
+
+  const enterVendor = (e) => {
+    const randomX = ((Math.floor(Math.random() * 100) * 10) + 60)
+    const randomY = (window.pageYOffset + (Math.floor(Math.random() * 10) * 40))
+    const foodImages = document.querySelector(".foodImage")
+
+    foodImages.childNodes.forEach(obj => {
+      if (obj.classList.contains(e.currentTarget.id)) {
+        obj.style.opacity = "1"
+        obj.style.transform = `translate(${randomX}px, ${randomY}px)`
+      }
+    })
+  }
+
+  const exitVendor = () => {
+    const foodImages = document.querySelector(".foodImage")
+    foodImages.childNodes.forEach(obj => {
+      obj.style.opacity = "0"
+    })
+  }
+
   return (
-    <div className="pageContainer" style={{left: "60px"}}>
+    <div className="pageContainer" style={{ left: "60px" }}>
+      <div className="foodImage">
+        <div className="foodImage__card pho"></div>
+        <div className="foodImage__card mooncake"></div>
+        <div className="foodImage__card burger"></div>
+        <div className="foodImage__card burrito"></div>
+        <div className="foodImage__card chickenSkewer"></div>
+        <div className="foodImage__card cockedSeafood"></div>
+        <div className="foodImage__card iceFruitBowl"></div>
+        <div className="foodImage__card pancakes"></div>
+        <div className="foodImage__card salmon"></div>
+        <div className="foodImage__card saladBacon"></div>
+      </div>
       <section className="foodPage">
-        <div className='foodPage__hoursContainer'>
-          <p>Food</p>
-          <p>Food Hall Hours: Mon – Sun: 11:00AM - 8:00PM</p>
+        <span className="foodPage__logo">Food</span>
+        <div className="foodPage__hoursContainer">
+          <p>Food Hall Hours:</p>
+          <p>Mon – Sun: 11:00AM - 8:00PM</p>
         </div>
         <div className='foodPage__headlineContainer'>
-          <h1>The Food Hall</h1>
-          <img src="" alt="Food Hall image" />
+          <h1 className="foodPage__headline">The Food Hall</h1>
+          <img className="foodPage__image" src="/src/assets/images/foodImage.jpg" alt="Food Hall image" />
         </div>
       </section>
       <section className="foodVendors">
         <div className="foodVendors__card">
-          <Link className="foodVendors__anchor" to="">
-            <p className="foodVendors__food">Khao Man Gai</p>
-            <p className="foodVendors__vendor">Betong</p>
+          <Link id="pho" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
+            <p className="foodVendors__food">Vietnamese Soup Pho</p>
+            <p className="foodVendors__vendor">Vietnamese Soup Pho Vendor</p>
           </Link>
         </div>
         <div className="foodVendors__card">
-          <Link className="foodVendors__anchor" to="">
-            <p className="foodVendors__food">Khao Man Gai</p>
-            <p className="foodVendors__vendor">Betong</p>
+          <Link id="mooncake" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
+            <p className="foodVendors__food">Chinese Mooncake</p>
+            <p className="foodVendors__vendor">Chinese Mooncake Vendor</p>
           </Link>
         </div>
         <div className="foodVendors__card">
-          <Link className="foodVendors__anchor" to="">
-            <p className="foodVendors__food">Khao Man Gai</p>
-            <p className="foodVendors__vendor">Betong</p>
+          <Link id="burger" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
+            <p className="foodVendors__food">Delicious Burger</p>
+            <p className="foodVendors__vendor">Delicious Burger Vendor</p>
           </Link>
         </div>
         <div className="foodVendors__card">
-          <Link className="foodVendors__anchor" to="">
-            <p className="foodVendors__food">Khao Man Gai</p>
-            <p className="foodVendors__vendor">Betong</p>
+          <Link id="burrito" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
+            <p className="foodVendors__food">Mexican Burrito</p>
+            <p className="foodVendors__vendor">Mexican Burrito Vendor</p>
           </Link>
         </div>
         <div className="foodVendors__card">
-          <Link className="foodVendors__anchor" to="">
-            <p className="foodVendors__food">Khao Man Gai</p>
-            <p className="foodVendors__vendor">Betong</p>
+          <Link id="chickenSkewer" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
+            <p className="foodVendors__food">Delightful Chicken Skewer</p>
+            <p className="foodVendors__vendor">Delightful Chicken Skewer Vendor</p>
           </Link>
         </div>
         <div className="foodVendors__card">
-          <Link className="foodVendors__anchor" to="">
-            <p className="foodVendors__food">Khao Man Gai</p>
-            <p className="foodVendors__vendor">Betong</p>
+          <Link id="cockedSeafood" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
+            <p className="foodVendors__food">Japanese Cocked Seafood</p>
+            <p className="foodVendors__vendor">Japanese Cocked Seafood Vendor</p>
           </Link>
         </div>
         <div className="foodVendors__card">
-          <Link className="foodVendors__anchor" to="">
-            <p className="foodVendors__food">Khao Man Gai</p>
-            <p className="foodVendors__vendor">Betong</p>
+          <Link id="iceFruitBowl" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
+            <p className="foodVendors__food">Ice Fruit Bowl</p>
+            <p className="foodVendors__vendor">Ice Fruit Bowl Vendor</p>
+          </Link>
+        </div>
+        <div className="foodVendors__card">
+          <Link id="pancakes" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
+            <p className="foodVendors__food">Delicious Pancakes</p>
+            <p className="foodVendors__vendor">Delicious Pancakes Vendor</p>
+          </Link>
+        </div>
+        <div className="foodVendors__card">
+          <Link id="salmon" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
+            <p className="foodVendors__food">Delightful Salmon</p>
+            <p className="foodVendors__vendor">Delightful Salmon</p>
+          </Link>
+        </div>
+        <div className="foodVendors__card">
+          <Link id="saladBacon" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
+            <p className="foodVendors__food">Salad Bacon Plate</p>
+            <p className="foodVendors__vendor">Salad Bacon Vendor</p>
           </Link>
         </div>
       </section>
+      <section className="banner">
+        <img className="banner__icon" src="/src/assets/images/smiley.svg" alt="bannericon" />
+        <div className="banner__textContainer">
+          <h3 className="banner__headline">The Best of NYC</h3>
+          <p className="banner__text">All under one roof!</p>
+        </div>
+        <img className="banner__icon" src="/src/assets/images/smiley.svg" alt="bannericon" />
+      </section>
+      <Footer/>
     </div>
   )
 }
