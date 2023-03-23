@@ -7,7 +7,7 @@ import Footer from "../footer/Footer"
 
 const eventData =
   [
-    { date: "03/12", event: "S3E9: Haircuts and Go Bags with Tea Ho (HBO's \"The Sympathizer\")" },
+    { date: "03/12", event: "        letter-spacing: 1px" },
     { date: "03/01", event: "Dennis Chung Interview (General Secretary for Jamaican Football Federation) + Karyn Forbes Interview (Pro Player in England From T&T) + SheBelieves Cup Recap + Multiple International Teams on Strike" },
     { date: "05/03", event: "We're back and we're better!" },
   ]
