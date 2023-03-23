@@ -95,9 +95,16 @@ main
         background-size: 24px 1px,24px 1px,24px 1px,24px 1px
         animation: 1s infinite dashedUnderlineAnimation linear
     &__item
-        width: 22rem
+        width: 30rem
         text-align: center
         font-family: $paragraph-font
+    &__date
+        margin-bottom: 1rem
+        font-size: .8rem
+    &__headline
+        font-size: .9rem
+        letter-spacing: 1.5px
+        line-height: 1.3rem
     &__button
         font-family: $paragraph-font
         background-color: transparent
@@ -379,6 +386,50 @@ main
         width: 27rem
         height: 30rem
 
+.introPage
+    margin: 11rem 4rem
+    position: relative
+    animation: 2.5s forwards linear textOpacity
+    &__introText
+        position: absolute
+        right: 0
+        text-align: right
+        font-family: $paragraph-font
+        font-size: .9rem
+        line-height: 1.3rem
+        white-space: pre-line
+    &__logo
+        font-family: $paragraph-font
+        font-size: 1rem
+        letter-spacing: 1px
+        position: absolute
+        top: 10px
+        left: -10px
+        transform: rotate(90deg)
+        opacity: .3
+        &::after
+            position: absolute
+            bottom: -8px
+            content: "\21E3"
+            margin-left: .5rem
+            font-size: 1.9rem
+            transform: rotate(-90deg)
+    &__headlineContainer
+        padding-top: 8rem
+        display: flex
+        gap: 2rem
+        min-height: 50vh
+    &__headline
+        width: 80%
+        font-family: $headline-font
+        font-size: 15rem
+        line-height: 14rem
+        font-weight: 100
+    &__image
+        margin-right: 60px
+        width: 27rem
+        height: 30rem
+
 .foodVendors
     margin: 4rem 4rem
     display: grid
@@ -438,20 +489,21 @@ main
     background: url("/src/assets/images/saladBacon.jpg") no-repeat
     background-size: 100%
 
-.banner
+.foodBannerContainer
     margin: 2rem 4rem
     padding: 5rem 0
-    display: flex
-    justify-content: space-around
-    align-items: center
     background-image: repeating-linear-gradient(-45deg,#000,#000 1px,transparent 0,transparent 68px),repeating-linear-gradient(45deg,#000,#000 1px,transparent 0,transparent 68px),repeating-linear-gradient(-45deg,#000,#000 1px,transparent 0,transparent 71px),repeating-linear-gradient(45deg,#000,#000 1px,transparent 0,transparent 70px)
     background-position: 0 101%,0 101%,0 0,0 0
     background-size: 93px 50px,93px 50px,100px 50px,100px 50px
     background-repeat: repeat-x
     animation: 2s infinite zickzackAnimation linear
+
+//banner component
+.banner
+    display: flex
+    justify-content: space-around
+    align-items: center
     &__icon
-        width: 12rem
-        height: 12rem
         &:nth-child(1)
             animation: 2s infinite foodLogoAnimation ease-in-out
         &:nth-child(3)
@@ -625,6 +677,14 @@ main
             background-color: black
             color: white
 
+.radioBannerContainer
+    margin: 8rem 4rem 2rem 4rem
+    padding-top: 7rem
+    background-image: repeating-linear-gradient(-45deg,#000,#000 1px,transparent 0,transparent 71px),repeating-linear-gradient(45deg,#000,#000 1px,transparent 0,transparent 70px)
+    background-position: 0 0,0 0
+    background-size: 100px 50px,100px 50px
+    background-repeat: repeat-x
+    animation: 2s infinite zickzackAnimationTop linear
 .radioBanner
     margin: 8rem 4rem 2rem 4rem
     padding: 7rem 0

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import Events from "../events/Events"
+import Banner from "../banner/Banner"
+import PodcastIcon from "/src/assets/images/podcastLogo.svg"
 import Footer from "../footer/Footer"
 
 const eventData =
@@ -66,13 +68,18 @@ function Community() {
         </div>
         <button className="features__button">view all stories</button>
       </section>
-      <section className="radioBanner">
-        <img className="radioBanner__logo" src="/src/assets/images/podcastLogo.svg" alt="" />
+      <section className="radioBannerContainer">
+        {/* <img className="radioBanner__logo" src="/src/assets/images/podcastLogo.svg" alt="" />
         <div className="radioBanner__textContainer">
           <h2 className="radioBanner__headline">Market Radio</h2>
           <p className="radioBanner__text">Podcasted from the market</p>
         </div>
-        <img className="radioBanner__logo" src="/src/assets/images/podcastLogo.svg" alt="" />
+        <img className="radioBanner__logo" src="/src/assets/images/podcastLogo.svg" alt="" /> */}
+        <Banner
+          image={PodcastIcon}
+          imageAlt="podcast icon"
+          headline="Market Radio"
+          text="Podcasted from the market" />
       </section>
       <Events data={eventData}
         bgColor="#ffb400" />

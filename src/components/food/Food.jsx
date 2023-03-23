@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import Intro from "../intro/Intro"
+import Banner from "../banner/Banner"
+import SmileyIcon from "/src/assets/images/smiley.svg"
 import Footer from "/src/components/footer/Footer"
+import FoodHall from "/src/assets/images/foodImage.jpg"
 
 function Food() {
 
@@ -38,17 +42,12 @@ function Food() {
         <div className="foodImage__card salmon"></div>
         <div className="foodImage__card saladBacon"></div>
       </div>
-      <section className="foodPage">
-        <span className="foodPage__logo">Food</span>
-        <div className="foodPage__hoursContainer">
-          <p>Food Hall Hours:</p>
-          <p>Mon – Sun: 11:00AM - 8:00PM</p>
-        </div>
-        <div className='foodPage__headlineContainer'>
-          <h1 className="foodPage__headline">The Food Hall</h1>
-          <img className="foodPage__image" src="/src/assets/images/foodImage.jpg" alt="Food Hall image" />
-        </div>
-      </section>
+      <Intro
+        page="Food"
+        text={`Food Hall Hours:\nMon – Sun: 11:00AM - 8:00PM`}
+        headline="The Food Hall"
+        image={FoodHall}
+        imageAlt="Food Hall" />
       <section className="foodVendors">
         <div className="foodVendors__card">
           <Link id="pho" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
@@ -111,15 +110,15 @@ function Food() {
           </Link>
         </div>
       </section>
-      <section className="banner">
-        <img className="banner__icon" src="/src/assets/images/smiley.svg" alt="bannericon" />
-        <div className="banner__textContainer">
-          <h3 className="banner__headline">The Best of NYC</h3>
-          <p className="banner__text">All under one roof!</p>
-        </div>
-        <img className="banner__icon" src="/src/assets/images/smiley.svg" alt="bannericon" />
+      <section className="foodBannerContainer">
+        <Banner
+          image={SmileyIcon}
+          imageAlt="smiley icon"
+          headline="The Best of NYC"
+          text="All under one roof!"
+          />
       </section>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
