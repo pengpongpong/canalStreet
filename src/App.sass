@@ -76,7 +76,54 @@ main
     width: calc(100vw - 180px)
     color: black
     overflow: hidden
-    animation: textOpacity 2.5s linear forwards
+    animation: opacityAnimation 2s linear forwards
+
+//Intro component
+.introPage
+    margin: 11rem 4rem
+    position: relative
+    animation: 2s forwards linear opacityAnimation
+    &__introText
+        position: absolute
+        right: 0
+        text-align: right
+        font-family: $paragraph-font
+        font-size: .9rem
+        line-height: 1.3rem
+        white-space: pre-line
+    &__logo
+        font-family: $paragraph-font
+        font-size: 1rem
+        letter-spacing: 1px
+        position: absolute
+        top: 10px
+        left: -10px
+        transform: rotate(90deg)
+        opacity: .3
+        &::after
+            position: absolute
+            bottom: -8px
+            content: "\21E3"
+            margin-left: .5rem
+            font-size: 1.9rem
+            transform: rotate(-90deg)
+    &__headlineContainer
+        padding-top: 8rem
+        display: flex
+        gap: 2rem
+        min-height: 50vh
+    &__headline
+        width: 80%
+        font-family: $headline-font
+        font-size: 15rem
+        line-height: 14rem
+        font-weight: 100
+    &__image
+        margin-right: 60px
+        width: 28rem
+        height: 33rem
+        opacity: 0
+        animation: 3s forwards linear opacityAnimation
 
 //Event component
 .pageEvents
@@ -103,6 +150,7 @@ main
         font-size: .8rem
     &__headline
         font-size: .9rem
+        font-weight: 500
         letter-spacing: 1.5px
         line-height: 1.3rem
     &__button
@@ -346,7 +394,7 @@ main
 .foodPage
     margin: 11rem 4rem
     position: relative
-    animation: 2.5s forwards linear textOpacity
+    animation: 2.5s forwards linear opacityAnimation
     &__hoursContainer
         position: absolute
         right: 0
@@ -354,50 +402,6 @@ main
         font-family: $paragraph-font
         font-size: .9rem
         line-height: 1.3rem
-    &__logo
-        font-family: $paragraph-font
-        font-size: 1rem
-        letter-spacing: 1px
-        position: absolute
-        top: 10px
-        left: -10px
-        transform: rotate(90deg)
-        opacity: .3
-        &::after
-            position: absolute
-            bottom: -8px
-            content: "\21E3"
-            margin-left: .5rem
-            font-size: 1.9rem
-            transform: rotate(-90deg)
-    &__headlineContainer
-        padding-top: 8rem
-        display: flex
-        gap: 2rem
-        min-height: 50vh
-    &__headline
-        width: 80%
-        font-family: $headline-font
-        font-size: 15rem
-        line-height: 14rem
-        font-weight: 100
-    &__image
-        margin-right: 60px
-        width: 27rem
-        height: 30rem
-
-.introPage
-    margin: 11rem 4rem
-    position: relative
-    animation: 2.5s forwards linear textOpacity
-    &__introText
-        position: absolute
-        right: 0
-        text-align: right
-        font-family: $paragraph-font
-        font-size: .9rem
-        line-height: 1.3rem
-        white-space: pre-line
     &__logo
         font-family: $paragraph-font
         font-size: 1rem
@@ -454,40 +458,40 @@ main
         width: 500px
         height: 500px
         position: absolute
-        opacity: 0
+        opacity: 1
         will-change: opacity
         transition: opacity .8s ease-in
 
-.pho
-    background: url("/src/assets/images/pho.jpg") no-repeat
-    background-size: 100%
-.mooncake
-    background: url("/src/assets/images/mooncake.jpg") no-repeat
-    background-size: 100%
-.burger
-    background: url("/src/assets/images/burger.jpg") no-repeat
-    background-size: 100%
-.burrito
-    background: url("/src/assets/images/burrito.jpg") no-repeat
-    background-size: 100%
-.chickenSkewer
-    background: url("/src/assets/images/chickenSkewer.jpg") no-repeat
-    background-size: 100%
-.cockedSeafood
-    background: url("/src/assets/images/cockedSeafood.jpg") no-repeat
-    background-size: 100%
-.iceFruitBowl
-    background: url("/src/assets/images/iceFruitBowl.jpg") no-repeat
-    background-size: 100%
-.pancakes
-    background: url("/src/assets/images/pancakes.jpg") no-repeat
-    background-size: 100%
-.salmon
-    background: url("/src/assets/images/salmon.jpg") no-repeat
-    background-size: 100%
-.saladBacon
-    background: url("/src/assets/images/saladBacon.jpg") no-repeat
-    background-size: 100%
+// .pho
+//     background: url("/src/assets/images/pho.jpg") no-repeat
+//     background-size: 100%
+// .mooncake
+//     background: url("/src/assets/images/mooncake.jpg") no-repeat
+//     background-size: 100%
+// .burger
+//     background: url("/src/assets/images/burger.jpg") no-repeat
+//     background-size: 100%
+// .burrito
+//     background: url("/src/assets/images/burrito.jpg") no-repeat
+//     background-size: 100%
+// .chickenSkewer
+//     background: url("/src/assets/images/chickenSkewer.jpg") no-repeat
+//     background-size: 100%
+// .cockedSeafood
+//     background: url("/src/assets/images/cockedSeafood.jpg") no-repeat
+//     background-size: 100%
+// .iceFruitBowl
+//     background: url("/src/assets/images/iceFruitBowl.jpg") no-repeat
+//     background-size: 100%
+// .pancakes
+//     background: url("/src/assets/images/pancakes.jpg") no-repeat
+//     background-size: 100%
+// .salmon
+//     background: url("/src/assets/images/salmon.jpg") no-repeat
+//     background-size: 100%
+// .saladBacon
+//     background: url("/src/assets/images/saladBacon.jpg") no-repeat
+//     background-size: 100%
 
 .foodBannerContainer
     margin: 2rem 4rem
@@ -523,7 +527,7 @@ main
 
 //Community page
 .communityPage, .communityEvents
-    animation: 2.5s forwards linear textOpacity
+    animation: 2.5s forwards linear opacityAnimation
 
 .communityPage
     margin: 11rem 4rem 4rem 4rem
@@ -649,7 +653,7 @@ main
         gap: 4rem
         position: relative
     &__card
-        height: 30rem
+        height: 40rem
         position: relative
     &__image
         width: 100%
@@ -657,11 +661,16 @@ main
     &__imageHeadline
         display: inline-block
         background-color: white
+        border-left: 10px solid #fff
         font-size: 3rem
         font-weight: 100
         position: absolute
         bottom: -2rem
         left: 1rem
+    &__headlineSpan
+        background-color: white
+        padding: .8rem 0
+        padding-right: 10px
     &__button
         width: 100%
         padding: 1.25rem
@@ -781,7 +790,7 @@ main
     to
         background-position-x: right
 
-@keyframes textOpacity
+@keyframes opacityAnimation
     0%
         opacity: 0
     50%

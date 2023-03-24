@@ -7,7 +7,7 @@ import Footer from "../footer/Footer"
 
 const eventData =
   [
-    { date: "03/12", event: "        letter-spacing: 1px" },
+    { date: "03/12", event: "S3E10: Timberlands and Periodic Tables with Peter Sohn (Pixar's \"Elemental\")" },
     { date: "03/01", event: "Dennis Chung Interview (General Secretary for Jamaican Football Federation) + Karyn Forbes Interview (Pro Player in England From T&T) + SheBelieves Cup Recap + Multiple International Teams on Strike" },
     { date: "05/03", event: "We're back and we're better!" },
   ]
@@ -51,19 +51,19 @@ function Community() {
         <div className="features__cardContainer">
           <div className="features__card">
             <img className="features__image" src="/src/assets/images/community_feat1.jpg" alt="Community people" />
-            <h3 className="features__imageHeadline">CSM Community - Feat 1</h3>
+            <h3 className="features__imageHeadline"><span className='features__headlineSpan'>CSM Community - Feat 1</span></h3>
           </div>
           <div className="features__card">
             <img className="features__image" src="/src/assets/images/community_feat2.jpg" alt="Community people" />
-            <h3 className="features__imageHeadline">CSM Community - Feat 2</h3>
+            <h3 className="features__imageHeadline"><span className='features__headlineSpan'>CSM Community - Feat 2</span></h3>
           </div>
           <div className="features__card">
             <img className="features__image" src="/src/assets/images/community_feat3.jpg" alt="Community people" />
-            <h3 className="features__imageHeadline">CSM Community - Feat 3</h3>
+            <h3 className="features__imageHeadline"><span className='features__headlineSpan'>CSM Community - Feat 3</span></h3>
           </div>
           <div className="features__card">
             <img className="features__image" src="/src/assets/images/community_feat4.jpg" alt="Community people" />
-            <h3 className="features__imageHeadline">CSM Community - Feat 4</h3>
+            <h3 className="features__imageHeadline"><span className='features__headlineSpan'>CSM Community - Feat 4</span></h3>
           </div>
         </div>
         <button className="features__button">view all stories</button>

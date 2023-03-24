@@ -1,36 +1,112 @@
-import React from 'react'
-import { Link } from "react-router-dom"
-import Intro from "../intro/Intro"
-import Banner from "../banner/Banner"
-import SmileyIcon from "/src/assets/images/smiley.svg"
-import Footer from "/src/components/footer/Footer"
-import FoodHall from "/src/assets/images/foodImage.jpg"
+import React from "react";
+import { Link } from "react-router-dom";
+import Intro from "../intro/Intro";
+import Banner from "../banner/Banner";
+import SmileyIcon from "/src/assets/images/smiley.svg";
+import Footer from "/src/components/footer/Footer";
+import FoodHall from "/src/assets/images/foodImage.jpg";
+import VendorGrid from "../vendorGrid/VendorGrid";
 
 function Food() {
+  const imageData = [
+    {
+      imageSrc: "/src/assets/images/pho.jpg",
+      imageText: "pho",
+    },
+    {
+      imageSrc: "/src/assets/images/mooncake.jpg",
+      imageText: "mooncake",
+    },
+    {
+      imageSrc: "/src/assets/images/burger.jpg",
+      imageText: "burger",
+    },
+    {
+      imageSrc: "/src/assets/images/burrito.jpg",
+      imageText: "burrito",
+    },
+    {
+      imageSrc: "/src/assets/images/chickenSkewer.jpg",
+      imageText: "chickenSkewer",
+    },
+    {
+      imageSrc: "/src/assets/images/cockedSeafood.jpg",
+      imageText: "cockedSeafood",
+    },
+    {
+      imageSrc: "/src/assets/images/iceFruitBowl.jpg",
+      imageText: "iceFruitBowl",
+    },
+    {
+      imageSrc: "/src/assets/images/pancakes.jpg",
+      imageText: "pancakes",
+    },
+    {
+      imageSrc: "/src/assets/images/salmon.jpg",
+      imageText: "salmon",
+    },
+    {
+      imageSrc: "/src/assets/images/saladBacon.jpg",
+      imageText: "saladBacon",
+    },
+  ];
 
-  const enterVendor = (e) => {
-    const randomX = ((Math.floor(Math.random() * 100) * 10) + 60)
-    const randomY = (window.pageYOffset + (Math.floor(Math.random() * 10) * 40))
-    const foodImages = document.querySelector(".foodImage")
-
-    foodImages.childNodes.forEach(obj => {
-      if (obj.classList.contains(e.currentTarget.id)) {
-        obj.style.opacity = "1"
-        obj.style.transform = `translate(${randomX}px, ${randomY}px)`
-      }
-    })
-  }
-
-  const exitVendor = () => {
-    const foodImages = document.querySelector(".foodImage")
-    foodImages.childNodes.forEach(obj => {
-      obj.style.opacity = "0"
-    })
-  }
+  const vendorData = [
+    {
+      vendorID: "pho",
+      headline: "Vietnamese Soup Pho",
+      vendor: "Vietnamese Soup Pho Vendor",
+    },
+    {
+      vendorID: "mooncake",
+      headline: "Chinese Mooncake",
+      vendor: "Chinese Mooncake Vendor",
+    },
+    {
+      vendorID: "burger",
+      headline: "Delicious Burger",
+      vendor: "Delicious Burger Vendor",
+    },
+    {
+      vendorID: "burrito",
+      headline: "Mexican Burrito",
+      vendor: "Mexican Burrito Vendor",
+    },
+    {
+      vendorID: "chickenSkewer",
+      headline: "Delightful Chicken Skewer",
+      vendor: "Delightful Chicken Skewer Vendo",
+    },
+    {
+      vendorID: "cockedSeafood",
+      headline: "Japanese Cocked Seafood",
+      vendor: "Japanese Cocked Seafood Vendor",
+    },
+    {
+      vendorID: "iceFruitBowl",
+      headline: "Ice Fruit Bow",
+      vendor: "Ice Fruit Bowl Vendor",
+    },
+    {
+      vendorID: "pancakes",
+      headline: "Delicious Pancakes",
+      vendor: "Delicious Pancakes Vendor",
+    },
+    {
+      vendorID: "salmon",
+      headline: "Delightful Salmon",
+      vendor: "Delightful Salmon Vendor",
+    },
+    {
+      vendorID: "saladBacon",
+      headline: "Salad Bacon Plate",
+      vendor: "Salad Bacon Plate Vendor",
+    },
+  ];
 
   return (
     <div className="pageContainer" style={{ left: "60px" }}>
-      <div className="foodImage">
+      {/* <div className="foodImage">
         <div className="foodImage__card pho"></div>
         <div className="foodImage__card mooncake"></div>
         <div className="foodImage__card burger"></div>
@@ -41,14 +117,16 @@ function Food() {
         <div className="foodImage__card pancakes"></div>
         <div className="foodImage__card salmon"></div>
         <div className="foodImage__card saladBacon"></div>
-      </div>
+      </div> */}
       <Intro
         page="Food"
         text={`Food Hall Hours:\nMon – Sun: 11:00AM - 8:00PM`}
         headline="The Food Hall"
         image={FoodHall}
-        imageAlt="Food Hall" />
-      <section className="foodVendors">
+        imageAlt="Food Hall"
+      />
+      <VendorGrid imageData={imageData} vendorData={vendorData} />
+      {/* <section className="foodVendors">
         <div className="foodVendors__card">
           <Link id="pho" className="foodVendors__anchor" to="" onMouseEnter={enterVendor} onMouseLeave={exitVendor}>
             <p className="foodVendors__food">Vietnamese Soup Pho</p>
@@ -109,18 +187,18 @@ function Food() {
             <p className="foodVendors__vendor">Salad Bacon Vendor</p>
           </Link>
         </div>
-      </section>
+      </section> */}
       <section className="foodBannerContainer">
         <Banner
           image={SmileyIcon}
           imageAlt="smiley icon"
           headline="The Best of NYC"
           text="All under one roof!"
-          />
+        />
       </section>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default Food
+export default Food;
