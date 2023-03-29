@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function VendorGrid({ imageData, vendorData }) {
+function VendorGrid({ vendorData }) {
 
   const enterVendor = (e) => {
     const foodImageContainer = document.querySelector(".foodImage");
     const randomX = Math.floor(Math.random() * 100) * 10 + 60;
-    const randomY = window.pageYOffset + Math.floor(Math.random() * 10) * 40;
+    const randomY = (Math.floor(Math.random() * 10) * 40)
+    
     foodImageContainer.childNodes.forEach((obj) => {
       if (obj.classList.contains(e.currentTarget.id)) {
         obj.style.opacity = "1";
-        // obj.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        obj.style.transform = `translate(${randomX}px, ${randomY}px)`;
       }
     });
   };
@@ -25,8 +26,8 @@ function VendorGrid({ imageData, vendorData }) {
   return (
     <>
       <div className="foodImage">
-        {imageData.map((obj, index) => {
-          const imageClass = `foodImage__card ${obj.imageText}`;
+        {vendorData.map((obj, index) => {
+          const imageClass = `foodImage__card ${obj.vendorID}`;
           const bgImage = `no-repeat url(${obj.imageSrc})`;
           const imageCard = (
             <div className={imageClass} style={{ background: bgImage, backgroundSize: "100%" }} key={index}></div>
@@ -40,7 +41,7 @@ function VendorGrid({ imageData, vendorData }) {
             <div className="foodVendors__card" key={index}>
               <Link
                 id={obj.vendorID}
-                to=""
+                to={`/food/${obj.vendor.replace(" ", "-")}`}
                 className="foodVendors__anchor"
                 onMouseEnter={enterVendor}
                 onMouseLeave={exitVendor}

@@ -9,10 +9,10 @@ function Home() {
     const bgImage = document.getElementById("bgContainer");
     const descriptions = document.querySelector(".descriptions__list");
 
-    if (window.scrollY > 400) {
+    if (window.scrollY > 450) {
       bgImage.style.opacity = "1";
     }
-    if (window.scrollY > 1200) {
+    if (window.scrollY > 1550) {
       descriptions.style.opacity = "1";
     }
     /*     console.log(window.scrollY) */

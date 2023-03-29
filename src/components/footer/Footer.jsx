@@ -42,8 +42,8 @@ function Footer() {
             <footer className="footer">
                 <div className="footer__textContainer">
                     <p>Copyright Canal Street Market 2022</p>
-                    <a href="">Privacy Policy</a>
-                    <a href="">Vendor Login</a>
+                    <Link to="/policy">Privacy Policy</Link>
+                    <Link to="">Vendor Login</Link>
                 </div>
                 <p>Site by Phuong</p>
             </footer>

@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 import { Link } from "react-router-dom";
+import HomeIcon from "../../assets/images/homeIcon.svg"
 
 function Navbar({
   backgroundColor,
@@ -9,28 +10,21 @@ function Navbar({
   communityClass,
   foodClass,
 }) {
-  const transitionPages = document.querySelectorAll(".nav__item");
 
-  const currentUrl = document.URL;
-  const regEx = /\w*$/;
-  const matchUrl = currentUrl.match(regEx)[0];
-  let currentNav;
-  const handleNavPage = (e) => {
-    e.preventDefault();
-    /* currentNav = e.target.id; */
-  };
-/* 
-  if (transitionPages) {
-    transitionPages.forEach((page) => {
-      page.classList.remove("open");
-
-      if (page.classList.contains(currentNav)) {
-        page.classList.add("open");
-      }
-    });
-  } */
-
-  /*   currentNav = matchUrl; */
+  window.addEventListener("scroll", () => {
+    const navIcon = document.querySelector(".homeIcon")
+    if(navIcon) {
+      if (window.pageYOffset > 100) {
+        navIcon.style.opacity = "0"
+        navIcon.style.transition = "opacity .5s"
+      };
+      
+      if (window.pageYOffset < 160) {
+        navIcon.style.opacity = "1"
+        navIcon.style.transition = "opacity .5s"
+      };
+    } 
+  })
 
   const homeStyle = classNames(
     { "nav__item home": true },
@@ -49,13 +43,18 @@ function Navbar({
     { "nav__item--open": communityClass }
   );
 
+  const homeIconStyle = classNames(
+    { "nav__homeIconAnchor": true}, 
+    { "nav__homeIconAnchor--open": homeClass}
+  )
+
   return (
     <header>
-      <nav className="nav" onClick={handleNavPage}>
+      <nav className="nav">
+      <Link className={homeIconStyle} to="/"></Link>
         <ul className="nav__list" style={{ backgroundColor: backgroundColor }}>
           <li className={homeStyle} id="home">
             <Link className="nav__anchor" to="/">
-              <p className="nav__headline">餐饮</p>
               <span className="nav__text">home</span>
             </Link>
           </li>
