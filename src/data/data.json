@@ -2,11 +2,15 @@
     "foodVendors": [
         {
             "text": "Looking for a warm and comforting meal? Look no further than our Vietnamese Pho! Made with aromatic broth, tender rice noodles, and your choice of savory meats or tofu, our Pho is the perfect choice for a flavorful and satisfying meal. Topped with fresh herbs and a squeeze of lime, our Pho is bursting with bold and delicious flavors. Whether you're looking for a quick lunch or a cozy dinner, our Vietnamese Pho is the perfect choice. Order now and experience the authentic taste of Vietnam in every bowl!",
-            "vendorID": "pho",
             "headline": "Vietnamese Soup Pho",
             "vendor": "Pho-nomenal Delights",
-            "imageSrc": "/src/assets/images/pho.jpg",
-            "imageSrcVendorPage": ["/src/assets/images/food-vendors/pho/pho1.jpg", "/src/assets/images/food-vendors/pho/pho2.jpg", "/src/assets/images/food-vendors/pho/pho3.jpg", "/src/assets/images/food-vendors/pho/pho4.jpg"],
+            "imageSrc": "/src/assets/images/food-vendors/pho-nomenal-delights/phoNomenalDelights1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/food-vendors/pho-nomenal-delights/phoNomenalDelights2.jpg",
+                "/src/assets/images/food-vendors/pho-nomenal-delights/phoNomenalDelights3.jpg",
+                "/src/assets/images/food-vendors/pho-nomenal-delights/phoNomenalDelights4.jpg",
+                "/src/assets/images/food-vendors/pho-nomenal-delights/phoNomenalDelights5.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
@@ -14,11 +18,13 @@
         },
         {
             "text": "Get ready to indulge in a delicious and traditional treat with our Chinese Mooncake! Made with the finest ingredients and filled with a variety of sweet and savory flavors, our Mooncake is the perfect way to celebrate the Mid-Autumn Festival. With its delicate pastry shell and rich, flavorful filling, our Mooncake is a true taste of Chinese culture. Whether you're sharing with friends and family or enjoying it on your own, our Chinese Mooncake is sure to delight your taste buds. Order now and experience the authentic taste of Chinese cuisine!",
-            "vendorID": "mooncake",
             "headline": "Chinese Mooncake",
             "vendor": "Lunar Delights",
-            "imageSrc": "/src/assets/images/mooncake.jpg",
-            "imageSrcVendorPage": [],
+            "imageSrc": "/src/assets/images/food-vendors/lunar-delights/lunarDelights1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/food-vendors/lunar-delights/lunarDelights2.jpg",
+                "/src/assets/images/food-vendors/lunar-delights/lunarDelights3.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
@@ -26,10 +32,12 @@
         },
         {
             "text": "Get ready to sink your teeth into our delicious burger! Made with juicy, premium beef and served on a soft and fluffy bun, our burger is the perfect choice for any craving. Topped with your favorite toppings like crisp lettuce, ripe tomatoes, and melted cheese, our burger is sure to satisfy. Whether you're looking for a quick lunch or a satisfying dinner option, our burger is the perfect choice. Order now and indulge in a burger experience that's sure to leave you feeling happy and satisfied!",
-            "vendorID": "burger",
             "headline": "Delicious Burger",
             "vendor": "Burger Bliss",
-            "imageSrc": "/src/assets/images/burger.jpg",
+            "imageSrc": "/src/assets/images/food-vendors/burger-bliss/burgerBliss1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/food-vendors/burger-bliss/burgerBliss2.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Order Online": ""
@@ -37,10 +45,14 @@
         },
         {
             "text": "Looking for a flavorful and filling meal? Try our Mexican burrito! Made with the freshest ingredients and packed with delicious flavors, our burrito is the perfect choice for lunch or dinner. Our burrito is stuffed with your choice of protein, rice, beans, cheese, and a variety of tasty toppings. And with our homemade salsa and guacamole on the side, every bite is a burst of flavor. Whether you're craving something spicy or just looking for a satisfying meal, our Mexican burrito is sure to hit the spot. Order now and experience the deliciousness for yourself!",
-            "vendorID": "burrito",
             "headline": "Mexican Burrito",
             "vendor": "Burrito Bandito",
-            "imageSrc": "/src/assets/images/burrito.jpg",
+            "imageSrc": "/src/assets/images/food-vendors/burrito-bandito/burritoBandito1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/food-vendors/burrito-bandito/burritoBandito2.jpg",
+                "/src/assets/images/food-vendors/burrito-bandito/burritoBandito3.jpg",
+                "/src/assets/images/food-vendors/burrito-bandito/burritoBandito4.jpg"
+            ],
             "links": {
                 "Website": "",
                 "Facebook": "https://www.facebook.com"
@@ -48,10 +60,13 @@
         },
         {
             "text": "Looking for a delicious and satisfying meal option? Try our Delightful Chicken Skewer! Made with tender and juicy chicken marinated in a flavorful blend of spices, our skewers are grilled to perfection for a mouthwatering taste experience. Served with a side of crisp and fresh vegetables, our chicken skewers are the perfect choice for a healthy and balanced meal. Whether you're looking for a quick and tasty lunch or a flavorful dinner option, our Delightful Chicken Skewer is the perfect choice. Order now and indulge in a delicious and nutritious meal!",
-            "vendorID": "chickenSkewer",
             "headline": "Delightful Chicken Skewer",
             "vendor": "Grill Master Skewers",
-            "imageSrc": "/src/assets/images/chickenSkewer.jpg",
+            "imageSrc": "/src/assets/images/food-vendors/grill-master-skewer/GrillMasterSkewers1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/food-vendors/grill-master-skewer/GrillMasterSkewers2.jpg",
+                "/src/assets/images/food-vendors/grill-master-skewer/GrillMasterSkewers3.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
@@ -59,10 +74,13 @@
         },
         {
             "text": "Craving some delicious seafood with a Japanese twist? Look no further than our Japanese Cooked Seafood! Our seafood is cooked to perfection using traditional Japanese cooking techniques, ensuring a flavorful and satisfying meal. From succulent shrimp to tender octopus, our seafood selection is sure to please any seafood lover. Served with a side of steaming rice and crisp vegetables, our Japanese Cooked Seafood is a complete and filling meal. Order now and treat yourself to a seafood experience like no other!",
-            "vendorID": "cockedSeafood",
             "headline": "Japanese Cocked Seafood",
             "vendor": "Umami Seafood Grill",
-            "imageSrc": "/src/assets/images/cockedSeafood.jpg",
+            "imageSrc": "/src/assets/images/food-vendors/umami-seafood-grill/UmamiSeafoodGrill1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/food-vendors/umami-seafood-grill/UmamiSeafoodGrill2.jpg",
+                "/src/assets/images/food-vendors/umami-seafood-grill/UmamiSeafoodGrill3.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
@@ -70,10 +88,13 @@
         },
         {
             "text": "Looking for a refreshing and healthy treat? Try our ice fruit bowl! Made with a variety of fresh and juicy fruits, our bowl is topped with ice to keep it cool and refreshing. Perfect for a hot summer day or as a light and delicious dessert, our ice fruit bowl is sure to satisfy your sweet tooth while also providing essential vitamins and nutrients. Order now and experience the deliciousness for yourself!",
-            "vendorID": "iceFruitBowl",
             "headline": "Ice Fruit Bowl",
             "vendor": "Frosty Fruits",
-            "imageSrc": "/src/assets/images/iceFruitBowl.jpg",
+            "imageSrc": "/src/assets/images/food-vendors/frosty-fruits/FrostyFruits1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/food-vendors/frosty-fruits/FrostyFruits2.jpg",
+                "/src/assets/images/food-vendors/frosty-fruits/FrostyFruits3.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
@@ -81,10 +102,14 @@
         },
         {
             "text": "Looking for a tasty and satisfying breakfast option? Look no further than our delicious pancake stack! Made from scratch with the finest ingredients, our pancakes are light, fluffy, and sure to please. Served hot and fresh, our pancakes are perfect on their own or can be paired with your favorite toppings like syrup, butter, or fresh fruit. Whether you're looking for a quick breakfast on the go or a leisurely brunch with friends, our pancake stack is the perfect choice. Order now and indulge in a breakfast treat that's sure to leave you feeling happy and satisfied!",
-            "vendorID": "pancakes",
             "headline": "Delicious Pancakes",
             "vendor": "Fluffy Stack Pancakes",
-            "imageSrc": "/src/assets/images/pancakes.jpg",
+            "imageSrc": "/src/assets/images/food-vendors/fluffy-stack-pancakes/FluffyStackPancakes1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/food-vendors/fluffy-stack-pancakes/FluffyStackPancakes2.jpg",
+                "/src/assets/images/food-vendors/fluffy-stack-pancakes/FluffyStackPancakes3.jpg",
+                "/src/assets/images/food-vendors/fluffy-stack-pancakes/FluffyStackPancakes4.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
@@ -92,10 +117,13 @@
         },
         {
             "text": "Introducing our newest dish: the Delightful Salmon! Made with fresh, high-quality salmon, seasoned to perfection and served with flavorful vegetables and your choice of starch. Perfect for a healthy and satisfying lunch or dinner. Order now and enjoy a delicious seafood experience!",
-            "vendorID": "salmon",
             "headline": "Delightful Salmon",
             "vendor": "Salmon Delight Co.",
-            "imageSrc": "/src/assets/images/salmon.jpg",
+            "imageSrc": "/src/assets/images/food-vendors/salmon-delight-co/SalmonDelightCo1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/food-vendors/salmon-delight-co/SalmonDelightCo2.jpg",
+                "/src/assets/images/food-vendors/salmon-delight-co/SalmonDelightCo3.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
@@ -103,10 +131,14 @@
         },
         {
             "text": "Looking for a delicious and healthy meal that's packed with flavor? Look no further than our Salad Bacon Plate! Made with fresh and crisp greens, juicy tomatoes, and crispy bacon, our salad is the perfect choice for those looking for a tasty and nutritious meal. Topped with your choice of dressing, our Salad Bacon Plate is the perfect balance of savory and sweet flavors. Whether you're looking for a light lunch or a satisfying dinner, our salad is the perfect choice. Order now and enjoy a healthy and delicious meal that's sure to leave you feeling satisfied and refreshed!",
-            "vendorID": "saladBacon",
             "headline": "Salad Bacon Plate",
             "vendor": "Bacon Greens",
-            "imageSrc": "/src/assets/images/saladBacon.jpg",
+            "imageSrc": "/src/assets/images/food-vendors/bacon-greens/BaconGreens1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/food-vendors/bacon-greens/BaconGreens2.jpg",
+                "/src/assets/images/food-vendors/bacon-greens/BaconGreens3.jpg",
+                "/src/assets/images/food-vendors/bacon-greens/BaconGreens4.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
@@ -115,114 +147,144 @@
     ],
     "retailVendors": [
         {
-            "text": "",
-            "vendorID": "",
+            "text": "Introducing Opulent Charms - the ultimate destination for exquisite jewelry! Our stunning collection of necklaces, bracelets, earrings, and more is crafted with the finest materials and designed to elevate any look. Whether you're dressing up for a special occasion or adding a touch of glamour to your everyday style, Opulent Charms has the perfect piece for you. Shop now and discover the beauty of our jewelry for yourself!",
             "headline": "Jewelry",
-            "vendor": "",
-            "imageSrc": "",
+            "vendor": "Opulent Charms",
+            "imageSrc": "/src/assets/images/retail-vendors/opulent-charms/OpulentCharms1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/retail-vendors/opulent-charms/OpulentCharms2.jpg",
+                "/src/assets/images/retail-vendors/opulent-charms/OpulentCharms3.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
             }
         },
         {
-            "text": "",
-            "vendorID": "",
+            "text": "Transform your space into a peaceful oasis with Bonsai Haven. Our exquisite bonsai trees are hand-selected and cared for with expert precision, ensuring they thrive in any environment. With a variety of styles and species to choose from, you can find the perfect bonsai to suit your taste and space. Discover the beauty and tranquility of bonsai today with Bonsai Haven.",
             "headline": "Bonsai Shop",
-            "vendor": "",
-            "imageSrc": "",
+            "vendor": "Bonsai Haven",
+            "imageSrc": "/src/assets/images/retail-vendors/bonsai-haven/BonsaiHaven1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/retail-vendors/bonsai-haven/BonsaiHaven2.jpg",
+                "/src/assets/images/retail-vendors/bonsai-haven/BonsaiHaven3.jpg",
+                "/src/assets/images/retail-vendors/bonsai-haven/BonsaiHaven4.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
             }
         },
         {
-            "text": "",
-            "vendorID": "",
+            "text": "Discover StyleMaven - the ultimate destination for fashion enthusiasts seeking trendy apparel! Our collection is thoughtfully selected to provide you with the latest styles and trends that will enhance your wardrobe and boost your confidence. Our extensive range of products includes casual wear, formal attire, and everything in between, catering to all your fashion needs. Our team of seasoned fashion experts is always ahead of the curve, ensuring that you stay up-to-date with the latest fashion trends. Browse our collection today and unleash your inner fashionista with StyleMaven!",
             "headline": "Fashion Apparel",
-            "vendor": "",
-            "imageSrc": "",
+            "vendor": "StyleMaven",
+            "imageSrc": "/src/assets/images/retail-vendors/stylemaven/StyleMaven1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/retail-vendors/stylemaven/StyleMaven2.jpg",
+                "/src/assets/images/retail-vendors/stylemaven/StyleMaven3.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
             }
         },
         {
-            "text": "",
-            "vendorID": "",
+            "text": "Create a warm and stylish haven in your home with Nest Haven! Our diverse range of premium home goods and decor will enhance any space in your house. From sumptuous bedding and plush towels to sophisticated furniture and captivating wall art, we offer a wide selection of products that will transform your house into a serene retreat. Discover the ultimate in home comfort and style by shopping with Nest Haven today!",
             "headline": "Home Goods",
-            "vendor": "",
-            "imageSrc": "",
+            "vendor": "Nest Haven",
+            "imageSrc": "/src/assets/images/retail-vendors/nest-haven/NestHaven1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/retail-vendors/nest-haven/NestHaven2.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
             }
         },
         {
-            "text": "",
-            "vendorID": "",
-            "headline": "",
-            "vendor": "",
-            "imageSrc": "",
+            "text": "Upgrade your lifestyle with Objetique's captivating design objects. Our handpicked selection of modern and chic pieces will infuse your living spaces with style and sophistication. Whether you're looking for a striking centerpiece or a subtle accent, Objetique has the perfect object to enhance your home or office. Browse our exclusive collection now and experience the power of design to transform your world.",
+            "headline": "Design Objects",
+            "vendor": "Objetique",
+            "imageSrc": "/src/assets/images/retail-vendors/objetique/Objetique1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/retail-vendors/objetique/Objetique2.jpg",
+                "/src/assets/images/retail-vendors/objetique/Objetique3.jpg",
+                "/src/assets/images/retail-vendors/objetique/Objetique4.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
             }
         },
         {
-            "text": "",
-            "vendorID": "",
-            "headline": "",
-            "vendor": "",
-            "imageSrc": "",
+            "text": "Looking to add some sparkle to your life? Look no further than Crystal Bloom Jewelry Co.! Our stunning collection of handcrafted jewelry features dazzling gems and intricate designs that are sure to turn heads. From elegant necklaces to stunning earrings and everything in between, we have the perfect piece to elevate any outfit. Plus, our commitment to using only the highest quality materials ensures that your new favorite piece will last a lifetime. So why wait? Shop Crystal Bloom Jewelry Co. today and let us help you shine!",
+            "headline": "Jewelry",
+            "vendor": "Crystal Bloom Jewelry Co.",
+            "imageSrc": "/src/assets/images/retail-vendors/crystal-bloom/CrystalBloom1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/retail-vendors/crystal-bloom/CrystalBloom2.jpg",
+                "/src/assets/images/retail-vendors/crystal-bloom/CrystalBloom3.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
             }
         },
         {
-            "text": "",
-            "vendorID": "",
-            "headline": "",
-            "vendor": "",
-            "imageSrc": "",
+            "text": "Experience the ultimate blend of style and comfort with ChicThreadz. Our collection of fashion apparel is crafted with premium quality fabrics and designed to fit like a dream, making you look and feel your best. From casual wear to occasion wear, our versatile pieces are perfect for any style-savvy wardrobe. With a focus on modern and on-trend styles, ChicThreadz offers a range of options for every personality and occasion. Join the ChicThreadz community today and discover your new favorite pieces. Shop now and indulge in effortless style!",
+            "headline": "Fashion Apparel",
+            "vendor": "ChicThreadz",
+            "imageSrc": "/src/assets/images/retail-vendors/chicthreadz/ChicThreadz1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/retail-vendors/chicthreadz/ChicThreadz2.jpg",
+                "/src/assets/images/retail-vendors/chicthreadz/ChicThreadz3.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
             }
         },
         {
-            "text": "",
-            "vendorID": "",
-            "headline": "",
-            "vendor": "",
-            "imageSrc": "",
+            "text": "Looking for a magazine vendor that delivers quality content straight to your doorstep? Look no further than MagiZine! With our wide selection of magazines covering everything from fashion and food to business and technology, there's something for everyone. Plus, our easy-to-use online platform makes subscribing and managing your subscription a breeze. So why wait? Subscribe to MagiZine today and start receiving the best content right at your fingertips!",
+            "headline": "Magazine",
+            "vendor": "MagiZine",
+            "imageSrc": "/src/assets/images/retail-vendors/magizine/MagiZine1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/retail-vendors/magizine/MagiZine2.jpg",
+                "/src/assets/images/retail-vendors/magizine/MagiZine3.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
             }
         },
         {
-            "text": "",
-            "vendorID": "",
-            "headline": "",
-            "vendor": "",
-            "imageSrc": "",
+            "text": "Welcome to \"Haven Home\" - the perfect place to find everything you need to create a haven in your home. Our store features a wide variety of high-quality home goods, including luxurious bedding, chic decor, and stylish furniture that will elevate any space. We believe that your home should be a reflection of your unique style and personality, which is why we offer a carefully curated selection of items that are both beautiful and functional. Our friendly and knowledgeable staff are always on hand to help you find the perfect piece, and our affordable prices make it easy to bring your vision to life. So why wait? Visit Haven Home today and start creating your perfect sanctuary!",
+            "headline": "Home Goods",
+            "vendor": "CozyNest Home",
+            "imageSrc": "/src/assets/images/retail-vendors/cozynest-home/CozyNestHome1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/retail-vendors/cozynest-home/CozyNestHome2.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
             }
         },
         {
-            "text": "",
-            "vendorID": "",
-            "headline": "",
-            "vendor": "",
-            "imageSrc": "",
+            "text": "Gemstone Avenue - Making your jewelry dreams come true! From classic and timeless to trendy and unique, we offer a wide variety of jewelry to suit every style and taste. Our team of skilled artisans creates each piece with attention to detail, ensuring that you receive a product of exceptional quality. We source only the finest materials, including diamonds, gold, and precious gemstones, to create pieces that are sure to turn heads. At Gemstone Avenue, we believe that every woman deserves to feel confident and beautiful, and our jewelry is designed to help you do just that. Browse our collection today and find your new favorite accessory!",
+            "headline": "Jewelry",
+            "vendor": "Gemstone Avenue",
+            "imageSrc": "/src/assets/images/retail-vendors/gemstone-avenue/GemstoneAvenue1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/retail-vendors/gemstone-avenue/GemstoneAvenue2.jpg",
+                "/src/assets/images/retail-vendors/gemstone-avenue/GemstoneAvenue3.jpg"
+            ],
             "links": {
                 "Instragram": "https://www.instagram.com",
                 "Facebook": "https://www.facebook.com"
             }
-        },
+        }
     ]
 }

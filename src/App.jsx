@@ -1,17 +1,18 @@
 import "./App.sass";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import Home from "./components/home/Home";
-import Food from "./components/food/Food"
-import Retail from "./components/retail/Retail"
-import Community from "./components/community/Community";
-import Policy from "./components/policy/Policy";
-import FoodVendor from "./components/foodVendor/FoodVendor"
-import RetailVendor from "./components/retailVendor/RetailVendor";
+import Home from "./pages/home/Home";
+import Food from "./pages/food/Food"
+import Retail from "./pages/retail/Retail"
+import Community from "./pages/community/Community";
+import Policy from "./pages/policy/Policy";
+import FoodVendor from "./pages/foodVendor/FoodVendor"
+import RetailVendor from "./pages/retailVendor/RetailVendor";
 
 export async function getVendorData() {
   return fetch("/src/data/data.json")
 }
+
 
 function App() {
   const router = createBrowserRouter([
@@ -67,7 +68,7 @@ function App() {
       path: "retail/:id",
       element: (
         <>
-          <Navbar backgroundColor="#5ea3ec" foodClass={true} />
+          <Navbar backgroundColor="#5ea3ec" retailClass={true} />
           <RetailVendor />
         </>
       ),

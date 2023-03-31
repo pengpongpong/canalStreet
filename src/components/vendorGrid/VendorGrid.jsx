@@ -1,15 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./VendorGrid.sass"
 
-function VendorGrid({ vendorData }) {
+function VendorGrid({ vendorData, retail }) {
 
   const enterVendor = (e) => {
-    const foodImageContainer = document.querySelector(".foodImage");
+    const foodImageContainer = document.querySelector(".vendorImage");
     const randomX = Math.floor(Math.random() * 100) * 10 + 60;
     const randomY = (Math.floor(Math.random() * 10) * 40)
-    
+
     foodImageContainer.childNodes.forEach((obj) => {
-      if (obj.classList.contains(e.currentTarget.id)) {
+      if (obj.id === e.currentTarget.id) {
         obj.style.opacity = "1";
         obj.style.transform = `translate(${randomX}px, ${randomY}px)`;
       }
@@ -17,37 +18,38 @@ function VendorGrid({ vendorData }) {
   };
 
   const exitVendor = () => {
-    const foodImageContainer = document.querySelector(".foodImage");
+    const foodImageContainer = document.querySelector(".vendorImage");
     foodImageContainer.childNodes.forEach((obj) => {
       obj.style.opacity = "0";
     });
   };
 
+  const linkCat = retail ? "retail" : "food"
+
   return (
     <>
-      <div className="foodImage">
+      <div className="vendorImage" aria-hidden={true}>
         {vendorData.map((obj, index) => {
-          const imageClass = `foodImage__card ${obj.vendorID}`;
           const bgImage = `no-repeat url(${obj.imageSrc})`;
           const imageCard = (
-            <div className={imageClass} style={{ background: bgImage, backgroundSize: "100%" }} key={index}></div>
+            <div id={obj.vendor.replace(/\s/gi, "")} className="vendorImage__card" style={{ background: bgImage, backgroundSize: "100%" }} key={index}></div>
           );
           return imageCard;
         })}
       </div>
-      <section className="foodVendors">
+      <section className="vendorCard">
         {vendorData.map((obj, index) => {
           const vendorCard = (
-            <div className="foodVendors__card" key={index}>
+            <div key={index}>
               <Link
-                id={obj.vendorID}
-                to={`/food/${obj.vendor.replace(" ", "-")}`}
-                className="foodVendors__anchor"
+                id={obj.vendor.replace(/\s/gi, "")}
+                to={`/${linkCat}/${obj.vendor.replace(/\s/gi, "-")}`}
+                className="vendorCard__anchor"
                 onMouseEnter={enterVendor}
                 onMouseLeave={exitVendor}
               >
-                <p className="foodVendors__food">{obj.headline}</p>
-                <p className="foodVendors__vendor">{obj.vendor}</p>
+                <p className="vendorCard__cat">{obj.headline}</p>
+                <p className="vendorCard__vendor">{obj.vendor}</p>
               </Link>
             </div>
           );

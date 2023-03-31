@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Banner.sass"
 
 function Banner({image, imageAlt, headline, text}) {
     return (

@@ -1,7 +1,28 @@
-home-page:
-    ☐ add new vendor form
-    ☐ refactor footer to component and then add policy page
-    ☐ add logo to home nav
-    ☐ add mobile nav animation
-food-page:
-    ☐ add vendor pages
+/* .radioBanner
+    margin: 8rem 4rem 2rem 4rem
+    padding: 7rem 0
+    display: flex
+    justify-content: space-around
+    background-image: repeating-linear-gradient(-45deg,#000,#000 1px,transparent 0,transparent 71px),repeating-linear-gradient(45deg,#000,#000 1px,transparent 0,transparent 70px)
+    background-position: 0 0,0 0
+    background-size: 100px 50px,100px 50px
+    background-repeat: repeat-x
+    animation: 2s infinite zickzackAnimationTop linear
+    &__logo
+        &:nth-child(1)
+            animation: 2s infinite foodLogoAnimation ease-in-out
+        &:nth-child(3)
+            animation: 2s infinite foodLogoAnimationFlip ease-in-out
+    &__textContainer
+        width: 30%
+        text-align: center
+    &__headline
+        margin-bottom: 2rem
+        font-family: $headline-font
+        font-size: 7rem
+        font-weight: 100
+        line-height: 6.5rem
+    &__text
+        font-family: $paragraph-font
+.podcasts
+    margin: 0 4rem 4rem 4rem  */

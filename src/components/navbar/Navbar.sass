@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=PT+Mono&display=swap')
+
+$headline-font: 'EB Garamond', serif
+
+//Navbar
+.nav
+    position: relative
+    &__list
+        display: flex
+        position: fixed
+        top: 0
+        height: 100%
+        width: 100%
+        list-style: none
+    &__item
+        height: 100%
+        width: 60px
+        will-change: width
+        position: relative
+        transition: width .5s ease-in-out
+        &--open
+            width: calc(100vw - 180px)
+            .nav__headline, .nav__text, .nav__anchor
+                opacity: 0
+                will-change: opacity
+                transition: opacity .2s
+        &:nth-child(1)
+            background-color: #fff
+            animation: navStartAnimation .8s ease-in-out
+        &:nth-child(2)
+            background-color: #5ea3ec
+            animation: navStartAnimation .7s ease-in-out
+        &:nth-child(3)
+            background-color: #f64444
+            animation: navStartAnimation .6s ease-in-out
+        &:nth-child(4)
+            background-color: #ffb400
+            animation: navStartAnimation .5s ease-in-out
+            text-align: center
+    &__anchor, &__headline, &__text
+        will-change: opacity
+        transition: opacity 1s
+    &__anchor
+        display: inline-block
+        width: 100%
+        height: 100%
+        padding-top: 4rem
+        font-family: $headline-font
+        font-size: 1.4rem
+        letter-spacing: 2px
+        color: black
+        &:visited
+            color: black
+    &__homeIconAnchor
+        width: 3rem
+        height: 3.5rem
+        position: fixed
+        top: 55px
+        left: 6px
+        will-change: width, margin
+        transition: margin .5s, width .5s
+        z-index: 5
+        background: url("/src/assets/icons/homeIcon.svg") top left no-repeat
+        background-size: 100%
+        &--open
+            width: 3.5rem
+            margin-left: 4rem
+            left: 0
+            will-change: width, margin
+            transition: margin .5s, width .5s
+    &__headline
+        text-align: center
+    &__text
+        display: block
+        position: absolute
+        transform: translateY(-50%) translateX(-50%) rotate(90deg)
+        transform-origin: center
+        top: 50%
+        left: 50%
+
+@keyframes navStartAnimation
+    from
+        transform: translateY(-100%)
+    to
+        transform: translateY(0)

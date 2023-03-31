@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=PT+Mono&display=swap')
+
+$headline-font: 'EB Garamond', serif
+$paragraph-font: 'PT Mono', monospace
+
+//Vendor Page
+.introPageVendor
+    margin: 11rem 4rem
+    position: relative
+    animation: 2s forwards linear opacityAnimation
+    &__headerTextContainer
+        text-align: right
+        font-family: $paragraph-font
+        font-size: .9rem
+        line-height: 1.3rem
+        white-space: pre-line
+    &__returnButton, &__socialLinks
+        border: 1px solid black
+        color: black
+        text-decoration: none
+        font-family: $paragraph-font
+        font-size: .8rem
+        letter-spacing: 1px
+        will-change: background-color, color
+        background-color: transparent
+        transition: background-color .4s, color .4s
+        cursor: pointer
+        &_:visited
+            color: black
+        &:hover
+            color: white
+            background-color: black
+    &__returnButton
+        padding: .7rem 4rem
+        display: flex
+        align-items: center
+        position: absolute
+        &::before
+            content: "\21E0"
+            margin-right: .5rem
+            font-size: 1.4rem
+    &__socialLinks
+        display: inline-block
+        text-align: center
+        width: 10rem
+        padding: 1rem
+        white-space: nowrap
+    &__contentContainer
+        padding-top: 5rem
+        display: flex
+        gap: 2rem
+        min-height: 50vh
+    &__headline
+        margin-bottom: 5rem
+        font-family: $headline-font
+        font-size: 8rem
+        line-height: 9rem
+        font-weight: 100
+    &__text
+        font-family: $paragraph-font
+        font-size: .9rem
+        line-height: 1.4rem
+    &__imageSocialContainer
+        margin-left: 8rem
+        min-height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    &__list
+        margin-top: 2rem
+        list-style: none
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        gap: 1rem
+        flex-wrap: wrap
+    &__image
+        width: 28rem
+        max-height: auto
+        will-change: opacity
+        opacity: 0
+        animation: 3s forwards linear opacityAnimation
+
+.vendorImages
+    margin: 4rem
+    will-change: background-position-x
+    background: linear-gradient(90deg, black 50%, transparent 0), linear-gradient(90deg, black 50%, transparent 0)
+    background-position: 0 0, 0 15px
+    background-repeat: repeat-x
+    background-size: 25px 1px
+    animation: 1s infinite normal forwards foodVendorDashedLinesAnimation linear
+    &__list
+        padding: 5rem 0
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 4rem
+        list-style: none
+    &__item
+        width: 100%
+        height: 25rem
+        border: 1px solid black
+        display: flex
+        justify-content: center
+        align-items: center
+    &__image
+        max-width: 100%
+        max-height: 100%
+
+@keyframes opacityAnimation
+    0%
+        opacity: 0
+    50%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes foodVendorDashedLinesAnimation
+    0%
+        background-position-x: 0px, 0px
+    100%
+        background-position-x: 25px, -25px

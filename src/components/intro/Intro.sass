@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=PT+Mono&display=swap')
+
+$headline-font: 'EB Garamond', serif
+$paragraph-font: 'PT Mono', monospace
+
+//change introText div textaling is enough
+.introPage
+    margin: 11rem 4rem
+    position: relative
+    font-family: $paragraph-font
+    &__introText
+        text-align: right
+        font-size: .9rem
+        line-height: 1.3rem
+        white-space: pre-line
+    &__logo
+        font-size: 1rem
+        letter-spacing: 1px
+        position: absolute
+        top: 10px
+        left: -10px
+        transform: rotate(90deg)
+        opacity: .3
+        &::after
+            position: absolute
+            bottom: -9px
+            content: "\21E3"
+            margin-left: .5rem
+            font-size: 1.9rem
+            transform: rotate(-90deg)
+    &__headlineContainer
+        padding-top: 8rem
+        display: flex
+        gap: 2rem
+        min-height: 50vh
+    &__headline
+        width: 80%
+        font-family: $headline-font
+        font-size: 15rem
+        line-height: 14rem
+        font-weight: 100
+    &__image
+        width: 28rem
+        height: 33rem
+        will-change: opacity
+        opacity: 0
+        animation: 3s forwards linear opacityAnimation
+
+@keyframes opacityAnimation
+    0%
+        opacity: 0
+    50%
+        opacity: 0
+    100%
+        opacity: 1

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=PT+Mono&display=swap')
+
+$headline-font: 'EB Garamond', serif
+$paragraph-font: 'PT Mono', monospace
+    
+.banner
+    display: flex
+    justify-content: space-around
+    align-items: center
+    &__icon
+        &:nth-child(1)
+            animation: 2s infinite logoAnimation ease-in-out
+        &:nth-child(3)
+            animation: 2s infinite logoAnimationReversedIcon ease-in-out
+    &__textContainer
+        width: 30%
+        text-align: center
+    &__headline
+        margin-bottom: 3rem
+        font-family: $headline-font
+        font-size: 7rem
+        font-weight: 100
+        line-height: 6.5rem
+    &__text
+        font-family: $paragraph-font
+        font-size: 1rem
+
+@keyframes logoAnimation 
+    0%
+        transform: translateY(-1.5rem)
+    50%
+        transform: translateY(1.5rem)
+    100%
+        transform: translateY(-1.5rem)
+
+@keyframes logoAnimationReversedIcon
+    0%
+        transform: translateY(1.5rem) rotate(180deg)
+    50%
+        transform: translateY(-1.5rem) rotate(180deg)
+    100%
+        transform: translateY(1.5rem) rotate(180deg)

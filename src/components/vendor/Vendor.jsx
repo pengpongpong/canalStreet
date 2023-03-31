@@ -1,48 +1,51 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import "./Vendor.sass"
 
-function Vendor({ data, headerText, returnButton }) {
+function Vendor({ data, headerText, returnButton, retail }) {
     const links = data[0].links
     const linksKey = Object.keys(data[0].links);
 
-    const linksItems = linksKey.map((obj, index) => {
+    const linksItems = linksKey?.map((obj, index) => {
         return (
-            <li className="introPageFoodVendor__item" key={index}>
-                <Link className="introPageFoodVendor__socialLinks" to={links[obj]}>{obj}</Link>
+            <li className="introPageVendor__item" key={index}>
+                <Link className="introPageVendor__socialLinks" to={links[obj]}>{obj}</Link>
             </li>
         )
     })
 
     const imageItems = data[0].imageSrcVendorPage?.map((obj, index) => {
         return (
-            <li className="foodVendorImages__item" key={index}>
-                <img className="foodVendorImages__image" src={obj} alt={`${data[0].vendorID} images`} />
+            <li className="vendorImages__item" key={index}>
+                <img className="vendorImages__image" src={obj} alt={`${data[0].vendorID} images`} />
             </li>
         )
     })
 
+    const linkCat = retail ? "retail" : "food"
+
     return (
         <>
-            <section className="introPageFoodVendor">
-                <Link className="introPageFoodVendor__anchor" to="/food">{returnButton}</Link>
-                <div className="introPageFoodVendor__headerText">
+            <section className="introPageVendor">
+                <Link className="introPageVendor__returnButton" to={`/${linkCat}`} >{returnButton}</Link>
+                <div className="introPageVendor__headerTextContainer">
                     <p>{headerText}</p>
                 </div>
-                <div className='introPageFoodVendor__contentContainer'>
-                    <div className="introPageFoodVendor__textContainer">
-                        <h1 className="introPageFoodVendor__headline">{data[0].vendor}</h1>
-                        <p className="introPageFoodVendor__text">{data[0].text}</p>
+                <div className='introPageVendor__contentContainer'>
+                    <div className="introPageVendor__textContainer">
+                        <h1 className="introPageVendor__headline">{data[0].vendor}</h1>
+                        <p className="introPageVendor__text">{data[0].text}</p>
                     </div>
-                    <div className="introPageFoodVendor__imageSocialContainer">
-                        <img className="introPageFoodVendor__image" src={data[0].imageSrc} alt={data[0].headline} />
-                        <ul className="introPageFoodVendor__list">
+                    <div className="introPageVendor__imageSocialContainer">
+                        <img className="introPageVendor__image" src={data[0].imageSrc} alt={data[0].headline} />
+                        <ul className="introPageVendor__list">
                             {linksItems}
                         </ul>
                     </div>
                 </div>
             </section>
-            <section className="foodVendorImages">
-                <ul className="foodVendorImages__list">
+            <section className="vendorImages">
+                <ul className="vendorImages__list">
                     {imageItems}
                 </ul>
             </section>

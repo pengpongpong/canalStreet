@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=PT+Mono&display=swap')
+
+$headline-font: 'EB Garamond', serif
+$paragraph-font: 'PT Mono', monospace
+    
+ 
+//Footer component
+.footerBanner
+    margin: 3rem 4rem
+    padding: 3rem 0
+    display: grid
+    place-items: center
+    background-image: repeating-linear-gradient(-73deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 0,transparent 4px),repeating-linear-gradient(-73deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 0,transparent 4px)
+    background-position: 0 0,0 100%
+    background-size: 100% 12px,100% 12px
+    background-repeat: repeat-x,repeat-x,repeat-y,repeat-y
+    &__headline
+        margin: 1rem
+        font-family: $headline-font
+        font-size: 3rem
+        font-weight: 100
+    &__button
+        margin: 1rem
+        border: 1px solid black
+        padding: 1rem 2.5rem
+        background-color: transparent
+        will-change: color, background-color
+        transition: color .4s, background-color .4s
+        cursor: pointer
+        font-family: $paragraph-font
+        font-size: 1rem
+        &:hover
+            color: white
+            background-color: black
+
+.socials
+    padding: 3rem 4rem
+    &__list
+        display: flex
+        justify-content: space-between
+        gap: 4rem
+        list-style: none
+    &__item
+        width: 100%
+        padding: 3rem 3rem
+        font-family: $paragraph-font
+        font-size: .9rem
+        text-align: center
+        will-change: background-position
+        background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0)
+        background-position: 0 0,0 100%,0 0,100% 0
+        background-repeat: repeat-x,repeat-x,repeat-y,repeat-y
+        background-size: 30px 1px,30px 1px,1px 30px,1px 30px
+        cursor: pointer
+        &:hover
+            animation: .8s infinite boxDashedUnderlineAnimation linear
+    &__anchor
+        text-decoration: none
+        &:visited
+            color: black
+    &__logo
+        margin-bottom: .5rem
+        width: 2.5rem
+    &__text
+        width: 35%
+        margin: 0 auto
+        line-height: 1.3rem
+
+.newsletter
+    margin: 3rem 4rem 2rem 4rem
+    padding: 2rem 4rem
+    display: flex
+    justify-content: space-between
+    font-family: $paragraph-font
+    position: relative
+    will-change: background-position
+    background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(70deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0)
+    background-position: 0 0,0 100%,0 0,100% 0
+    background-repeat: repeat-x,repeat-x,repeat-y,repeat-y
+    background-size: 30px 1px,30px 1px,1px 30px,1px 30px
+    &:hover
+        animation: .8s infinite boxDashedUnderlineAnimation
+        animation-timing-function: linear
+    &__headline
+        width: 22%
+        font-size: 1.5rem
+        font-weight: 100
+    &__emailInput
+        width: 50%
+        padding: 1rem 2rem
+        border: 1px solid black
+        font-family: $paragraph-font
+        font-size: .9rem
+        background-color: transparent
+        &::placeholder
+            color: black
+            opacity: 1
+        &:focus
+            outline: none
+    &__emailButton
+        position: absolute
+        right: 6rem
+        bottom: 40%
+
+.footer
+    margin-bottom: 4rem
+    padding: 0 4rem
+    display: flex
+    justify-content: space-between
+    font-family: $paragraph-font
+    font-size: .8rem
+    &__textContainer
+        display: flex
+        gap: 6rem
+    &__anchor
+        color: black
+        text-decoration: none
+        border-bottom: 1px solid black
+        &:visited
+            color: black
+
+@keyframes boxDashedUnderlineAnimation
+    0%
+        background-position-x: 0px, 0px, 0%, 100%
+        background-position-y: 0%, 100%, 0px, 0px
+    100%
+        background-position-x: 30px, -30px, 0%, 100%
+        background-position-y: 0%, 100%, -30px, 30px

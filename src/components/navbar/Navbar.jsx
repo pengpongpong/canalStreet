@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 import { Link } from "react-router-dom";
-import HomeIcon from "../../assets/images/homeIcon.svg"
+import "./Navbar.sass"
 
 function Navbar({
   backgroundColor,

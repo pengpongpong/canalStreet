@@ -1,6 +1,7 @@
 import React from 'react'
+import "./Intro.sass"
 
-function Intro({page, text, headline, image, imageAlt}) {
+function Intro({ page, text, headline, image, imageAlt }) {
     return (
         <section className="introPage">
             <span className="introPage__logo">{page}</span>
@@ -9,7 +10,7 @@ function Intro({page, text, headline, image, imageAlt}) {
             </div>
             <div className='introPage__headlineContainer'>
                 <h1 className="introPage__headline">{headline}</h1>
-                <img className="introPage__image" src={image} alt={imageAlt} />
+                {image ? <img className="introPage__image" src={image} alt={imageAlt} /> : ""}
             </div>
         </section>
     )

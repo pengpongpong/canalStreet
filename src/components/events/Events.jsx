@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Events.sass"
 
 function Events({ data, bgColor }) {
     return (
