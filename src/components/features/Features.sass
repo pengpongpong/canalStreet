@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=PT+Mono&display=swap')
+
+$headline-font: 'EB Garamond', serif
+    
+.features
+    margin-bottom: 8rem
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 4rem
+    position: relative
+    &__card
+        height: 27rem
+        position: relative
+    &__anchor
+        text-decoration: none
+        color: black
+        &:visited
+            color: black
+    &__image
+        width: 100%
+        height: 100%
+    &__imageHeadline
+        display: inline-block
+        background-color: white
+        border-left: 10px solid #fff
+        font-family: $headline-font
+        font-size: 3rem
+        font-weight: 100
+        position: absolute
+        bottom: -2rem
+        left: 1rem
+    &__headlineSpan
+        background-color: white
+        padding: .8rem 0
+        padding-right: 10px

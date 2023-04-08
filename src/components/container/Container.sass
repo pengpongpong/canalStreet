@@ -1,3 +1,10 @@
+.pageContainer
+    position: relative
+    width: calc(100vw - 180px)
+    color: black
+    animation: opacityAnimation 2s linear forwards
+    z-index: 1
+    
 .BgTopBottomContainer
     margin: 2rem 4rem
     padding: 5rem 0
@@ -5,7 +12,7 @@
     background-position: 0 101%,0 101%,0 0,0 0
     background-size: 93px 50px,93px 50px,100px 50px,100px 50px
     background-repeat: repeat-x
-    animation: 2s infinite zickzackAnimation linear
+    animation: 2s infinite zickzackAnimationTopBottom linear
 
 .BgTopContainer
     margin: 8rem 4rem 2rem 4rem
@@ -16,16 +23,6 @@
     background-repeat: repeat-x
     animation: 2s infinite zickzackAnimationTop linear
 
-//Page container
-.pageContainer
-    position: relative
-    width: calc(100vw - 180px)
-    color: black
-    overflow: hidden
-    animation: opacityAnimation 2s linear forwards
-    z-index: 1
-
-
 @keyframes opacityAnimation
     0%
         opacity: 0
@@ -34,8 +31,7 @@
     100%
         opacity: 1
 
-
-@keyframes zickzackAnimation
+@keyframes zickzackAnimationTopBottom
     0%
         background-position-x: 0px, 0px, 0px, 0px
         background-position-y: 101%, 101%, 0px, 0px

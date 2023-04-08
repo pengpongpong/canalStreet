@@ -11,6 +11,11 @@ $paragraph-font: 'PT Mono', monospace
         &:nth-child(1)
             animation: 2s infinite logoAnimation ease-in-out
         &:nth-child(3)
+            animation: 2s infinite logoAnimationBottomStart ease-in-out
+    &__iconReverse
+        &:nth-child(1)
+            animation: 2s infinite logoAnimation ease-in-out
+        &:nth-child(3)
             animation: 2s infinite logoAnimationReversedIcon ease-in-out
     &__textContainer
         width: 30%
@@ -32,6 +37,14 @@ $paragraph-font: 'PT Mono', monospace
         transform: translateY(1.5rem)
     100%
         transform: translateY(-1.5rem)
+
+@keyframes logoAnimationBottomStart
+    0%
+        transform: translateY(1.5rem)
+    50%
+        transform: translateY(-1.5rem)
+    100%
+        transform: translateY(1.5rem)
 
 @keyframes logoAnimationReversedIcon
     0%

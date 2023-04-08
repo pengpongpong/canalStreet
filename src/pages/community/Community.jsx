@@ -1,38 +1,28 @@
 import React from 'react'
-import { Link } from "react-router-dom"
-import Events from "/src/components/events/Events"
+import { Link, useLoaderData } from "react-router-dom"
+import EventBanner from "/src/components/EventBanner/EventBanner"
 import Banner from "/src/components/banner/Banner"
 import PodcastIcon from "/src/assets/icons/podcastLogo.svg"
 import Footer from "/src/components/footer/Footer"
 import Intro from "/src/components/intro/Intro"
 import BgZickzackTopContainer from "../../components/container/BgZickzackTopContainer"
 import PageContainer from "/src/components/container/PageContainer"
+import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
+import Features from "../../components/features/Features"
 import "./Community.sass"
 
-const eventData =
-  [
-    { date: "03/12", event: "S3E10: Timberlands and Periodic Tables with Peter Sohn (Pixar's \"Elemental\")" },
-    { date: "03/01", event: "Dennis Chung Interview (General Secretary for Jamaican Football Federation) + Karyn Forbes Interview (Pro Player in England From T&T) + SheBelieves Cup Recap + Multiple International Teams on Strike" },
-    { date: "05/03", event: "We're back and we're better!" },
-  ]
-
-const featuresData = [
-  { imageSrc: "/src/assets/images/pages-images/community/community_feat1.jpg", featureText: "CSM Community - Feat 1" },
-  { imageSrc: "/src/assets/images/pages-images/community/community_feat2.jpg", featureText: "CSM Community - Feat 2" },
-  { imageSrc: "/src/assets/images/pages-images/community/community_feat3.jpg", featureText: "CSM Community - Feat 3" },
-  { imageSrc: "/src/assets/images/pages-images/community/community_feat4.jpg", featureText: "CSM Community - Feat 4" }
-]
-
-const featuresItems = featuresData.map(obj => {
-  return (
-    <div className="features__card">
-      <img className="features__image" src={obj.imageSrc} alt="Community people" />
-      <h3 className="features__imageHeadline"><span className='features__headlineSpan'>{obj.featureText}</span></h3>
-    </div>
-  )
-})
-
 function Community() {
+  const data = useLoaderData()
+
+  const featuresItems = data.featuresData.map(obj => {
+    return (
+      <div className="features__card">
+        <img className="features__image" src={obj.imageSrc} alt="Community people" />
+        <h3 className="features__imageHeadline"><span className='features__headlineSpan'>{obj.featureText}</span></h3>
+      </div>
+    )
+  })
+
   return (
     <PageContainer left="180px" >
       <Intro
@@ -64,24 +54,22 @@ function Community() {
             <Link className="events__anchor"><p>Taiwanese Wave</p></Link>
           </div>
         </section>
-        <Link to="" className="communityEvents__anchor">view all</Link>
+        <Link to="/community/event" className="communityEvents__anchor">view all</Link>
       </section>
-      <section className="features">
-        <h2 className="features__headline">Features</h2>
-        <div className="features__cardContainer">
-          {featuresItems}
-        </div>
-        <Link to="" className="communityEvents__anchor">view all stories</Link>
+      <section className="featuresBanner">
+        <h2 className="featuresBanner__headline">Features</h2>
+        <Features data={data.featuresData} />
+        <Link to="/community/feature" className="communityEvents__anchor">view all stories</Link>
       </section>
       <BgZickzackTopContainer>
         <Banner
           image={PodcastIcon}
-          imageAlt="podcast icon"
           headline="Market Radio"
           text="Podcasted from the market" />
       </BgZickzackTopContainer>
-      <Events data={eventData}
+      <EventBanner data={data.communityPodcastData}
         bgColor="#ffb400" />
+      <VendorRegisterBanner />
       <Footer />
     </PageContainer>
   )

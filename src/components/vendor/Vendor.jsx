@@ -1,10 +1,16 @@
-import React from 'react'
-import { Link } from "react-router-dom"
-import "./Vendor.sass"
+import React from 'react';
+import { Link } from "react-router-dom";
+import "./Vendor.sass";
+import ImageSlider from "../image-slider/ImageSlider";
+import ReturnButtonEl from "./returnButtonEl"
 
-function Vendor({ data, headerText, returnButton, retail }) {
-    const links = data[0].links
-    const linksKey = Object.keys(data[0].links);
+function Vendor({ data, headerText, returnButtonText, retail, community, event, feature }) {
+    const links = data[0]?.links
+    let linksKey;
+
+    if (data[0].links) {
+        linksKey = Object.keys(data[0].links);
+    }
 
     const linksItems = linksKey?.map((obj, index) => {
         return (
@@ -22,22 +28,25 @@ function Vendor({ data, headerText, returnButton, retail }) {
         )
     })
 
-    const linkCat = retail ? "retail" : "food"
-
     return (
         <>
             <section className="introPageVendor">
-                <Link className="introPageVendor__returnButton" to={`/${linkCat}`} >{returnButton}</Link>
+                <ReturnButtonEl
+                    retail={retail}
+                    community={community}
+                    feature={feature}
+                    returnButtonText={returnButtonText}
+                    />
                 <div className="introPageVendor__headerTextContainer">
-                    <p>{headerText}</p>
+                    {headerText ? <p>{headerText}</p> : ""}
                 </div>
                 <div className='introPageVendor__contentContainer'>
                     <div className="introPageVendor__textContainer">
-                        <h1 className="introPageVendor__headline">{data[0].vendor}</h1>
+                        <h1 className="introPageVendor__headline">{data[0].vendor || data[0].event}</h1>
                         <p className="introPageVendor__text">{data[0].text}</p>
                     </div>
                     <div className="introPageVendor__imageSocialContainer">
-                        <img className="introPageVendor__image" src={data[0].imageSrc} alt={data[0].headline} />
+                        <img className="introPageVendor__image" src={data[0].imageSrc} alt={data[0].event} />
                         <ul className="introPageVendor__list">
                             {linksItems}
                         </ul>
@@ -45,9 +54,12 @@ function Vendor({ data, headerText, returnButton, retail }) {
                 </div>
             </section>
             <section className="vendorImages">
-                <ul className="vendorImages__list">
+                {community ? <div className="vendorImages__slideContainer">
+                    <ImageSlider data={data[0].imageSrcVendorPage} />
+                </div> : <ul className="vendorImages__list">
                     {imageItems}
-                </ul>
+                </ul>}
+
             </section>
         </>
     )

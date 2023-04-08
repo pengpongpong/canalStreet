@@ -4,6 +4,7 @@ import "./VendorGrid.sass"
 
 function VendorGrid({ vendorData, retail }) {
 
+  //enter vendor card -> display image
   const enterVendor = (e) => {
     const foodImageContainer = document.querySelector(".vendorImage");
     const randomX = Math.floor(Math.random() * 100) * 10 + 60;
@@ -17,6 +18,7 @@ function VendorGrid({ vendorData, retail }) {
     });
   };
 
+  //exit vendor card -> hide image
   const exitVendor = () => {
     const foodImageContainer = document.querySelector(".vendorImage");
     foodImageContainer.childNodes.forEach((obj) => {

@@ -4,7 +4,7 @@ import "./Container.sass"
 function PageContainer({ children, left, id }) {
 
     const containerDistance = left ? left : "0px"
-
+/* 
     if (id) {
         useEffect(() => {
             window.scrollTo(0, 0)
@@ -13,7 +13,7 @@ function PageContainer({ children, left, id }) {
         useEffect(() => {
             window.scrollTo(0, 0)
         }, [])
-    }
+    } */
 
     return (
         <section className='pageContainer' style={{ left: containerDistance }}>

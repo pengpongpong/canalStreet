@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=PT+Mono&display=swap')
 
 $paragraph-font: 'PT Mono', monospace
-    
-//Event component
+
 .pageEvents
     padding: 1rem 4rem
     &__list
         display: flex
         justify-content: space-between
         position: relative
-        padding: 75px 0 100px
+        padding: 4rem 0 5rem 0
         list-style: none
         background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0)
-        /* background-position: 0 0,0 100%,left 14px,0 calc(100% - 14px) */
         background-position-x: 0px, 0px, 0px, 0px
         background-position-y: 0px, 14px, 100%, calc(100% - 14px)
         background-repeat: repeat-x,repeat-x,repeat-x,repeat-x
@@ -31,14 +29,14 @@ $paragraph-font: 'PT Mono', monospace
         letter-spacing: 1.5px
         line-height: 1.3rem
     &__button
+        padding: 1rem 3rem
         font-family: $paragraph-font
         background-color: transparent
         border: 1px solid black
-        padding: 1rem 3rem
         position: relative
         bottom: .5rem
         left: 50%
-        transform: translateY(-50%) translateX(-50%)
+        transform: translate(-50%, -50%)
         will-change: background-color, color
         transition: background-color .4s, color .4s
         cursor: pointer

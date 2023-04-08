@@ -8,6 +8,7 @@ import FoodHall from "/src/assets/images/pages-images/food/foodImage.jpg";
 import VendorGrid from "/src/components/vendorGrid/VendorGrid";
 import BgZickZackTopBottomContainer from "../../components/container/BgZickZackTopBottomContainer";
 import PageContainer from "/src/components/container/PageContainer"
+import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 
 function Food() {
   const data = useLoaderData()
@@ -26,11 +27,11 @@ function Food() {
       <BgZickZackTopBottomContainer>
         <Banner
           image={SmileyIcon}
-          imageAlt="smiley icon"
           headline="The Best of NYC"
           text="All under one roof!"
         />
       </BgZickZackTopBottomContainer>
+      <VendorRegisterBanner/>
       <Footer />
     </PageContainer>
   );

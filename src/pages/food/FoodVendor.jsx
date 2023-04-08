@@ -7,6 +7,7 @@ import Footer from "/src/components/footer/Footer"
 import Vendor from "/src/components/vendor/Vendor"
 import BgZickzackTopContainer from "../../components/container/BgZickzackTopContainer"
 import PageContainer from "/src/components/container/PageContainer"
+import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 
 function FoodVendor() {
   const { id } = useParams()
@@ -22,7 +23,7 @@ function FoodVendor() {
         <Vendor
           data={data}
           headerText={`Food Hall Hours:\nMon – Sun: 11:00AM - 8:00PM`}
-          returnButton="all food"
+          returnButtonText="all food"
         />
         <BgZickzackTopContainer>
           <VendorBanner
@@ -31,6 +32,7 @@ function FoodVendor() {
           />
         </BgZickzackTopContainer>
         <VendorGrid vendorData={loaderData.foodVendors} />
+        <VendorRegisterBanner/>
         <Footer />
       </PageContainer>
     )

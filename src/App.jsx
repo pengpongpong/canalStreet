@@ -6,8 +6,12 @@ import Food from "./pages/food/Food"
 import Retail from "./pages/retail/Retail"
 import Community from "./pages/community/Community";
 import Policy from "./pages/policy/Policy";
-import FoodVendor from "./pages/foodVendor/FoodVendor"
-import RetailVendor from "./pages/retailVendor/RetailVendor";
+import FoodVendor from "./pages/food/FoodVendor"
+import RetailVendor from "./pages/retail/RetailVendor";
+import CommunityEvents from "./pages/community/CommunityEvents";
+import CommunityEventVendor from "./pages/community/CommunityEventVendor";
+import CommunityFeatures from "./pages/community/CommunityFeatures";
+import CommunityFeaturesVendor from "./pages/community/CommunityFeaturesVendor";
 
 export async function getVendorData() {
   return fetch("/src/data/data.json")
@@ -20,16 +24,17 @@ function App() {
       path: "/",
       element: (
         <>
-          <Navbar backgroundColor="#fff" homeClass={true} />
+          <Navbar backgroundColor="#fff" homeClass />
           <Home />
         </>
       ),
+      loader: getVendorData
     },
     {
       path: "/policy",
       element: (
         <>
-          <Navbar backgroundColor="#fff" homeClass={true} />
+          <Navbar backgroundColor="#fff" homeClass />
           <Policy />
         </>
       )
@@ -38,7 +43,7 @@ function App() {
       path: "/food",
       element: (
         <>
-          <Navbar backgroundColor="#5ea3ec" foodClass={true} />
+          <Navbar backgroundColor="#5ea3ec" foodClass />
           <Food />
         </>
       ),
@@ -48,7 +53,7 @@ function App() {
       path: "food/:id",
       element: (
         <>
-          <Navbar backgroundColor="#5ea3ec" foodClass={true} />
+          <Navbar backgroundColor="#5ea3ec" foodClass />
           <FoodVendor />
         </>
       ),
@@ -58,7 +63,7 @@ function App() {
       path: "/retail",
       element: (
         <>
-          <Navbar backgroundColor="#f64444" retailClass={true} />
+          <Navbar backgroundColor="#f64444" retailClass />
           <Retail />
         </>
       ),
@@ -68,7 +73,7 @@ function App() {
       path: "retail/:id",
       element: (
         <>
-          <Navbar backgroundColor="#5ea3ec" retailClass={true} />
+          <Navbar backgroundColor="#5ea3ec" retailClass />
           <RetailVendor />
         </>
       ),
@@ -78,10 +83,51 @@ function App() {
       path: "/community",
       element: (
         <>
-          <Navbar backgroundColor="#ffb400" communityClass={true} />
+          <Navbar backgroundColor="#ffb400" communityClass />
           <Community />
         </>
       ),
+      loader: getVendorData
+    },
+    {
+      path: "/community/event",
+      element: (
+        <>
+          <Navbar backgroundColor="#ffb400" communityClass />
+          <CommunityEvents />
+        </>
+      ),
+      loader: getVendorData
+    },
+    {
+      path: "/community/event/:id",
+      element: (
+        <>
+          <Navbar backgroundColor="#ffb400" communityClass />
+          <CommunityEventVendor />
+        </>
+      ),
+      loader: getVendorData
+    },
+    {
+      path: "/community/feature",
+      element: (
+        <>
+          <Navbar backgroundColor="#ffb400" communityClass />
+          <CommunityFeatures />
+        </>
+      ),
+      loader: getVendorData
+    },
+    {
+      path: "/community/feature/:id",
+      element: (
+        <>
+          <Navbar backgroundColor="#ffb400" communityClass />
+          <CommunityFeaturesVendor />
+        </>
+      ),
+      loader: getVendorData
     },
   ]);
 

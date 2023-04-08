@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from "../../components/footer/Footer"
 import PageContainer from "/src/components/container/PageContainer"
+import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import "./Policy.sass"
 
 function Policy() {
@@ -30,6 +31,7 @@ function Policy() {
                 <p className="policy__text">While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.</p>
                 <p className="policy__text">If you feel that we are not abiding by this privacy policy, you should contact us immediately at info@canalstreet.market</p>
             </div>
+            <VendorRegisterBanner/>
             <Footer/>
         </PageContainer>
     )

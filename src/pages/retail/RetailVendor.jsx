@@ -7,6 +7,7 @@ import Footer from "/src/components/footer/Footer"
 import RoseIcon from "/src/assets/icons/rose.svg"
 import BgZickzackTopContainer from "../../components/container/BgZickzackTopContainer"
 import PageContainer from "/src/components/container/PageContainer"
+import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 
 function RetailVendor() {
     const { id } = useParams()
@@ -20,8 +21,8 @@ function RetailVendor() {
                 <Vendor
                     data={data}
                     headerText={`Retail Market Hours:\nMon – Sat: 11AM – 7PM\nSun: 12AM – 6PM`}
-                    returnButton="all retail"
-                    retail={true}
+                    returnButtonText="all retail"
+                    retail
                 />
                 <BgZickzackTopContainer>
                     <VendorBanner
@@ -30,6 +31,7 @@ function RetailVendor() {
                     />
                 </BgZickzackTopContainer>
                 <VendorGrid vendorData={loaderData.retailVendors} retail={true} />
+                <VendorRegisterBanner/>
                 <Footer />
             </PageContainer>
         )

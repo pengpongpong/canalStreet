@@ -1,0 +1,57 @@
+.imageSliderContainer
+    margin: 4rem auto
+    width: 1140px
+    height: 830px
+    display: flex
+
+.swiper
+    width: 100%
+
+.swiper-slide
+    display: grid !important
+    place-items: center
+    
+.image
+    max-width: 100%
+    height: 100%
+    object-fit: cover
+
+.button-slider-prev, .button-slider-next
+    display: grid
+    place-content: center
+    width: 100%
+    height: 100%
+    max-width: 240px
+    border-top: 1px solid black
+    border-bottom: 1px solid black
+    background-image: repeating-linear-gradient(-56deg,#000,#000 1px,transparent 0,transparent 18px)
+    background-position: 0 0
+    animation: .4s infinite normal buttonAnimation linear paused
+    cursor: pointer
+    &:hover
+        animation-play-state: running
+    &:hover > .iconContainer
+        transform: scale(1.2)
+
+.button-slider-prev
+    border-left: 1px solid black
+    
+.button-slider-next
+    border-right: 1px solid black
+
+.iconContainer
+    display: grid
+    place-items: center
+    width: 3rem
+    height: 3rem
+    background-color: #ffb400
+    border: 1px solid black
+    border-radius: 50%
+    transform: scale(1)
+    transition: transform .3s
+    
+@keyframes buttonAnimation
+    0%
+        background-position-x: 0
+    100%
+        background-position-x: 22px

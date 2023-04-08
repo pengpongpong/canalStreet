@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Footer from "/src/components/footer/Footer"
-import Events from "/src/components/events/Events";
+import EventBanner from "/src/components/EventBanner/EventBanner";
 import PageContainer from "/src/components/container/PageContainer"
+import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import "./Home.sass"
 
 function Home() {
+  const data = useLoaderData()
 
   window.addEventListener("scroll", (e) => {
     const bgImage = document.getElementById("bgContainer");
@@ -20,19 +22,6 @@ function Home() {
       descriptions.style.opacity = "1";
     }
   });
-
-  const eventsData =
-    [
-      { date: "12/02", event: "Small Business Retail Pop Up Weekend!" },
-      {
-        date: "02/07", event:
-          "New Balance x Paperboy Paris by Greenhouse @ Canal Street Market"
-      },
-      {
-        date: "12/11",
-        event: "Hack City 12/11<"
-      }
-    ]
 
   const marketDescription = [
     { imageSrc: "src/assets/images/pages-images/home/canalStreetMarket.jpg", imageAlt: "Canal Street Market", description: "Merging retail, food, art, and culture, Canal Street Market highlights top retail and design concepts, restaurants, and up-and-coming players in the downtown New York City community." },
@@ -57,12 +46,9 @@ function Home() {
     <PageContainer>
       <section className="homePage">
         <h1 className="homePage__headline">
-          Canal Street Market is a carefully curated retail market, food hall &
-          community space open year-round at 265 Canal Street.{" "}
-          <Link className="homePage__anchor" to="/community">
-            Support Small Business{" "}
-          </Link>
-          this weekend!
+          Discover the Street Market - open all year round, showcasing a diverse range of small businesses and artisanal treasures. Join us in{" "}
+          <Link className="homePage__anchor" to="/community">supporting small business</Link>{" "}
+          and experience the best of our vibrant community at the Street Market!
         </h1>
       </section>
       <div className="bgContainer" id="bgContainer"></div>
@@ -77,8 +63,8 @@ function Home() {
         <h2 className="eventsBanner__headline">{`Market\nEvents`}</h2>
         <span className="eventsBanner__logo" aria-hidden={true}>活動</span>
       </section>
-      <Events
-        data={eventsData}
+      <EventBanner
+        data={data.eventData}
         bgColor="#fff" />
       <section className="address">
         <div className="address__box">
@@ -88,6 +74,7 @@ function Home() {
           <img className="address__map" src="src/assets/images/pages-images/home/map.jpg"></img>
         </div>
       </section>
+      <VendorRegisterBanner/>
       <Footer />
     </PageContainer>
   );

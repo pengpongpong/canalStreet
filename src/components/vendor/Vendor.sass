@@ -3,17 +3,20 @@
 $headline-font: 'EB Garamond', serif
 $paragraph-font: 'PT Mono', monospace
 
-//Vendor Page
 .introPageVendor
     margin: 11rem 4rem
     position: relative
-    animation: 2s forwards linear opacityAnimation
     &__headerTextContainer
+        position: absolute
         text-align: right
+        right: 0
+        top: 0
         font-family: $paragraph-font
         font-size: .9rem
         line-height: 1.3rem
         white-space: pre-line
+    &__buttonContainer
+        display: flex
     &__returnButton, &__socialLinks
         border: 1px solid black
         color: black
@@ -21,6 +24,7 @@ $paragraph-font: 'PT Mono', monospace
         font-family: $paragraph-font
         font-size: .8rem
         letter-spacing: 1px
+        white-space: nowrap
         will-change: background-color, color
         background-color: transparent
         transition: background-color .4s, color .4s
@@ -31,14 +35,17 @@ $paragraph-font: 'PT Mono', monospace
             color: white
             background-color: black
     &__returnButton
+        width: 14rem
         padding: .7rem 4rem
         display: flex
         align-items: center
-        position: absolute
+        position: relative
         &::before
             content: "\21E0"
             margin-right: .5rem
             font-size: 1.4rem
+            position: relative
+            bottom: 1px
     &__socialLinks
         display: inline-block
         text-align: center
@@ -83,13 +90,22 @@ $paragraph-font: 'PT Mono', monospace
         animation: 3s forwards linear opacityAnimation
 
 .vendorImages
-    margin: 4rem
+    margin: 0rem 4rem
+    padding-top: 1rem
     will-change: background-position-x
-    background: linear-gradient(90deg, black 50%, transparent 0), linear-gradient(90deg, black 50%, transparent 0)
+    background: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0)
     background-position: 0 0, 0 15px
     background-repeat: repeat-x
     background-size: 25px 1px
-    animation: 1s infinite normal forwards foodVendorDashedLinesAnimation linear
+    animation: 1s infinite normal forwards vendorDashedLinesAnimation linear
+    &__slideContainer
+        min-height: 10rem
+        padding-bottom: 1rem
+        background: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0)
+        background-position: 0 100%, 0 calc(100% - 15px)
+        background-repeat: repeat-x
+        background-size: 25px 1px
+        animation: 1s infinite normal forwards vendorDashedLinesAnimation linear
     &__list
         padding: 5rem 0
         display: grid
@@ -106,6 +122,20 @@ $paragraph-font: 'PT Mono', monospace
     &__image
         max-width: 100%
         max-height: 100%
+    &__slideImage
+        max-width: 100%
+        height: 100%
+    &__imageContainer
+        width: 25rem
+        height: 30rem
+        opacity: 0
+        transform: translateX(100%)
+        transition: transform .5s
+        &--active 
+            opacity: 1
+            transform: translateX(0)
+    &__container
+        display: flex
 
 @keyframes opacityAnimation
     0%
@@ -115,7 +145,7 @@ $paragraph-font: 'PT Mono', monospace
     100%
         opacity: 1
 
-@keyframes foodVendorDashedLinesAnimation
+@keyframes vendorDashedLinesAnimation
     0%
         background-position-x: 0px, 0px
     100%

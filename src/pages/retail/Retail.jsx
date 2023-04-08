@@ -8,6 +8,7 @@ import RetailMarket from "/src/assets/images/pages-images/retail/retailMarket.jp
 import RoseIcon from "/src/assets/icons/rose.svg"
 import BgZickZackTopBottomContainer from "../../components/container/BgZickZackTopBottomContainer"
 import PageContainer from "/src/components/container/PageContainer"
+import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 
 function Retail() {
   const data = useLoaderData()
@@ -25,11 +26,11 @@ function Retail() {
       <BgZickZackTopBottomContainer>
         <Banner
           image={RoseIcon}
-          imageAlt="smiley icon"
           headline="The Best of NYC"
           text="All under one roof!"
         />
       </BgZickZackTopBottomContainer>
+      <VendorRegisterBanner/>
       <Footer />
     </PageContainer>
   )

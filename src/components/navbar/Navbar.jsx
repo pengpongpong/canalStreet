@@ -11,35 +11,21 @@ function Navbar({
   foodClass,
 }) {
 
-  window.addEventListener("scroll", () => {
-    const navIcon = document.querySelector(".homeIcon")
-    if(navIcon) {
-      if (window.pageYOffset > 100) {
-        navIcon.style.opacity = "0"
-        navIcon.style.transition = "opacity .5s"
-      };
-      
-      if (window.pageYOffset < 160) {
-        navIcon.style.opacity = "1"
-        navIcon.style.transition = "opacity .5s"
-      };
-    } 
-  })
 
   const homeStyle = classNames(
-    { "nav__item home": true },
+    { "nav__item": true },
     { "nav__item--open": homeClass }
   );
   const foodStyle = classNames(
-    { "nav__item food": true },
+    { "nav__item": true },
     { "nav__item--open": foodClass }
   );
   const retailStyle = classNames(
-    { "nav__item retail": true },
+    { "nav__item": true },
     { "nav__item--open": retailClass }
   );
   const communityStyle = classNames(
-    { "nav__item community": true },
+    { "nav__item": true },
     { "nav__item--open": communityClass }
   );
 

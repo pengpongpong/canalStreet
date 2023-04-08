@@ -286,5 +286,171 @@
                 "Facebook": "https://www.facebook.com"
             }
         }
+    ],
+    "communityPodcastData": [
+        {
+            "date": "03/12",
+            "event": "S3E10: Timberlands and Periodic Tables with Peter Sohn (Pixar's \"Elemental\")"
+        },
+        {
+            "date": "03/01",
+            "event": "Dennis Chung Interview (General Secretary for Jamaican Football Federation) + Karyn Forbes Interview (Pro Player in England From T&T) + SheBelieves Cup Recap + Multiple International Teams on Strike"
+        },
+        {
+            "date": "05/03",
+            "event": "We're back and we're better!"
+        }
+    ],
+    "featuresData": [
+        {
+            "imageSrc": "/src/assets/images/pages-images/community/community_feat1.jpg",
+            "imageSidebar": "/src/assets/images/food-vendors/burrito-bandito/burritoBandito1.jpg",
+            "featureText": "CSM Community - Burrito Bandito",
+            "vendor": "Burrito Bandito",
+            "type": "food",
+            "headline": "Mexican Burrito",
+            "owner": "Carlos Rodriguez",
+            "description": ["Burrito Bandito is a popular street food vendor in the downtown area, known for its generous portions and bold, flavorful fillings.", "Owner Carlos Rodriguez learned to make burritos from his grandmother and has been perfecting his craft for over a decade, using fresh, locally sourced ingredients whenever possible."],
+            "interview": [
+                {
+                    "question": "Can you tell us a bit about Burrito Bandito and what inspired you to start the business?",
+                    "answer": "Burrito Bandito is a street market vendor that specializes in delicious, homemade burritos. We use fresh, high-quality ingredients to create a variety of different burrito fillings, from classic carne asada to vegan black bean and sweet potato. I was inspired to start the business after years of working in restaurants and dreaming of owning my own food business. I saw a need for affordable, high-quality burritos that could be enjoyed on the go, and decided to take the plunge and start my own venture."
+                },
+                {
+                    "question": "What sets Burrito Bandito apart from other burrito vendors?",
+                    "answer": "I think what sets us apart is the quality of our ingredients and the care we put into each and every burrito we make. We use only the freshest produce, the highest-quality meats, and make all of our sauces and salsas from scratch. We also offer a wide variety of fillings, including vegetarian and vegan options, so there's something for everyone."
+                },
+                {
+                    "question": "What's your most popular burrito filling?",
+                    "answer": "Our most popular filling is definitely the carne asada. It's a classic for a reason - the tender, marinated steak combined with fresh pico de gallo, guacamole, and sour cream is a winning combination that our customers love."
+                },
+                {
+                    "question": "What's the biggest challenge you face as a street market vendor?",
+                    "answer": "I think the biggest challenge is probably the weather. When it's hot out, people tend to gravitate towards our cold drinks and lighter menu options, while on colder days, they're more likely to opt for something warm and hearty. It can be tricky to strike a balance and make sure we're catering to all of our customers' needs, regardless of the weather."
+                },
+                {
+                    "question": "What's next for Burrito Bandito?",
+                    "answer": "We're always looking for ways to grow and expand our business. Right now, we're exploring the possibility of setting up a food truck so that we can reach even more customers and bring our delicious burritos to different parts of the city. We're also constantly experimenting with new recipes and flavors, so stay tuned for some exciting new menu items!"
+                }
+            ]
+        },
+        {
+            "imageSrc": "/src/assets/images/pages-images/community/community_feat2.jpg",
+            "imageSidebar": "",
+            "featureText": "CSM Community - Feat 2",
+            "vendor": "Feat 2",
+            "owner": "Carlos Rodriguez",
+            "description": ["", ""],
+            "interview": [
+                {
+                    "question": "",
+                    "answer": ""
+                },
+                {
+                    "question": "",
+                    "answer": ""
+                },
+                {
+                    "question": "",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "imageSrc": "/src/assets/images/pages-images/community/community_feat3.jpg",
+            "featureText": "CSM Community - Feat 3",
+            "vendor": "Feat 3",
+            "owner": "Carlos Rodriguez",
+            "description": ["", ""],
+            "interview": [
+                {
+                    "question": "",
+                    "answer": ""
+                },
+                {
+                    "question": "",
+                    "answer": ""
+                },
+                {
+                    "question": "",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "imageSrc": "/src/assets/images/pages-images/community/community_feat4.jpg",
+            "featureText": "CSM Community - Feat 4",
+            "vendor": "Feat 4",
+            "owner": "Carlos Rodriguez",
+            "description": ["", ""],
+            "interview": [
+                {
+                    "question": "",
+                    "answer": ""
+                },
+                {
+                    "question": "",
+                    "answer": ""
+                },
+                {
+                    "question": "",
+                    "answer": ""
+                }
+            ]
+        }
+    ],
+    "eventData": [
+        {
+            "date": "12/02",
+            "event": "Small Business Retail Pop Up Weekend!",
+            "href": "Small Business Retail",
+            "imageSrc": "/src/assets/images/communityEvents/small-business/smallBusiness1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/communityEvents/greenhouse/greenhouse1.jpg",
+                "/src/assets/images/communityEvents/hack-city/hackCity1.jpg",
+                "/src/assets/images/communityEvents/fantasyland/fantasyland1.jpg"
+            ],
+            "text": ""
+        },
+        {
+            "date": "02/07",
+            "event": "New Balance x Paperboy Paris by Greenhouse @ Canal Street Market",
+            "href": "New Balance x Paperboy Paris",
+            "imageSrc": "/src/assets/images/communityEvents/greenhouse/greenhouse1.jpg",
+            "imageSrcVendorPage": [],
+            "text": ""
+        },
+        {
+            "date": "12/11",
+            "event": "Hack City 12/11",
+            "href": "Hack City",
+            "imageSrc": "/src/assets/images/communityEvents/hack-city/hackCity1.jpg",
+            "imageSrcVendorPage": [],
+            "text": ""
+        },
+        {
+            "date": "12/01",
+            "event": "Fantasyland Fairytale Ball - A Magical Evening of Enchantment!",
+            "href": "Fantasyland Fairytale Ball",
+            "imageSrc": "/src/assets/images/communityEvents/fantasyland/fantasyland1.jpg",
+            "imageSrcVendorPage": [],
+            "text": "Immerse yourself in a world of fantasy at the Fantasyland Fairytale Ball! Dance the night away and enjoy live performances from fantastical creatures and fairy tale characters. Savor delicious refreshments and capture memories with our royal photo booth. The perfect event for kids and adults alike. Don't miss your chance to experience the enchantment - get your tickets today!"
+        },
+        {
+            "date": "11/25",
+            "event": "Midnight Masquerade - A Night of Mystery and Intrigue",
+            "href": "Midnight Masquerade",
+            "imageSrc": "/src/assets/images/communityEvents/midnight-masquerade/midnightMasquerade1.jpg",
+            "imageSrcVendorPage": [],
+            "text": "Don your finest attire and mask for the Midnight Masquerade! Dance the night away to live music, indulge in delicious refreshments, and take part in fun activities. Surprises await at every turn in this alluring and mysterious event. Experience the magic of a night filled with secrets and intrigue. Get your tickets today!"
+        },
+        {
+            "date": "11/15",
+            "event": "Sip & Paint - Unleash Your Inner Artist with Wine and Canvas!",
+            "href": "Sip & Paint",
+            "imageSrc": "/src/assets/images/communityEvents/sip-paint/sipPaint1.jpg",
+            "imageSrcVendorPage": [],
+            "text": "Join us for a fun night of painting and wine at Sip & Paint! No experience needed - our talented instructors will guide you through creating a masterpiece on canvas. Enjoy delicious wine and refreshments while unleashing your inner artist. Perfect for a unique date night or fun night out with friends. Get your tickets today!"
+        }
     ]
 }
