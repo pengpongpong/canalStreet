@@ -6,6 +6,21 @@ import PageContainer from "/src/components/container/PageContainer"
 import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import "./Home.sass"
 
+const MarketDescriptionItems = ({ arr }) => (
+  arr.map(obj => {
+    return (
+      <li className="descriptions__item" key={obj.imageAlt}>
+        <img
+          className="descriptions__image"
+          src={obj.imageSrc}
+          alt={obj.imageAlt}
+        />
+        <p className="descriptions__text">{obj.description}</p>
+      </li>
+    )
+  })
+)
+
 function Home() {
   const data = useLoaderData()
 
@@ -29,19 +44,6 @@ function Home() {
     { imageSrc: "src/assets/images/pages-images/home/foodHall.jpg", imageAlt: "Food Hall", description: `Food Hall Hours:\nMon – Sun: 11:00AM - 8:00PM` }
   ]
 
-  const marketDescriptionItems = marketDescription.map(obj => {
-    return (
-      <li className="descriptions__item" key={obj.imageAlt}>
-        <img
-          className="descriptions__image"
-          src={obj.imageSrc}
-          alt={obj.imageAlt}
-        />
-        <p className="descriptions__text">{obj.description}</p>
-      </li>
-    )
-  })
-
   return (
     <PageContainer>
       <section className="homePage">
@@ -55,7 +57,9 @@ function Home() {
       <section className="descriptions">
         <h2 className="descriptions__headline">A New Kind of Market</h2>
         <ul className="descriptions__list">
-          {marketDescriptionItems}
+          <MarketDescriptionItems
+            arr={marketDescription}
+          />
         </ul>
       </section>
       <section className="eventsBanner">
@@ -74,7 +78,7 @@ function Home() {
           <img className="address__map" src="src/assets/images/pages-images/home/map.jpg"></img>
         </div>
       </section>
-      <VendorRegisterBanner/>
+      <VendorRegisterBanner />
       <Footer />
     </PageContainer>
   );
