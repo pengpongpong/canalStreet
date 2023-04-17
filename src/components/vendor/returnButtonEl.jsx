@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import "./Vendor.sass";
 
-function ReturnButtonEl({ retail, community, feature, returnButtonText }) {
+function ReturnButtonEl({ retail, community, feature, returnButtonText, radio }) {
 
     let linkCat;
 
@@ -16,13 +16,28 @@ function ReturnButtonEl({ retail, community, feature, returnButtonText }) {
         linkCat = "food"
     }
 
-    let communityLink = feature ? "feature" : "event"
-    let communityLinkText = feature ? "Features" : "Events"
+    let communityLink;
+    let communityLinkText;
 
+
+    if (feature) {
+        communityLink = "feature"
+        communityLinkText = "Features"
+    }
+    else if (radio) {
+        communityLink = "radio"
+        communityLinkText = "Radio"
+    } else {
+        communityLink = "event"
+        communityLinkText = "Events"
+    }
+
+    const test = communityLink.charAt(0).toUpperCase + communityLink.slice(1)
+    console.log("🚀 ~ file: returnButtonEl.jsx:36 ~ ReturnButtonEl ~ test:", test)
     return (
         <div className="introPageVendor__buttonContainer">
             <Link className="introPageVendor__returnButton" to={`/${linkCat}`} >{returnButtonText}</Link>
-            {community ? <Link style={{ borderLeft: 0 }} className="introPageVendor__returnButton" to={`/community/${communityLink}`} >{communityLinkText}</Link> : ""}
+            {community ?? <Link style={{ borderLeft: "0px" }} className="introPageVendor__returnButton" to={`/community/${communityLink}`} >{communityLinkText}</Link>}
         </div>
     )
 }

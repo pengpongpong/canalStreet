@@ -16,28 +16,29 @@ function CommunityFeaturesVendor() {
     if (featureVendorData) {
 
         let vendorType = featureVendorData[0].type === "food" ? data.foodVendors : data.retailVendors
+        let vendorLinkType = featureVendorData[0].type === "food" ? "food" : "retail"
 
         const vendorData = vendorType.filter(obj => obj.vendor === featureVendorData[0].vendor)
-        console.log("🚀 ~ file: CommunityFeaturesVendor.jsx:21 ~ CommunityFeaturesVendor ~ vendorData:", vendorData)
+        const vendorLink = `/${vendorLinkType}/${vendorData[0].vendor.replace(/\s/gi, "-")}`
 
         const qaItem = featureVendorData[0].interview.map((obj, index) => {
             return (
-                <li key={index}>
-                    <p>{obj.question}</p>
-                    <p>{obj.answer}</p>
+                <li className="vendorDescription__item" key={index}>
+                    <p className="vendorDescription__question">{obj.question}</p>
+                    <p className="vendorDescription__text">{obj.answer}</p>
                 </li>
             )
         })
 
         const descriptionItem = featureVendorData[0].description.map((obj, index) => {
             return (
-                <li key={index}><p>{obj}</p></li>
+                <li className="vendorDescription__item" key={index}><p>{obj}</p></li>
             )
         })
 
         return (
-            <PageContainer left="180px">
-                <div style={{ margin: "10rem 4rem" }}>
+            <PageContainer left="180px" id={id}>
+                <div className="featHeader__buttonContainer">
                     <ReturnButtonEl
                         community
                         feature
@@ -48,17 +49,18 @@ function CommunityFeaturesVendor() {
                 </section>
                 <section className="featVendor">
                     <div className="vendorDescription">
-                        <p>{featureVendorData[0].owner}</p>
-                        <ul>{descriptionItem}</ul>
-                        <img className="vendorDescription__image" src="" alt="vendor image" />
-                        <ul>
+                        <p className="vendorDescription__text">{featureVendorData[0].owner}</p>
+                        <ul className="vendorDescription__list">{descriptionItem}</ul>
+                        {/* <img className="vendorDescription__image" src="" alt="vendor image" /> */}
+                        <ul className="vendorDescription__list">
                             {qaItem}
                         </ul>
                     </div>
                     <div className="featVendor__sidebar">
-                        <p className="featVendor__sidebarText">{featureVendorData[0].headline}</p>
-                        <p className="featVendor__sidebarText">{featureVendorData[0].vendor}</p>
-                        <div style={{background: `url(${vendorData[0].imageSidebar}) no-repeat`, backgroundSize: "100%", height: "20rem"}}></div>
+                        <p className="featVendor__sidebarText">{vendorData[0].headline}</p>
+                        <p className="featVendor__sidebarText">{vendorData[0].vendor}</p>
+                        <div className="featVendor__sidebarImage" style={{backgroundImage: `url(${vendorData[0].imageSrc})`}}></div>
+                        <Link className="communityEvents__anchor" to={vendorLink}>learn more</Link>                   
                     </div>
                 </section>
                 <section className="featuresBanner">

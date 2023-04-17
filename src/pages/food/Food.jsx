@@ -27,7 +27,7 @@ function Food() {
       <BgZickZackTopBottomContainer>
         <Banner
           image={SmileyIcon}
-          headline="The Best of NYC"
+          headline="The Best of Street Market"
           text="All under one roof!"
         />
       </BgZickZackTopBottomContainer>

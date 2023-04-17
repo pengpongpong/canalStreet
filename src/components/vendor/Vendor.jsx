@@ -4,7 +4,7 @@ import "./Vendor.sass";
 import ImageSlider from "../image-slider/ImageSlider";
 import ReturnButtonEl from "./returnButtonEl"
 
-function Vendor({ data, headerText, returnButtonText, retail, community, event, feature }) {
+function Vendor({ data, headerText, returnButtonText, retail, community, feature, radio }) {
     const links = data[0]?.links
     let linksKey;
 
@@ -36,6 +36,7 @@ function Vendor({ data, headerText, returnButtonText, retail, community, event, 
                     community={community}
                     feature={feature}
                     returnButtonText={returnButtonText}
+                    radio={radio}
                     />
                 <div className="introPageVendor__headerTextContainer">
                     {headerText ? <p>{headerText}</p> : ""}

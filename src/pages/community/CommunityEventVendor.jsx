@@ -12,7 +12,7 @@ function CommunityEventVendor() {
 
     if (eventData) {
         return (
-            <PageContainer left="180px">
+            <PageContainer left="180px" id={id}>
                 <Vendor
                     data={eventData}
                     returnButtonText="Community"

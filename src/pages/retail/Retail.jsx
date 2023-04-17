@@ -26,7 +26,7 @@ function Retail() {
       <BgZickZackTopBottomContainer>
         <Banner
           image={RoseIcon}
-          headline="The Best of NYC"
+          headline="The Best of Street Market"
           text="All under one roof!"
         />
       </BgZickZackTopBottomContainer>

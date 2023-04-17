@@ -4,9 +4,10 @@ $paragraph-font: 'PT Mono', monospace
 
 .pageEvents
     padding: 1rem 4rem
+    position: relative
     &__list
         display: flex
-        justify-content: space-between
+        justify-content: space-around
         position: relative
         padding: 4rem 0 5rem 0
         list-style: none
@@ -17,7 +18,7 @@ $paragraph-font: 'PT Mono', monospace
         background-size: 24px 1px,24px 1px,24px 1px,24px 1px
         animation: 1s infinite dashedUnderlineAnimation linear
     &__item
-        width: 30rem
+        width: 20rem
         text-align: center
         font-family: $paragraph-font
     &__date
@@ -28,7 +29,13 @@ $paragraph-font: 'PT Mono', monospace
         font-weight: 500
         letter-spacing: 1.5px
         line-height: 1.3rem
-    &__button
+    &__anchor, &__anchorButton
+        color: black
+        text-decoration: none
+        &:visited
+            color: black
+    &__anchorButton
+        display: inline-block
         padding: 1rem 3rem
         font-family: $paragraph-font
         background-color: transparent
@@ -39,7 +46,6 @@ $paragraph-font: 'PT Mono', monospace
         transform: translate(-50%, -50%)
         will-change: background-color, color
         transition: background-color .4s, color .4s
-        cursor: pointer
         &:hover
             background-color: black !important
             color: white

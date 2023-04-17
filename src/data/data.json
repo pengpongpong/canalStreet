@@ -289,26 +289,36 @@
     ],
     "communityPodcastData": [
         {
-            "date": "03/12",
-            "event": "S3E10: Timberlands and Periodic Tables with Peter Sohn (Pixar's \"Elemental\")"
+            "podcast": "Market Munchies",
+            "headline": "A local foodie and blogger with a passion for exploring the culinary offerings of the street market.",
+            "href": "Market Munchies",
+            "imageSrc": "/src/assets/images/communityRadio/market-munchies/MarketMunchies1.jpg", 
+            "imageSrcVendorPage": [],
+            "text": "Hosted by local foodie and blogger, this podcast explores the diverse food offerings at the street market. From savory street tacos to sweet treats, each episode highlights a different vendor and their unique culinary creations."
         },
         {
-            "date": "03/01",
-            "event": "Dennis Chung Interview (General Secretary for Jamaican Football Federation) + Karyn Forbes Interview (Pro Player in England From T&T) + SheBelieves Cup Recap + Multiple International Teams on Strike"
+            "podcast": "Shop Talk",
+            "headline": "A small business consultant with expertise in retail and a desire to share the stories of the diverse vendors at the street market.",
+            "href": "Shop Talk",
+            "imageSrc": "/src/assets/images/communityRadio/shop-talk/ShopTalk1.jpg", 
+            "imageSrcVendorPage": [],
+            "text": "Hosted by a small business consultant, this podcast delves into the world of retail at the street market. Each episode features an interview with a local vendor, discussing their business journey, marketing strategies, and community engagement."
         },
         {
-            "date": "05/03",
-            "event": "We're back and we're better!"
+            "podcast": "Community Corner",
+            "headline": "A neighborhood activist with a commitment to highlighting the positive impact of the street market on the local community.",
+            "href": "Community Corner",
+            "imageSrc": "/src/assets/images/communityRadio/community-corner/CommunityCorner1.jpg", 
+            "imageSrcVendorPage": [],
+            "text": "Hosted by a neighborhood activist, this podcast focuses on the impact of the street market on the local community. Through interviews with market-goers and vendors, each episode explores the social and economic benefits of this vibrant community gathering place."
         }
     ],
     "featuresData": [
         {
             "imageSrc": "/src/assets/images/pages-images/community/community_feat1.jpg",
-            "imageSidebar": "/src/assets/images/food-vendors/burrito-bandito/burritoBandito1.jpg",
-            "featureText": "CSM Community - Burrito Bandito",
+            "featureText": "Street Market Community - Burrito Bandito",
             "vendor": "Burrito Bandito",
             "type": "food",
-            "headline": "Mexican Burrito",
             "owner": "Carlos Rodriguez",
             "description": ["Burrito Bandito is a popular street food vendor in the downtown area, known for its generous portions and bold, flavorful fillings.", "Owner Carlos Rodriguez learned to make burritos from his grandmother and has been perfecting his craft for over a decade, using fresh, locally sourced ingredients whenever possible."],
             "interview": [
@@ -336,65 +346,79 @@
         },
         {
             "imageSrc": "/src/assets/images/pages-images/community/community_feat2.jpg",
-            "imageSidebar": "",
-            "featureText": "CSM Community - Feat 2",
-            "vendor": "Feat 2",
-            "owner": "Carlos Rodriguez",
-            "description": ["", ""],
+            "featureText": "Street Market Community - MagiZine",
+            "vendor": "MagiZine",
+            "type": "retail",
+            "owner": "Sarah Jenkins & Rachel Kim",
+            "description": ["MagiZine is a popular magazine vendor known for its wide selection of magazines ranging from fashion to technology.", "The business is co-owned by Sarah Jenkins and Rachel Kim, two savvy entrepreneurs with a passion for delivering the latest and greatest in print media to their customers."],
             "interview": [
                 {
-                    "question": "",
-                    "answer": ""
+                    "question": "How did you come up with the idea for MagiZine?",
+                    "answer": "We both have a love for print media and we noticed that there was a gap in the market for a magazine vendor that offered a wide variety of magazines all in one place. So, we decided to start MagiZine to fill that gap."
                 },
                 {
-                    "question": "",
-                    "answer": ""
+                    "question": "What sets MagiZine apart from other magazine vendors?",
+                    "answer": "We believe it's our commitment to providing the latest and greatest magazines in a wide range of categories. We also prioritize customer service and making sure our customers always have a positive experience when they visit our store."
                 },
                 {
-                    "question": "",
-                    "answer": ""
+                    "question": "What challenges have you faced while running MagiZine?",
+                    "answer": "One of the biggest challenges we've faced is staying up to date with the latest trends and constantly sourcing new magazines to add to our selection. We also had to navigate the pandemic and figure out how to continue serving our customers safely."
+                },
+                {
+                    "question": "What do you envision for the future of MagiZine?",
+                    "answer": "We hope to continue expanding our selection of magazines and potentially even opening up additional locations. We're also exploring the possibility of offering online ordering for our customers' convenience. Ultimately, we just want to keep delivering the best selection of print media to our customers."
                 }
             ]
         },
         {
             "imageSrc": "/src/assets/images/pages-images/community/community_feat3.jpg",
-            "featureText": "CSM Community - Feat 3",
-            "vendor": "Feat 3",
-            "owner": "Carlos Rodriguez",
-            "description": ["", ""],
+            "featureText": "Street Market Community - StyleMaven",
+            "vendor": "StyleMaven",
+            "type": "retail",
+            "owner": "Avery Rosewood",
+            "description": ["StyleMaven, led by owner Avery Rosewood, offers trendsetting and sustainable fashion pieces that empower women to express their unique style with confidence."],
             "interview": [
                 {
-                    "question": "",
-                    "answer": ""
+                    "question": "What inspired you to start StyleMaven?",
+                    "answer": "As a fashion enthusiast, I always struggled to find stylish clothing that was also sustainable and ethically made. I wanted to create a brand that offers both, without compromising on quality or affordability."
                 },
                 {
-                    "question": "",
-                    "answer": ""
+                    "question": "How would you describe the StyleMaven aesthetic?",
+                    "answer": "StyleMaven's aesthetic is all about mixing classic pieces with trendy and unique items. We offer versatile clothing that can be dressed up or down, and our color palette is inspired by nature, with earthy tones and pops of color."
                 },
                 {
-                    "question": "",
-                    "answer": ""
+                    "question": "What sets StyleMaven apart from other fashion brands?",
+                    "answer": "Our commitment to sustainability and ethical practices is what sets us apart. We use eco-friendly materials and prioritize ethical manufacturing processes. We also offer a wide range of sizes to ensure that every woman can feel confident and beautiful in our clothing."
+                },
+                {
+                    "question": "What advice would you give to someone looking to start their own fashion brand?",
+                    "answer": "My biggest advice would be to stay true to your vision and values. Don't compromise on quality or ethics just to make a quick profit. Also, be prepared to work hard and be persistent. Building a successful fashion brand takes time, effort, and dedication."
                 }
             ]
         },
         {
             "imageSrc": "/src/assets/images/pages-images/community/community_feat4.jpg",
-            "featureText": "CSM Community - Feat 4",
-            "vendor": "Feat 4",
-            "owner": "Carlos Rodriguez",
-            "description": ["", ""],
+            "featureText": "Street Market Community - Opulent Charms",
+            "vendor": "Opulent Charms",
+            "type": "retail",
+            "owner": "Samantha Rosewood",
+            "description": ["Samantha Rosewood is the creative force behind Opulent Charms, a jewelry vendor that offers unique and exquisite pieces crafted with the finest materials."],
             "interview": [
                 {
-                    "question": "",
-                    "answer": ""
+                    "question": "What inspired you to start Opulent Charms?",
+                    "answer": "I've always been passionate about jewelry and its ability to enhance a person's beauty and express their individuality. I wanted to create a brand that offered unique and high-quality pieces that could be treasured for a lifetime."
                 },
                 {
-                    "question": "",
-                    "answer": ""
+                    "question": "What sets Opulent Charms apart from other jewelry vendors?",
+                    "answer": "At Opulent Charms, we prioritize quality and craftsmanship above all else. Each piece is carefully crafted by skilled artisans using only the finest materials, ensuring that every customer receives a one-of-a-kind piece that will stand the test of time."
                 },
                 {
-                    "question": "",
-                    "answer": ""
+                    "question": "What is your favorite piece in the Opulent Charms collection?",
+                    "answer": "That's a tough question! I love all of our pieces, but if I had to choose one, it would be our Diamond and Sapphire Drop Earrings. They're absolutely stunning and add a touch of glamour to any outfit."
+                },
+                {
+                    "question": "What's next for Opulent Charms?",
+                    "answer": "We're always exploring new materials and designs to keep our collections fresh and exciting. We're also expanding our online presence and working on collaborations with other brands and designers. Ultimately, our goal is to continue creating beautiful and unique pieces that our customers will love for years to come."
                 }
             ]
         }
@@ -402,38 +426,54 @@
     "eventData": [
         {
             "date": "12/02",
-            "event": "Small Business Retail Pop Up Weekend!",
-            "href": "Small Business Retail",
+            "event": "Support Local Small Businesses @ Street Market",
+            "href": "Support Local Small Businesses",
             "imageSrc": "/src/assets/images/communityEvents/small-business/smallBusiness1.jpg",
             "imageSrcVendorPage": [
-                "/src/assets/images/communityEvents/greenhouse/greenhouse1.jpg",
-                "/src/assets/images/communityEvents/hack-city/hackCity1.jpg",
-                "/src/assets/images/communityEvents/fantasyland/fantasyland1.jpg"
+                "/src/assets/images/communityEvents/small-business/smallBusiness2.jpg",
+                "/src/assets/images/communityEvents/small-business/smallBusiness3.jpg",
+                "/src/assets/images/communityEvents/small-business/smallBusiness4.jpg",
+                "/src/assets/images/communityEvents/small-business/smallBusiness5.jpg"
             ],
-            "text": ""
+            "text": "Come out and support small businesses at the upcoming Small Business Saturday Market in Downtown on December 2nd, from 10 am to 4 pm. This event will feature a wide range of vendors selling handmade crafts, unique gifts, and locally sourced foods. Show your support for small businesses and enjoy a fun day out!"
         },
         {
             "date": "02/07",
-            "event": "New Balance x Paperboy Paris by Greenhouse @ Canal Street Market",
-            "href": "New Balance x Paperboy Paris",
-            "imageSrc": "/src/assets/images/communityEvents/greenhouse/greenhouse1.jpg",
-            "imageSrcVendorPage": [],
-            "text": ""
+            "event": "Get Your Groove On at the Street Market with Live Music Performances @ Street Market",
+            "href": "Live Music Performances",
+            "imageSrc": "/src/assets/images/communityEvents/live-music/liveMusic1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/communityEvents/live-music/liveMusic2.jpg",
+                "/src/assets/images/communityEvents/live-music/liveMusic3.jpg",
+                "/src/assets/images/communityEvents/live-music/liveMusic4.jpg",
+                "/src/assets/images/communityEvents/live-music/liveMusic5.jpg"
+            ],
+            "text": "Join us for a fun-filled day of music and dancing at the local street market! We're thrilled to announce that we'll have several talented local artists performing live throughout the day. Bring your friends and family and enjoy a day of shopping, eating delicious food, and tapping your feet to some fantastic tunes. From acoustic sets to rock bands, we've got something for everyone. Don't miss out on this exciting event!"
         },
         {
             "date": "12/11",
-            "event": "Hack City 12/11",
-            "href": "Hack City",
-            "imageSrc": "/src/assets/images/communityEvents/hack-city/hackCity1.jpg",
-            "imageSrcVendorPage": [],
-            "text": ""
+            "event": "Kids' Craft Workshop",
+            "href": "Kids' Craft Workshop",
+            "imageSrc": "/src/assets/images/communityEvents/kids-craft-workshop/KidsCraftWorkshop1.jpg",
+            "imageSrcVendorPage": [
+                "/src/assets/images/communityEvents/kids-craft-workshop/KidsCraftWorkshop2.jpg",
+                "/src/assets/images/communityEvents/kids-craft-workshop/KidsCraftWorkshop3.jpg",
+                "/src/assets/images/communityEvents/kids-craft-workshop/KidsCraftWorkshop4.jpg",
+                "/src/assets/images/communityEvents/kids-craft-workshop/KidsCraftWorkshop5.jpg",
+                "/src/assets/images/communityEvents/kids-craft-workshop/KidsCraftWorkshop6.jpg"
+            ],
+            "text": "Bring Your Little Ones to the Street Market for a Fun and Creative Craft Workshop!"
         },
         {
             "date": "12/01",
             "event": "Fantasyland Fairytale Ball - A Magical Evening of Enchantment!",
             "href": "Fantasyland Fairytale Ball",
             "imageSrc": "/src/assets/images/communityEvents/fantasyland/fantasyland1.jpg",
-            "imageSrcVendorPage": [],
+            "imageSrcVendorPage": [
+                "/src/assets/images/communityEvents/fantasyland/fantasyland2.jpg",
+                "/src/assets/images/communityEvents/fantasyland/fantasyland3.jpg",
+                "/src/assets/images/communityEvents/fantasyland/fantasyland4.jpg"
+            ],
             "text": "Immerse yourself in a world of fantasy at the Fantasyland Fairytale Ball! Dance the night away and enjoy live performances from fantastical creatures and fairy tale characters. Savor delicious refreshments and capture memories with our royal photo booth. The perfect event for kids and adults alike. Don't miss your chance to experience the enchantment - get your tickets today!"
         },
         {
@@ -441,7 +481,11 @@
             "event": "Midnight Masquerade - A Night of Mystery and Intrigue",
             "href": "Midnight Masquerade",
             "imageSrc": "/src/assets/images/communityEvents/midnight-masquerade/midnightMasquerade1.jpg",
-            "imageSrcVendorPage": [],
+            "imageSrcVendorPage": [
+                "/src/assets/images/communityEvents/midnight-masquerade/midnightMasquerade2.jpg",
+                "/src/assets/images/communityEvents/midnight-masquerade/midnightMasquerade3.jpg",
+                "/src/assets/images/communityEvents/midnight-masquerade/midnightMasquerade4.jpg"
+            ],
             "text": "Don your finest attire and mask for the Midnight Masquerade! Dance the night away to live music, indulge in delicious refreshments, and take part in fun activities. Surprises await at every turn in this alluring and mysterious event. Experience the magic of a night filled with secrets and intrigue. Get your tickets today!"
         },
         {
@@ -449,7 +493,11 @@
             "event": "Sip & Paint - Unleash Your Inner Artist with Wine and Canvas!",
             "href": "Sip & Paint",
             "imageSrc": "/src/assets/images/communityEvents/sip-paint/sipPaint1.jpg",
-            "imageSrcVendorPage": [],
+            "imageSrcVendorPage": [
+                "/src/assets/images/communityEvents/sip-paint/sipPaint2.jpg",
+                "/src/assets/images/communityEvents/sip-paint/sipPaint3.jpg",
+                "/src/assets/images/communityEvents/sip-paint/sipPaint4.jpg"
+            ],
             "text": "Join us for a fun night of painting and wine at Sip & Paint! No experience needed - our talented instructors will guide you through creating a masterpiece on canvas. Enjoy delicious wine and refreshments while unleashing your inner artist. Perfect for a unique date night or fun night out with friends. Get your tickets today!"
         }
     ]

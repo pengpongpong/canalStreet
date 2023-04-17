@@ -14,46 +14,40 @@ import "./Community.sass"
 function Community() {
   const data = useLoaderData()
 
-  const featuresItems = data.featuresData.map(obj => {
-    return (
-      <div className="features__card">
-        <img className="features__image" src={obj.imageSrc} alt="Community people" />
-        <h3 className="features__imageHeadline"><span className='features__headlineSpan'>{obj.featureText}</span></h3>
-      </div>
-    )
-  })
+  const marketEvents = <section className="events">
+    <h2 className="events__headline">Market Events</h2>
+    <div className="events__cardTop">
+      <span className="events__date">{data.eventData[0].date}</span>
+      <Link className="events__anchor" to={`/community/event/${data.eventData[0].href.replace(/\s/gi, "-")}`}><p>{data.eventData[0].event}</p></Link>
+    </div>
+    <div className="events__cardTop"></div>
+    <div className="events__cardTop"></div>
+    <div className="events__cardTop">
+      <span className="events__date">{data.eventData[1].date}</span>
+      <Link className="events__anchor" to={`/community/event/${data.eventData[1].href.replace(/\s/gi, "-")}`} ><p>{data.eventData[1].event}</p></Link>
+    </div>
+    <div className="events__cardBottom">
+      <span className="events__date">{data.eventData[2].date}</span>
+      <Link className="events__anchor" to={`/community/event/${data.eventData[2].href.replace(/\s/gi, "-")}`}><p>{data.eventData[2].event}</p></Link>
+    </div>
+    <div className="events__cardBottomMid"></div>
+    <div className="events__cardBottomMid"></div>
+    <div className="events__cardBottom">
+      <span className="events__date">{data.eventData[3].date}</span>
+      <Link className="events__anchor" to={`/community/event/${data.eventData[3].href.replace(/\s/gi, "-")}`}><p>{data.eventData[3].event}</p></Link>
+    </div>
+  </section>
+  
 
   return (
     <PageContainer left="180px" >
       <Intro
         page="Community"
-        text={`Our mixed-use space hosts\n ongoing events, podcasts\n & artists in residence`}
-        headline="Canal St. Community"
+        text={`Events, podcasts, and artist residencies\n are all part of the vibrant mix at\n our multi-purpose space.`}
+        headline="Street Market Community"
       />
       <section className="communityEvents">
-        <section className="events">
-          <h2 className="events__headline">Market Events</h2>
-          <div className="events__cardTop">
-            <span className="events__date">12/02 (past)</span>
-            <Link className="events__anchor"><p>Small Business Retail Pop Up Weekend!</p></Link>
-          </div>
-          <div className="events__cardTop"></div>
-          <div className="events__cardTop"></div>
-          <div className="events__cardTop">
-            <span className="events__date">02/07 (past)</span>
-            <Link className="events__anchor"><p>New Balance x Paperboy Paris by Greenhouse @ Canal Street Market</p></Link>
-          </div>
-          <div className="events__cardBottom">
-            <span className="events__date">12/11 (past)</span>
-            <Link className="events__anchor"><p>Hack City 12/11</p></Link>
-          </div>
-          <div className="events__cardBottomMid"></div>
-          <div className="events__cardBottomMid"></div>
-          <div className="events__cardBottom">
-            <span className="events__date">07/27 (past)</span>
-            <Link className="events__anchor"><p>Taiwanese Wave</p></Link>
-          </div>
-        </section>
+        {marketEvents}
         <Link to="/community/event" className="communityEvents__anchor">view all</Link>
       </section>
       <section className="featuresBanner">
@@ -68,7 +62,8 @@ function Community() {
           text="Podcasted from the market" />
       </BgZickzackTopContainer>
       <EventBanner data={data.communityPodcastData}
-        bgColor="#ffb400" />
+        bgColor="#ffb400"
+        radio />
       <VendorRegisterBanner />
       <Footer />
     </PageContainer>

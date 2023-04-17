@@ -2,6 +2,9 @@ import classNames from "classnames";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.sass"
+import FoodIcon from "/src/assets/icons/food.svg"
+import CommunityIcon from "/src/assets/icons/community.svg"
+import RetailIcon from "/src/assets/icons/retail.svg"
 
 function Navbar({
   backgroundColor,
@@ -30,14 +33,14 @@ function Navbar({
   );
 
   const homeIconStyle = classNames(
-    { "nav__homeIconAnchor": true}, 
-    { "nav__homeIconAnchor--open": homeClass}
+    { "nav__homeIconAnchor": true },
+    { "nav__homeIconAnchor--open": homeClass }
   )
 
   return (
     <header>
       <nav className="nav">
-      <Link className={homeIconStyle} to="/"></Link>
+        <Link className={homeIconStyle} to="/"></Link>
         <ul className="nav__list" style={{ backgroundColor: backgroundColor }}>
           <li className={homeStyle} id="home">
             <Link className="nav__anchor" to="/">
@@ -46,19 +49,19 @@ function Navbar({
           </li>
           <li className={foodStyle} id="food">
             <Link className="nav__anchor" to="/food">
-              <p className="nav__headline">餐饮</p>
+              <img className="nav__icon" src={FoodIcon} />
               <span className="nav__text">Food</span>
             </Link>
           </li>
           <li className={retailStyle} id="retail">
             <Link className="nav__anchor" to="/retail">
-              <p className="nav__headline">餐饮</p>
+              <img className="nav__icon" src={RetailIcon} />
               <span className="nav__text">Retail</span>
             </Link>
           </li>
           <li className={communityStyle} id="community">
             <Link className="nav__anchor" to="/community">
-              <p className="nav__headline">餐饮</p>
+              <img className="nav__icon" src={CommunityIcon} />
               <span className="nav__text">Community</span>
             </Link>
           </li>

@@ -12,6 +12,8 @@ import CommunityEvents from "./pages/community/CommunityEvents";
 import CommunityEventVendor from "./pages/community/CommunityEventVendor";
 import CommunityFeatures from "./pages/community/CommunityFeatures";
 import CommunityFeaturesVendor from "./pages/community/CommunityFeaturesVendor";
+import CommunityRadio from "./pages/community/CommunityRadio";
+import CommunityRadioVendor from "./pages/community/CommunityRadioVendor";
 
 export async function getVendorData() {
   return fetch("/src/data/data.json")
@@ -129,6 +131,26 @@ function App() {
       ),
       loader: getVendorData
     },
+    {
+      path: "/community/radio",
+      element: (
+        <>
+          <Navbar backgroundColor="#ffb400" communityClass />
+          <CommunityRadio />
+        </>
+      ),
+      loader: getVendorData
+    },
+    {
+      path: "/community/radio/:id",
+      element: (
+        <>
+          <Navbar backgroundColor="#ffb400" communityClass />
+          <CommunityRadioVendor />
+        </>
+      ),
+      loader: getVendorData
+    }
   ]);
 
   return (

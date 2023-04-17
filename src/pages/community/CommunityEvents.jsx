@@ -21,10 +21,11 @@ function CommunityEvents() {
             </li>
         )
     })
+    
     return (
         <PageContainer left="180px">
             <IntroCommunity
-                headerText={`Our curated list of events\n bringing interesting people,\n talks, and workshops to Street Market`}
+                headerText={`Events, podcasts, and artist residencies\n are all part of the vibrant mix at\n our multi-purpose space.`}
                 headline="Market Events" />
             <Banner
                 image={SmileyIcon}

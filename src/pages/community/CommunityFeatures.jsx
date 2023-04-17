@@ -12,7 +12,7 @@ function CommunityFeatures() {
   return (
     <PageContainer left="180px">
       <IntroCommunity
-        headerText={`Our mixed-use space hosts\nongoing events, podcasts\n& artists in residence `}
+        headerText={`Events, podcasts, and artist residencies\n are all part of the vibrant mix at\n our multi-purpose space.`}
         headline="Features" />
       <section style={{ margin: "0 4rem" }}>
         <Features data={data.featuresData} />

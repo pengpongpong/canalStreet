@@ -31,7 +31,7 @@ function Home() {
 
   const marketDescriptionItems = marketDescription.map(obj => {
     return (
-      <li className="descriptions__item">
+      <li className="descriptions__item" key={obj.imageAlt}>
         <img
           className="descriptions__image"
           src={obj.imageSrc}

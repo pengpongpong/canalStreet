@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=PT+Mono&display=swap')
+
+$headline-font: 'EB Garamond', serif
+$paragraph-font: 'PT Mono', monospace
+    
+$listIconSize: 100%
+
+.vendorForm
+    padding: 4rem
+    position: absolute
+    top: 0
+    min-height: 100vh
+    width: 70vw
+    z-index: 4
+    cursor: default
+    background-image: repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 1px, transparent 1px, transparent 4px), repeating-linear-gradient(0deg, #d3d3d3, #d3d3d3 1px, transparent 1px, transparent 4px), repeating-linear-gradient(0deg, #d3d3d3, #d3d3d3 1px, transparent 1px, transparent 4px),
+    background-color: white
+    background-size: 100% 15px, 100% 15px, 15px calc(100% - 30px), 15px calc(100% - 30px)
+    background-position: 0 0, 0 100%, left 15px, right 15px
+    background-repeat: no-repeat
+    &__headlineContainer
+        margin-bottom: 4rem
+        padding-bottom: 4rem
+        background-image: repeating-linear-gradient(-30deg,#000,#000 1px,transparent 0,transparent 40px),repeating-linear-gradient(30deg,#000,#000 1px,transparent 0,transparent 40px)
+        background-position: 0 101%,0 101%
+        background-size: 70px 27px,70px 27px
+        background-repeat: repeat-x
+    &__headline
+        width: 75%
+        margin: 0 auto
+        font-family: $headline-font
+        font-size: 8rem
+        font-weight: 400
+        text-align: center
+        &:nth-child(2)
+            font-size: 4rem
+    &__listHeadline
+        font-family: $headline-font
+        font-size: 3rem
+        font-weight: 400
+    &__cardsContainer
+        margin: 2rem 0
+    &__card
+        display: flex
+        height: 33rem
+        &:nth-child(1)
+            .vendorForm__item
+                &:nth-child(1)
+                    &::before
+                        background: url("/src/assets/icons/vendor-form/bxl-sketch.svg") no-repeat
+                        background-size: $listIconSize
+                &:nth-child(2)
+                    &::before
+                        background: url("/src/assets/icons/vendor-form/bx-smile.svg") no-repeat
+                        background-size: $listIconSize
+                &:nth-child(3)
+                    &::before
+                        background: url("/src/assets/icons/vendor-form/bx-group.svg") no-repeat
+                        background-size: $listIconSize
+        &:nth-child(2)
+            .vendorForm__item
+                &:nth-child(1)
+                    &::before
+                        background: url("/src/assets/icons/vendor-form/bxs-offer.svg") no-repeat
+                        background-size: $listIconSize
+                &:nth-child(2)
+                    &::before
+                        background: url("/src/assets/icons/vendor-form/bxs-yin-yang.svg") no-repeat
+                        background-size: $listIconSize
+                &:nth-child(3)
+                    &::before
+                        background: url("/src/assets/icons/vendor-form/bx-building-house.svg") no-repeat
+                        background-size: $listIconSize
+        &:nth-child(3)
+            .vendorForm__item
+                &:nth-child(1)
+                    &::before
+                        background: url("/src/assets/icons/vendor-form/bx-line-chart.svg") no-repeat
+                        background-size: $listIconSize
+                &:nth-child(2)
+                    &::before
+                        background: url("/src/assets/icons/vendor-form/bx-message-rounded-dots.svg") no-repeat
+                        background-size: $listIconSize
+                &:nth-child(3)
+                    &::before
+                        background: url("/src/assets/icons/vendor-form/bxs-flag.svg") no-repeat
+                        background-size: $listIconSize
+                &:nth-child(4)
+                    &::before
+                        background: url("/src/assets/icons/vendor-form/bxl-graphql.svg") no-repeat
+                        background-size: $listIconSize
+                &:nth-child(5)
+                    &::before
+                        background: url("/src/assets/icons/vendor-form/bxs-direction-right.svg") no-repeat
+                        background-size: $listIconSize
+        &:nth-child(2)
+            flex-direction: row-reverse
+    &__cardText
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 4rem
+        width: 50%
+    &__imageContainer
+        width: 50%
+        height: 100%
+    &__image
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__list
+        padding: 1rem 2rem
+        list-style: none
+    &__item
+        margin: 2rem 0
+        display: flex
+        align-items: center
+        gap: .5rem
+        font-family: $paragraph-font
+        font-size: .9rem
+        letter-spacing: 1px
+        &::before
+            content: ""
+            display: inline-block
+            height: 20px
+            width: 20px
+
+.form
+    margin-top: 2rem
+    &__row
+        display: flex
+        gap: 2rem
+        margin-bottom: 2rem
+    &__inputContainer
+        width: 100%
+    &__input, &__select, &__textarea
+        font-family: $paragraph-font
+        font-size: .9rem
+        letter-spacing: 1px
+        width: 100%
+        padding: 1rem
+        border: 1px solid black
+        background: white
+        &::placeholder
+            opacity: 1
+    &__error
+        margin: 1rem 0 0 1rem
+        font-family: $paragraph-font
+        font-size: .8rem
+        color: red
+    &__submitButton
+        width: 100%
+        margin: 2rem 0
+        padding: 1rem
+        border: 1px solid black
+        text-align: center
+        font-family: $paragraph-font
+        font-size: 1rem
+        letter-spacing: 1px
+        color: white
+        cursor: pointer
+        background-color: black
+        will-change: auto
+        transition: background-color .4s, color .4s
+        &:hover
+            background-color: white
+            color: black
+
+        
+
