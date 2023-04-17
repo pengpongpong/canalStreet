@@ -2,6 +2,8 @@
 
 $headline-font: 'EB Garamond', serif
 
+$mobile: 400px
+
 .nav
     position: relative
     &__list
@@ -78,6 +80,9 @@ $headline-font: 'EB Garamond', serif
             left: 0
             will-change: width, margin
             transition: margin .5s, width .5s
+    @media screen and ( max-width: $mobile )
+        &__homeIconAnchor
+            display: none
 
 @keyframes navStartAnimation
     0%
