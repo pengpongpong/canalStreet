@@ -10,11 +10,11 @@ import BgZickZackTopBottomContainer from "../../components/container/BgZickZackT
 import PageContainer from "/src/components/container/PageContainer"
 import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 
-function Retail() {
+function Retail({bgColor}) {
   const data = useLoaderData()
 
   return (
-    <PageContainer left="120px" >
+    <PageContainer left="120px" bgColor={bgColor}>
       <Intro
         page="Retail"
         text={`Retail Market Hours\nFri - Sun: 11:00AM - 7:00PM`}

@@ -7,10 +7,10 @@ import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import { useLoaderData } from "react-router-dom"
 /* import "./Community.sass" */
 
-function CommunityFeatures() {
+function CommunityFeatures({bgColor}) {
   const data = useLoaderData()
   return (
-    <PageContainer left="180px">
+    <PageContainer left="180px" bgColor={bgColor}>
       <IntroCommunity
         headerText={`Events, podcasts, and artist residencies\n are all part of the vibrant mix at\n our multi-purpose space.`}
         headline="Features" />

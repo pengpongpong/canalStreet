@@ -21,7 +21,7 @@ const MarketDescriptionItems = ({ arr }) => (
   })
 )
 
-function Home() {
+function Home({bgColor}) {
   const data = useLoaderData()
 
   window.addEventListener("scroll", (e) => {
@@ -45,7 +45,7 @@ function Home() {
   ]
 
   return (
-    <PageContainer>
+    <PageContainer bgColor={bgColor}>
       <section className="homePage">
         <h1 className="homePage__headline">
           Discover the Street Market - open all year round, showcasing a diverse range of small businesses and artisanal treasures. Join us in{" "}

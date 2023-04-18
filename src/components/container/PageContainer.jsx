@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import "./Container.sass"
 
-function PageContainer({ children, left, id }) {
+function PageContainer({ children, left, id, bgColor }) {
 
     const containerDistance = left ? left : "0px"
 
@@ -14,6 +14,14 @@ function PageContainer({ children, left, id }) {
             window.scrollTo(0, 0)
         }, [])
     }
+
+    useEffect(() => {
+        const body = document.querySelector("body")
+        const main = document.querySelector("main")
+        main.style.backgroundColor = `${bgColor}`
+        body.style.backgroundColor = `${bgColor}`
+      
+    },[bgColor])
 
     return (
         <section className='pageContainer' style={{ left: containerDistance }}>

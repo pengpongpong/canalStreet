@@ -7,7 +7,7 @@ import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import Footer from "/src/components/footer/Footer"
 import "./Community.sass"
 
-function CommunityFeaturesVendor() {
+function CommunityFeaturesVendor({bgColor}) {
     const { id } = useParams()
     const data = useLoaderData()
 
@@ -37,7 +37,7 @@ function CommunityFeaturesVendor() {
         })
 
         return (
-            <PageContainer left="180px" id={id}>
+            <PageContainer left="180px" id={id} bgColor={bgColor}>
                 <div className="featHeader__buttonContainer">
                     <ReturnButtonEl
                         community

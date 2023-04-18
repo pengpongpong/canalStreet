@@ -4,7 +4,7 @@ import Vendor from "../../components/vendor/Vendor"
 import PageContainer from "/src/components/container/PageContainer"
 import Footer from "/src/components/footer/Footer"
 
-function CommunityEventVendor() {
+function CommunityEventVendor({bgColor}) {
     const data = useLoaderData()
     const { id } = useParams()
 
@@ -12,7 +12,7 @@ function CommunityEventVendor() {
 
     if (eventData) {
         return (
-            <PageContainer left="180px" id={id}>
+            <PageContainer left="180px" id={id} bgColor={bgColor}>
                 <Vendor
                     data={eventData}
                     returnButtonText="Community"

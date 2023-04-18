@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.sass"
 import FoodIcon from "/src/assets/icons/food.svg"
@@ -13,6 +13,8 @@ function Navbar({
   communityClass,
   foodClass,
 }) {
+
+  const nav = useRef()
 
 
   const homeStyle = classNames(
@@ -37,14 +39,23 @@ function Navbar({
     { "nav__homeIconAnchor--open": homeClass }
   )
 
+  //change visibility or set bg color from ul to main
+  const closeNav = () => {
+    const navItems = document.querySelectorAll(".nav__item")
+    navItems.forEach(obj => {
+      obj.style.visibility = "hidden"
+    })
+  }
+
   return (
     <header>
-      <nav className="nav">
+      <button onClick={closeNav}>minimize</button>
+      <nav className="nav" ref={nav}>
         <Link className={homeIconStyle} to="/"></Link>
-        <ul className="nav__list" style={{ backgroundColor: backgroundColor }}>
+        <ul className="nav__list" style={{  }}>
           <li className={homeStyle} id="home">
             <Link className="nav__anchor" to="/">
-              <span className="nav__text">home</span>
+              <span className="nav__text">Home</span>
             </Link>
           </li>
           <li className={foodStyle} id="food">

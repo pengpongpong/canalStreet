@@ -9,7 +9,7 @@ import BgZickzackTopContainer from "../../components/container/BgZickzackTopCont
 import PageContainer from "/src/components/container/PageContainer"
 import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 
-function FoodVendor() {
+function FoodVendor({bgColor}) {
   const { id } = useParams()
   const loaderData = useLoaderData()
 
@@ -19,7 +19,7 @@ function FoodVendor() {
   if (data) {
 
     return (
-      <PageContainer left="60px" id={id}>
+      <PageContainer left="60px" id={id} bgColor={bgColor}>
         <Vendor
           data={data}
           headerText={`Food Hall Hours:\nMon – Sun: 11:00AM - 8:00PM`}

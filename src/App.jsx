@@ -26,8 +26,8 @@ function App() {
       path: "/",
       element: (
         <>
-          <Navbar backgroundColor="#fff" homeClass />
-          <Home />
+          <Navbar homeClass />
+          <Home bgColor="#fff"/>
         </>
       ),
       loader: getVendorData
@@ -36,8 +36,8 @@ function App() {
       path: "/policy",
       element: (
         <>
-          <Navbar backgroundColor="#fff" homeClass />
-          <Policy />
+          <Navbar homeClass />
+          <Policy bgColor="#fff"/>
         </>
       )
     },
@@ -45,8 +45,8 @@ function App() {
       path: "/food",
       element: (
         <>
-          <Navbar backgroundColor="#5ea3ec" foodClass />
-          <Food />
+          <Navbar foodClass />
+          <Food bgColor="#5ea3ec"/>
         </>
       ),
       loader: getVendorData
@@ -55,8 +55,8 @@ function App() {
       path: "food/:id",
       element: (
         <>
-          <Navbar backgroundColor="#5ea3ec" foodClass />
-          <FoodVendor />
+          <Navbar foodClass />
+          <FoodVendor bgColor="#5ea3ec"/>
         </>
       ),
       loader: getVendorData
@@ -65,8 +65,8 @@ function App() {
       path: "/retail",
       element: (
         <>
-          <Navbar backgroundColor="#f64444" retailClass />
-          <Retail />
+          <Navbar retailClass />
+          <Retail bgColor="#f64444"/>
         </>
       ),
       loader: getVendorData
@@ -75,8 +75,8 @@ function App() {
       path: "retail/:id",
       element: (
         <>
-          <Navbar backgroundColor="#5ea3ec" retailClass />
-          <RetailVendor />
+          <Navbar retailClass />
+          <RetailVendor bgColor="#5ea3ec"/>
         </>
       ),
       loader: getVendorData
@@ -85,8 +85,8 @@ function App() {
       path: "/community",
       element: (
         <>
-          <Navbar backgroundColor="#ffb400" communityClass />
-          <Community />
+          <Navbar communityClass />
+          <Community bgColor="#ffb400"/>
         </>
       ),
       loader: getVendorData
@@ -95,8 +95,8 @@ function App() {
       path: "/community/event",
       element: (
         <>
-          <Navbar backgroundColor="#ffb400" communityClass />
-          <CommunityEvents />
+          <Navbar communityClass />
+          <CommunityEvents bgColor="#ffb400"/>
         </>
       ),
       loader: getVendorData
@@ -105,8 +105,8 @@ function App() {
       path: "/community/event/:id",
       element: (
         <>
-          <Navbar backgroundColor="#ffb400" communityClass />
-          <CommunityEventVendor />
+          <Navbar communityClass />
+          <CommunityEventVendor bgColor="#ffb400"/>
         </>
       ),
       loader: getVendorData
@@ -115,8 +115,8 @@ function App() {
       path: "/community/feature",
       element: (
         <>
-          <Navbar backgroundColor="#ffb400" communityClass />
-          <CommunityFeatures />
+          <Navbar communityClass />
+          <CommunityFeatures bgColor="#ffb400"/>
         </>
       ),
       loader: getVendorData
@@ -125,8 +125,8 @@ function App() {
       path: "/community/feature/:id",
       element: (
         <>
-          <Navbar backgroundColor="#ffb400" communityClass />
-          <CommunityFeaturesVendor />
+          <Navbar communityClass />
+          <CommunityFeaturesVendor bgColor="#ffb400"/>
         </>
       ),
       loader: getVendorData
@@ -135,8 +135,8 @@ function App() {
       path: "/community/radio",
       element: (
         <>
-          <Navbar backgroundColor="#ffb400" communityClass />
-          <CommunityRadio />
+          <Navbar communityClass />
+          <CommunityRadio bgColor="#ffb400"/>
         </>
       ),
       loader: getVendorData
@@ -145,8 +145,8 @@ function App() {
       path: "/community/radio/:id",
       element: (
         <>
-          <Navbar backgroundColor="#ffb400" communityClass />
-          <CommunityRadioVendor />
+          <Navbar communityClass />
+          <CommunityRadioVendor bgColor="#ffb400"/>
         </>
       ),
       loader: getVendorData

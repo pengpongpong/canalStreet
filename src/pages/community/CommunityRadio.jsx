@@ -7,7 +7,7 @@ import IntroCommunity from "../../components/intro-community/IntroCommunity"
 import SmileyIcon from "/src/assets/icons/smiley.svg"
 import Footer from "/src/components/footer/Footer"
 
-function CommunityRadio() {
+function CommunityRadio({bgColor}) {
     const data = useLoaderData()
 
     const eventItem = data.communityPodcastData.map((obj, index) => {
@@ -23,7 +23,7 @@ function CommunityRadio() {
     })
     
     return (
-        <PageContainer left="180px">
+        <PageContainer left="180px" bgColor={bgColor}>
             <IntroCommunity
                 headerText={`Events, podcasts, and artist residencies\n are all part of the vibrant mix at\n our multi-purpose space.`}
                 headline="Market Radio" />

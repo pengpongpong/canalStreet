@@ -11,7 +11,7 @@ import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import Features from "../../components/features/Features"
 import "./Community.sass"
 
-function Community() {
+function Community({bgColor}) {
   const data = useLoaderData()
 
   const marketEvents = <section className="events">
@@ -40,7 +40,7 @@ function Community() {
   
 
   return (
-    <PageContainer left="180px" >
+    <PageContainer left="180px" bgColor={bgColor}>
       <Intro
         page="Community"
         text={`Events, podcasts, and artist residencies\n are all part of the vibrant mix at\n our multi-purpose space.`}

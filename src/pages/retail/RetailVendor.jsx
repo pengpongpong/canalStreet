@@ -9,7 +9,7 @@ import BgZickzackTopContainer from "../../components/container/BgZickzackTopCont
 import PageContainer from "/src/components/container/PageContainer"
 import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 
-function RetailVendor() {
+function RetailVendor({bgColor}) {
     const { id } = useParams()
     const loaderData = useLoaderData()
 
@@ -17,7 +17,7 @@ function RetailVendor() {
 
     if (data) {
         return (
-            <PageContainer left="120px" id={id}>
+            <PageContainer left="120px" id={id} bgColor={bgColor}>
                 <Vendor
                     data={data}
                     headerText={`Retail Market Hours:\nMon – Sat: 11AM – 7PM\nSun: 12AM – 6PM`}

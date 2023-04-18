@@ -4,10 +4,10 @@ import PageContainer from "/src/components/container/PageContainer"
 import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import "./Policy.sass"
 
-function Policy() {
+function Policy({bgColor}) {
 
     return (
-        <PageContainer>
+        <PageContainer bgColor={bgColor}>
             <div className="policy">
                 <h1 className="policy__headline">Privacy Policy</h1>
                 <p className="policy__text">This privacy notice discloses the privacy practices for https://streetMarket-homepage.com/. This privacy notice applies solely to information collected by this website. It will notify you of the following:</p>
