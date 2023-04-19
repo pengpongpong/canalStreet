@@ -16,14 +16,14 @@ $mobile: 400px
     &__item
         height: 100%
         width: 60px
-        will-change: width
+        will-change: auto
         position: relative
         transition: width .5s ease-in-out
         &--open
             width: calc(100vw - 180px)
             .nav__headline, .nav__text, .nav__anchor
                 opacity: 0
-                will-change: opacity
+                will-change: auto
                 transition: opacity .2s
         &:nth-child(1)
             background-color: #fff
@@ -39,7 +39,7 @@ $mobile: 400px
             animation: navStartAnimation .5s ease-in-out
             text-align: center
     &__anchor, &__headline, &__text
-        will-change: opacity
+        will-change: auto
         transition: opacity 1s
     &__anchor
         display: inline-block
@@ -53,22 +53,25 @@ $mobile: 400px
         text-align: center
         &:visited
             color: black
-    &__icon
-        width: 2rem
-    &__text
+    &__icon, &__text
         display: block
         position: absolute
-        transform: translateY(-50%) translateX(-50%) rotate(90deg)
         transform-origin: center
-        top: 50%
         left: 50%
+    &__icon
+        top: 9%
+        transform: translateY(-50%) translateX(-50%)
+        width: 2rem
+    &__text
+        transform: translateY(-50%) translateX(-50%) rotate(90deg)
+        top: 50%
     &__homeIconAnchor
         width: 3rem
         height: 3.5rem
         position: fixed
-        top: 55px
+        top: 7%
         left: 6px
-        will-change: width, margin
+        will-change: width, auto
         transition: margin .5s, width .5s
         z-index: 5
         background: url("/src/assets/icons/homeIcon.svg") top left no-repeat
@@ -78,50 +81,98 @@ $mobile: 400px
             width: 3.5rem
             margin-left: 4rem
             left: 0
-            will-change: width, margin
+            will-change: width, auto
             transition: margin .5s, width .5s
     @media screen and ( max-width: $mobile )
         width: 100vw
-        height: 100vh
+        transform: translate(100%, 0)
         &__list
-            margin-top: 5em
-            display: grid
-            grid-template-columns: 50vw 50vw
-            grid-template-rows: 20em 20em
-            height: 50vh
+            top: 0
+            display: flex
+            flex-wrap: wrap
         &__item
-            width: 100%
+            width: 50vw
+            height: 25em
+            position: relative
             &--open
-                width: 100%
+                transform: scale(3)
+                transition: .5s
+                z-index: 5
                 .nav__headline, .nav__text, .nav__anchor
                     opacity: 1
-                    will-change: opacity
+                    will-change: auto
                     transition: opacity .2s
             &:nth-child(1)
                 animation: navStartAnimation .8s ease-in-out
-                .nav__anchor
+                .nav__anchor > .nav__text
                     transform: rotate(-125deg)
             &:nth-child(2)
                 animation: navStartAnimation .7s ease-in-out
-                .nav__anchor
+                .nav__anchor > .nav__text
                     transform: rotate(-45deg)
             &:nth-child(3)
                 animation: navStartAnimation .6s ease-in-out
-                .nav__anchor
+                .nav__anchor > .nav__text
                     transform: rotate(-45deg)
             &:nth-child(4)
                 animation: navStartAnimation .5s ease-in-out
                 text-align: center
-                .nav__anchor
+                .nav__anchor > .nav__text
                     transform: rotate(-125deg)
         &__homeIconAnchor, &__icon
             display: none
 
+@media screen and ( max-width: $mobile )
+    header
+        position: relative
+        height: 0
+        z-index: 3
+
+@media screen and ( max-width: $mobile )
+    .hamburger
+        margin-top: 1rem
+        display: block
+        position: absolute
+        top: 0
+        right: 0
+        width: 3em
+        height: 2em
+        z-index: 4
+        &__slice
+            display: block
+            position: absolute
+            left: 0px
+            width: 45px
+            height: 4px
+            border-radius: 3px
+            background-color: #f8982b
+            transition: transform .2s
+            &:nth-child(1)
+                top: 1px
+            &:nth-child(2)
+                top: 10px
+            &:nth-child(3)
+                top: 20px
+
+
+#hamburger
+    display: none
+
+#hamburger:checked + .hamburger .hamburger__slice:nth-child(1)
+   transform: translateY(9.5px) rotate(-45deg)
+
+#hamburger:checked + .hamburger .hamburger__slice:nth-child(2)
+   opacity:0
+
+#hamburger:checked + .hamburger .hamburger__slice:nth-child(3)
+   transform: translateY(-9.5px) rotate(45deg)
+            
+
 @keyframes navStartAnimation
     0%
-        transform: translateY(-100%)
+        height: 0%
     100%
-        transform: translateY(0)
+        height: 100%
 
 @keyframes homeIconStartAnimation
     0%

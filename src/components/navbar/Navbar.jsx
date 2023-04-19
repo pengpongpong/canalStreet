@@ -1,37 +1,61 @@
 import classNames from "classnames";
-import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { create } from "zustand"
 import "./Navbar.sass"
 import FoodIcon from "/src/assets/icons/food.svg"
 import CommunityIcon from "/src/assets/icons/community.svg"
 import RetailIcon from "/src/assets/icons/retail.svg"
 
+//store for handling mobile nav animation
+const useStyleStore = create((set) => ({
+  home: false,
+  food: false,
+  retail: false,
+  community: false,
+  setHome: () => set((state) => ({ home: !state.home })),
+  setFood: () => set((state) => ({ food: !state.food })),
+  setRetail: () => set((state) => ({ retail: !state.retail })),
+  setCommunity: () => set((state) => ({ community: !state.community })),
+  resetState: () => set((state) => ({ home: false, food: false, retail: false, community: false }))
+}))
+
 function Navbar({
-  backgroundColor,
   homeClass,
   retailClass,
   communityClass,
   foodClass,
 }) {
+  const [toggle, setToggle] = useState(false)
+  const navMenu = useRef()
+  const checkboxMenu = useRef()
+  const screenWidth = window.innerWidth;
+  const mobileSize = 400
+  const location = useLocation()
 
-  const nav = useRef()
+  //zustand store
+  const store = useStyleStore((state) => state)
 
-
+  //styles for nav animation desktop & mobile
   const homeStyle = classNames(
     { "nav__item": true },
-    { "nav__item--open": homeClass }
+    { "nav__item--open": homeClass && screenWidth > mobileSize },
+    { "nav__item--open": homeClass && screenWidth < mobileSize && store.home }
   );
   const foodStyle = classNames(
     { "nav__item": true },
-    { "nav__item--open": foodClass }
+    { "nav__item--open": foodClass && screenWidth > mobileSize },
+    { "nav__item--open": foodClass && screenWidth < mobileSize && store.food }
   );
   const retailStyle = classNames(
     { "nav__item": true },
-    { "nav__item--open": retailClass }
+    { "nav__item--open": retailClass && screenWidth > mobileSize },
+    { "nav__item--open": retailClass && screenWidth < mobileSize && store.retail }
   );
   const communityStyle = classNames(
     { "nav__item": true },
-    { "nav__item--open": communityClass }
+    { "nav__item--open": communityClass && screenWidth > mobileSize },
+    { "nav__item--open": communityClass && screenWidth < mobileSize && store.community }
   );
 
   const homeIconStyle = classNames(
@@ -39,40 +63,89 @@ function Navbar({
     { "nav__homeIconAnchor--open": homeClass }
   )
 
-  //change visibility or set bg color from ul to main
-  const closeNav = () => {
-    const navItems = document.querySelectorAll(".nav__item")
-    navItems.forEach(obj => {
-      obj.style.visibility = "hidden"
-    })
+  //set animation style when changing pages with hamburger menu
+  const setMobileStyle = (e) => {
+    e.preventDefault()
+    const page = e.currentTarget.innerText
+    const pathName = location.pathname
+
+    switch (page) {
+      case "Home":
+        pathName !== "/" ? store.setHome() : ""
+        break;
+      case "Food":
+        pathName !== "/food" ? store.setFood() : ""
+        break;
+      case "Retail":
+        pathName !== "/retail" ? store.setRetail() : ""
+        break;
+      case "Community":
+        pathName !== "/community" ? store.setCommunity() : ""
+        break;
+    }
   }
+
+  //toggle hamburger menu
+  const toggleMenu = () => {
+    setToggle(!toggle)
+  }
+
+  //hide hamburger menu when changing page after .5s animation
+  useEffect(() => {
+    setTimeout(() => {
+      setToggle(false)
+      checkboxMenu.current.checked = false
+      store.resetState()
+    }, 500)
+
+  }, [location.pathname])
+
+  //set hide/show hamburger menu
+  useEffect(() => {
+    if (toggle && screenWidth < mobileSize) {
+      navMenu.current.style.transform = "translate(0, 0)"
+    }
+    else if (!toggle && screenWidth < mobileSize) {
+      navMenu.current.style.transform = "translate(100%, 0)"
+    }
+  }, [toggle])
 
   return (
     <header>
-      <button onClick={closeNav}>minimize</button>
-      <nav className="nav" ref={nav}>
+      {screenWidth < mobileSize ?
+        <>
+          <input type="checkbox" id="hamburger" ref={checkboxMenu} />
+          <label className="hamburger" htmlFor="hamburger" onClick={toggleMenu} aria-label="toggle navigation">
+            <span className="hamburger__slice"></span>
+            <span className="hamburger__slice"></span>
+            <span className="hamburger__slice"></span>
+          </label>
+        </>
+        : ""}
+
+      <nav className="nav" ref={navMenu}>
         <Link className={homeIconStyle} to="/"></Link>
-        <ul className="nav__list" style={{  }}>
-          <li className={homeStyle} id="home">
+        <ul className="nav__list">
+          <li className={homeStyle} onClick={setMobileStyle}>
             <Link className="nav__anchor" to="/">
               <span className="nav__text">Home</span>
             </Link>
           </li>
-          <li className={foodStyle} id="food">
+          <li className={foodStyle} onClick={setMobileStyle}>
             <Link className="nav__anchor" to="/food">
-              <img className="nav__icon" src={FoodIcon} />
+              <img className="nav__icon" src={FoodIcon} aria-hidden={true} />
               <span className="nav__text">Food</span>
             </Link>
           </li>
-          <li className={retailStyle} id="retail">
+          <li className={retailStyle} onClick={setMobileStyle}>
             <Link className="nav__anchor" to="/retail">
-              <img className="nav__icon" src={RetailIcon} />
+              <img className="nav__icon" src={RetailIcon} aria-hidden={true} />
               <span className="nav__text">Retail</span>
             </Link>
           </li>
-          <li className={communityStyle} id="community">
+          <li className={communityStyle} onClick={setMobileStyle}>
             <Link className="nav__anchor" to="/community">
-              <img className="nav__icon" src={CommunityIcon} />
+              <img className="nav__icon" src={CommunityIcon} aria-hidden={true} />
               <span className="nav__text">Community</span>
             </Link>
           </li>

@@ -17,10 +17,7 @@ function PageContainer({ children, left, id, bgColor }) {
 
     useEffect(() => {
         const body = document.querySelector("body")
-        const main = document.querySelector("main")
-        main.style.backgroundColor = `${bgColor}`
         body.style.backgroundColor = `${bgColor}`
-      
     },[bgColor])
 
     return (
