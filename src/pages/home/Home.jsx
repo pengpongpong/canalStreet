@@ -6,6 +6,12 @@ import PageContainer from "/src/components/container/PageContainer"
 import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import "./Home.sass"
 
+const marketDescription = [
+  { imageSrc: "src/assets/images/pages-images/home/canalStreetMarket.jpg", imageAlt: "Canal Street Market", description: "Merging retail, food, art, and culture, Canal Street Market highlights top retail and design concepts, restaurants, and up-and-coming players in the downtown New York City community." },
+  { imageSrc: "src/assets/images/pages-images/home/retailMarket.jpg", imageAlt: "Retail Market", description: `Retail Market Hours:\nFri– Sun: 11:00AM - 7:00PM` },
+  { imageSrc: "src/assets/images/pages-images/home/foodHall.jpg", imageAlt: "Food Hall", description: `Food Hall Hours:\nMon – Sun: 11:00AM - 8:00PM` }
+]
+
 const MarketDescriptionItems = ({ arr }) => (
   arr.map(obj => {
     return (
@@ -21,14 +27,22 @@ const MarketDescriptionItems = ({ arr }) => (
   })
 )
 
-function Home({bgColor}) {
+function Home({ bgColor }) {
   const data = useLoaderData()
+  const screenWidth = window.innerWidth
 
   window.addEventListener("scroll", (e) => {
     const bgImage = document.getElementById("bgContainer");
     const descriptions = document.querySelector(".descriptions__list");
 
-    //console.log(window.screen.width);
+    if (window.scrollY > 100 && screenWidth < 400) {
+      bgImage.style.opacity = "1";
+    }
+
+    if (window.scrollY > 450 && screenWidth < 400) {
+      descriptions.style.opacity = "1";
+    }
+   
     if (window.scrollY > 450) {
       bgImage.style.opacity = "1";
     }
@@ -37,12 +51,6 @@ function Home({bgColor}) {
       descriptions.style.opacity = "1";
     }
   });
-
-  const marketDescription = [
-    { imageSrc: "src/assets/images/pages-images/home/canalStreetMarket.jpg", imageAlt: "Canal Street Market", description: "Merging retail, food, art, and culture, Canal Street Market highlights top retail and design concepts, restaurants, and up-and-coming players in the downtown New York City community." },
-    { imageSrc: "src/assets/images/pages-images/home/retailMarket.jpg", imageAlt: "Retail Market", description: `Retail Market Hours:\nFri– Sun: 11:00AM - 7:00PM` },
-    { imageSrc: "src/assets/images/pages-images/home/foodHall.jpg", imageAlt: "Food Hall", description: `Food Hall Hours:\nMon – Sun: 11:00AM - 8:00PM` }
-  ]
 
   return (
     <PageContainer bgColor={bgColor}>

@@ -1,3 +1,5 @@
+$mobile: 400px
+    
 *
     box-sizing: border-box
     margin: 0
@@ -5,3 +7,7 @@
 
 body
     position: relative
+
+body, main
+    @media screen and ( max-width: $mobile )
+        overflow-x: hidden

@@ -1,9 +1,14 @@
+$mobile: 400px
+    
 .pageContainer
     position: relative
     width: calc(100vw - 180px)
     color: black
     animation: opacityAnimation 1s linear forwards
     z-index: 1
+    @media screen and ( max-width: $mobile )
+        width: 100vw
+        overflow-x: hidden
     
 .BgTopBottomContainer
     margin: 2rem 4rem
@@ -13,6 +18,9 @@
     background-size: 93px 50px,93px 50px,100px 50px,100px 50px
     background-repeat: repeat-x
     animation: 2s infinite zickzackAnimationTopBottom linear
+    @media screen and ( max-width: $mobile )
+        margin: 0 2rem
+        padding: 1rem 0
 
 .BgTopContainer
     margin: 8rem 4rem 2rem 4rem
@@ -22,6 +30,9 @@
     background-size: 100px 50px,100px 50px
     background-repeat: repeat-x
     animation: 2s infinite zickzackAnimationTop linear
+    @media screen and ( max-width: $mobile )
+        margin: 2rem
+        padding-top: 3rem
 
 @keyframes opacityAnimation
     0%
