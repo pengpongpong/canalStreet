@@ -9,12 +9,13 @@ import { useLoaderData } from "react-router-dom"
 
 function CommunityFeatures({bgColor}) {
   const data = useLoaderData()
+
   return (
     <PageContainer left="180px" bgColor={bgColor}>
       <IntroCommunity
         headerText={`Events, podcasts, and artist residencies\n are all part of the vibrant mix at\n our multi-purpose space.`}
         headline="Features" />
-      <section style={{ margin: "0 4rem" }}>
+      <section style={{ margin: window.innerWidth < 400 ? "0 2em 2.5em 2em" : "0 4rem" }}>
         <Features data={data.featuresData} />
       </section>
       <VendorRegisterBanner />

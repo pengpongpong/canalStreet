@@ -1,10 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import "./IntroCommunity.sass"
 
 function IntroCommunity({headerText, headline}) {
     return (
         <section className="marketEvents">
-            <Link to="/community" className="marketEvents__returnButton">Community</Link>
+            <div className="marketEvents__buttonContainer">
+                <Link to="/community" className="marketEvents__returnButton">Community</Link>
+            </div>
             <div className="marketEvents__introText">
                 <p>{headerText}</p>
             </div>

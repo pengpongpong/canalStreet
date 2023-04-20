@@ -12,16 +12,16 @@ import 'swiper/css';
 
 
 function ImageSlider({ data }) {
-        const imageSlider = data.map((obj, index) => {
+        const imageSlider = data.map((obj) => {
             return (
-                <SwiperSlide tag="picture"><img className="image" src={obj} /></SwiperSlide>
+                <SwiperSlide tag="picture" key={obj}><img className="image" src={obj} /></SwiperSlide>
             )
         })
 
         if (imageSlider.length) {
             return (
                 <div className="imageSliderContainer">
-                    <div role="button" className="button-slider-prev">
+                    <div role="button-prev" className="button-slider-prev">
                         <div className="iconContainer"><ArrowBackIcon /></div >
                     </div>
                     <Swiper
@@ -38,7 +38,7 @@ function ImageSlider({ data }) {
                     >
                         {imageSlider}
                     </Swiper>
-                    <div role="button" className="button-slider-next">
+                    <div role="button-next" className="button-slider-next">
                         <div className="iconContainer"><ArrowForwardIcon /></div>
                     </div>
                 </div>

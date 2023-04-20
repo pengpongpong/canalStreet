@@ -12,17 +12,17 @@ function Vendor({ data, headerText, returnButtonText, retail, community, feature
         linksKey = Object.keys(data[0].links);
     }
 
-    const linksItems = linksKey?.map((obj, index) => {
+    const linksItems = linksKey?.map((obj) => {
         return (
-            <li className="introPageVendor__item" key={index}>
+            <li className="introPageVendor__item" key={obj}>
                 <Link className="introPageVendor__socialLinks" to={links[obj]}>{obj}</Link>
             </li>
         )
     })
 
-    const imageItems = data[0].imageSrcVendorPage?.map((obj, index) => {
+    const imageItems = data[0].imageSrcVendorPage?.map((obj) => {
         return (
-            <li className="vendorImages__item" key={index}>
+            <li className="vendorImages__item" key={obj}>
                 <img className="vendorImages__image" src={obj} alt={`${data[0].vendorID} images`} />
             </li>
         )

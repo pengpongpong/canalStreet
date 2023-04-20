@@ -115,49 +115,6 @@ $mobile: 400px
         &__headline
             font-size: 3em
 
-
-//community event page
-.marketEvents
-    margin: 8rem 4rem 4rem 4rem
-    &__returnButton
-        padding: .7rem 4rem
-        display: flex
-        align-items: center
-        position: absolute
-        border: 1px solid black
-        color: black
-        text-decoration: none
-        font-family: $paragraph-font
-        font-size: .8rem
-        letter-spacing: 1px
-        will-change: background-color, color
-        background-color: transparent
-        transition: background-color .4s, color .4s
-        cursor: pointer
-        &::before
-            content: "\21E0"
-            margin-right: .5rem
-            font-size: 1.4rem
-            position: relative
-            bottom: 1px
-        &_:visited
-            color: black
-        &:hover
-            color: white
-            background-color: black
-    &__introText
-        text-align: right
-        font-size: .9rem
-        font-weight: 100
-        line-height: 1.3rem
-        letter-spacing: 2px
-        white-space: pre-wrap
-    &__headline
-        margin: 1rem 0
-        font-family: $headline-font
-        font-size: 7rem
-        font-weight: 100
-
 //CommunityEvents
 .eventGrid
     margin: 4rem
@@ -183,6 +140,14 @@ $mobile: 400px
         margin: 1rem 0
         font-family: $paragraph-font
         font-size: .9rem
+    @media screen and ( max-width: $mobile )
+        margin: 2em
+        &__list
+            display: flex
+            flex-direction: column
+            gap: 1em
+        &__item
+            height: auto
 
 //features vendor
 .featHeader

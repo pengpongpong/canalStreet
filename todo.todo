@@ -44,3 +44,7 @@
             transform: translateX(0)
     &__container
         display: flex
+
+
+
+        //community event page

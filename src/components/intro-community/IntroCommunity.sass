@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=PT+Mono&display=swap')
+
+$headline-font: 'EB Garamond', serif
+$paragraph-font: 'PT Mono', monospace
+$mobile: 400px
+    
+.marketEvents
+    margin: 8rem 4rem 4rem 4rem
+    &__returnButton
+        padding: .7rem 4rem
+        display: flex
+        align-items: center
+        position: absolute
+        border: 1px solid black
+        color: black
+        text-decoration: none
+        font-family: $paragraph-font
+        font-size: .9rem
+        letter-spacing: 1px
+        will-change: background-color, color
+        background-color: transparent
+        transition: background-color .4s, color .4s
+        cursor: pointer
+        &::before
+            content: "\21E0"
+            margin-right: .5rem
+            font-size: 1.4rem
+            position: relative
+            bottom: 1px
+        &_:visited
+            color: black
+        &:hover
+            color: white
+            background-color: black
+    &__introText
+        text-align: right
+        font-size: .9rem
+        font-weight: 100
+        line-height: 1.3rem
+        letter-spacing: 2px
+        white-space: pre-wrap
+    &__headline
+        margin: 1rem 0
+        font-family: $headline-font
+        font-size: 7rem
+        font-weight: 100
+    @media screen and ( max-width: $mobile )
+        margin: 2em
+        padding-top: 3em
+        text-align: center
+        &__introText
+            display: none
+        &__buttonContainer
+            margin-top: 1.5em
+            display: flex
+            justify-content: flex-end
+        &__returnButton
+            width: 50%
+            padding: 1em 1.5em
+            position: relative
+            top: 0
+            right: 0
+        &__headline
+            margin: .75em 0
+            font-size: 3em
