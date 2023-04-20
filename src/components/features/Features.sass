@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=PT+Mono&display=swap')
 
 $headline-font: 'EB Garamond', serif
+$mobile: 400px
     
 .features
     margin-bottom: 8rem
@@ -32,3 +33,15 @@ $headline-font: 'EB Garamond', serif
     &__headlineSpan
         background-color: white
         padding: .8rem .7rem .8rem 0
+    @media screen and ( max-width: $mobile )
+        margin-bottom: 2em
+        display: flex
+        flex-direction: column
+        &__card
+            height: 15em
+        &__imageHeadline
+            font-size: 1em
+            border-left: none
+            bottom: -1.5em
+        &__headlineSpan
+            padding: .5em

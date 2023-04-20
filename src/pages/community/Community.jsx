@@ -20,8 +20,8 @@ function Community({bgColor}) {
       <span className="events__date">{data.eventData[0].date}</span>
       <Link className="events__anchor" to={`/community/event/${data.eventData[0].href.replace(/\s/gi, "-")}`}><p>{data.eventData[0].event}</p></Link>
     </div>
-    <div className="events__cardTop"></div>
-    <div className="events__cardTop"></div>
+    <div className="events__cardTopMid"></div>
+    <div className="events__cardTopMid"></div>
     <div className="events__cardTop">
       <span className="events__date">{data.eventData[1].date}</span>
       <Link className="events__anchor" to={`/community/event/${data.eventData[1].href.replace(/\s/gi, "-")}`} ><p>{data.eventData[1].event}</p></Link>
