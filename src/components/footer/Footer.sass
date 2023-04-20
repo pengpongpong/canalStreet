@@ -16,7 +16,7 @@ $mobile: 400px
     background: rgba(0, 0, 0, 0.5)
     visibility: hidden
     opacity: 0
-    will-change: opacity, visibility
+    will-change: auto
 
 .formContainer
     width: 70vw
@@ -60,7 +60,7 @@ $mobile: 400px
         border: 1px solid black
         padding: 1rem 2.5rem
         background-color: transparent
-        will-change: color, background-color
+        will-change: auto
         transition: color .4s, background-color .4s
         cursor: pointer
         font-family: $paragraph-font
@@ -93,7 +93,7 @@ $mobile: 400px
         font-family: $paragraph-font
         font-size: .9rem
         text-align: center
-        will-change: background-position
+        will-change: auto
         background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0)
         background-position: 0 0,0 100%,0 0,100% 0
         background-repeat: repeat-x,repeat-x,repeat-y,repeat-y
@@ -112,6 +112,14 @@ $mobile: 400px
         width: 35%
         margin: 0 auto
         line-height: 1.3rem
+    @media screen and ( max-width: $mobile )
+        padding: 2em
+        &__list
+            flex-direction: column
+            gap: 2em
+        &__item
+            &:hover
+                animation: none
 
 .newsletter
     margin: 3rem 4rem 2rem 4rem
@@ -120,7 +128,7 @@ $mobile: 400px
     justify-content: space-between
     font-family: $paragraph-font
     position: relative
-    will-change: background-position
+    will-change: auto
     background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(70deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0)
     background-position: 0 0,0 100%,0 0,100% 0
     background-repeat: repeat-x,repeat-x,repeat-y,repeat-y
@@ -147,6 +155,22 @@ $mobile: 400px
         position: absolute
         right: 6rem
         bottom: 40%
+    @media screen and ( max-width: $mobile )
+        margin: 2em
+        padding: 2em
+        flex-direction: column
+        &:hover
+                animation: none
+        &__headline
+            width: 100%
+            margin-bottom: 1em
+            font-size: 1.2em
+        &__emailInput
+            width: 100%
+            padding: 1.5em 2em
+        &__emailButton
+            bottom: 3.2em
+            right: 3.2em
 
 .footer
     margin-bottom: 4rem
@@ -161,9 +185,21 @@ $mobile: 400px
     &__anchor
         color: black
         text-decoration: none
-        border-bottom: 1px solid black
         &:visited
             color: black
+    @media screen and ( max-width: $mobile )
+        margin-bottom: 2em
+        padding: 0 2em
+        flex-direction: column
+        text-align: center
+        &__textContainer
+            flex-direction: column-reverse
+            gap: 1em
+        &__anchor
+            border: none
+        &__text
+            font-size: .8em
+            margin-bottom: .5em
 
 @keyframes boxDashedUnderlineAnimation
     0%

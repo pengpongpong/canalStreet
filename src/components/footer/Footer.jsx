@@ -12,11 +12,11 @@ function Footer() {
             <Newsletter />
             <footer className="footer">
                 <div className="footer__textContainer">
-                    <p>Copyright Street Market 2023</p>
-                    <Link className="footer__anchor" to="/policy">Privacy Policy</Link>
-                    <Link className="footer__anchor" to="">Vendor Login</Link>
+                    <p className="footer__text">Copyright Street Market 2023</p>
+                    <Link className="footer__anchor" to="/policy"><u>Privacy Policy</u></Link>
+                    <Link className="footer__anchor" to=""><u>Vendor Login</u></Link>
                 </div>
-                <p>Site by Phuong</p>
+                <p className="footer__text">Site by Phuong</p>
             </footer>
         </>
     )

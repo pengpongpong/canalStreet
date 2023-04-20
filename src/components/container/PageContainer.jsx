@@ -3,7 +3,10 @@ import "./Container.sass"
 
 function PageContainer({ children, left, id, bgColor }) {
 
-    const containerDistance = left ? left : "0px"
+    const screenWidth = window.innerWidth;
+    const mobileSize = 400
+
+    const containerDistance = left && screenWidth > mobileSize ? left : "0px"
 
     if (id) {
         useEffect(() => {

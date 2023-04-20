@@ -4,7 +4,6 @@ $headline-font: 'EB Garamond', serif
 $paragraph-font: 'PT Mono', monospace
 $mobile: 400px
 
-//Home page
 .homePage
     margin: 15rem 4rem 10rem 4rem
     display: flex
@@ -142,10 +141,14 @@ $mobile: 400px
         background-position: 0 0,0 100%,0 0,100% 0
         background-repeat: repeat-x,repeat-x,repeat-y,repeat-y
         background-size: 30px 1px,30px 1px,1px 30px,1px 30px
+        text-decoration: none
+        color: black
+        &:visited
+            color: black
         &:hover
             animation: .6s infinite boxDashedUnderlineAnimation linear
     @media screen and ( max-width: $mobile )
-        margin: 2em
+        margin: 2em 2em 4em 2em
         flex-direction: column
         &__text
             padding: 0
@@ -155,6 +158,10 @@ $mobile: 400px
             height: 15em
             display: grid
             place-items: center
+            &:hover
+                animation: none
+            &:nth-child(2)
+                display: none
 
 @keyframes underline
     0%

@@ -27,6 +27,12 @@ const MarketDescriptionItems = ({ arr }) => (
   })
 )
 
+const AddressBox = ({ element }) => (
+  <Link to="https://www.google.com/maps/place/Albert+Cuyp+Market/@52.3559705,4.8928122,17z/data=!4m6!3m5!1s0x47c609f28b745671:0xd2d8aeb9aaa10b4b!8m2!3d52.3559673!4d4.8953871!16s%2Fm%2F0269ljs" target="_blank" className="address__box">
+    {element}
+  </Link>
+)
+
 function Home({ bgColor }) {
   const data = useLoaderData()
   const screenWidth = window.innerWidth
@@ -42,7 +48,7 @@ function Home({ bgColor }) {
     if (window.scrollY > 450 && screenWidth < 400) {
       descriptions.style.opacity = "1";
     }
-   
+
     if (window.scrollY > 450) {
       bgImage.style.opacity = "1";
     }
@@ -79,12 +85,12 @@ function Home({ bgColor }) {
         data={data.eventData}
         bgColor="#fff" />
       <section className="address">
-        <div className="address__box">
-          <h3 className="address__text">265 Canal St. New York, NY</h3>
-        </div>
-        <div className="address__box">
-          <img className="address__map" src="src/assets/images/pages-images/home/map.jpg"></img>
-        </div>
+        <AddressBox
+          element={<h3 className="address__text">Albert Cuypstraat, Netherlands</h3>}
+        />
+        <AddressBox
+          element={<img className="address__map" src="src/assets/images/pages-images/home/map.png"></img>}
+        />
       </section>
       <VendorRegisterBanner />
       <Footer />

@@ -2,6 +2,8 @@
 
 $headline-font: 'EB Garamond', serif
 $paragraph-font: 'PT Mono', monospace
+$mobile: 400px
+
 
 .introPage
     margin: 11rem 4rem
@@ -43,7 +45,26 @@ $paragraph-font: 'PT Mono', monospace
         height: 33rem
         will-change: opacity
         opacity: 0
-        animation: 3s forwards linear opacityAnimation
+        animation: 2s forwards linear opacityAnimation
+    @media screen and ( max-width: $mobile )
+        margin: 0em
+        &__introText, &__logo
+            display: none
+            margin: 0 2em
+        &__headlineContainer
+            padding-top: 5em
+            flex-direction: column
+            gap: 1em
+        &__headline
+            margin-left: .5em
+            width: 100%
+            font-size: 4em
+            line-height: 1.5em
+        &__image
+            width: 100%
+            height: 100%
+        
+
 
 @keyframes opacityAnimation
     0%
