@@ -33,11 +33,11 @@ function ReturnButtonEl({ retail, community, feature, returnButtonText, radio })
     }
 
     const test = communityLink.charAt(0).toUpperCase + communityLink.slice(1)
-    console.log("🚀 ~ file: returnButtonEl.jsx:36 ~ ReturnButtonEl ~ test:", test)
+
     return (
         <div className="introPageVendor__buttonContainer">
             <Link className="introPageVendor__returnButton" to={`/${linkCat}`} >{returnButtonText}</Link>
-            {community ?? <Link style={{ borderLeft: "0px" }} className="introPageVendor__returnButton" to={`/community/${communityLink}`} >{communityLinkText}</Link>}
+            {community ? <Link style={{ borderLeft: "0px" }} className="introPageVendor__returnButton" to={`/community/${communityLink}`} >{communityLinkText}</Link> : ""}
         </div>
     )
 }

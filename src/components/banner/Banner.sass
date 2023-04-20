@@ -2,6 +2,7 @@
 
 $headline-font: 'EB Garamond', serif
 $paragraph-font: 'PT Mono', monospace
+$mobile: 400px
     
 .banner
     display: flex
@@ -29,6 +30,19 @@ $paragraph-font: 'PT Mono', monospace
     &__text
         font-family: $paragraph-font
         font-size: 1rem
+    @media screen and ( max-width: $mobile )
+        flex-direction: column
+        padding: 4em 0
+        &__icon, &__iconReverse
+            width: 8em
+        &__textContainer
+            width: 100%
+        &__headline
+            margin: 1em 0
+            font-size: 2em
+            line-height: 1em
+        &__text
+            margin-bottom: 2em
 
 @keyframes logoAnimation 
     0%

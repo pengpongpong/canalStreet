@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import "./VendorGrid.sass"
 
 function VendorGrid({ vendorData, retail }) {
+  const imageContainer = useRef()
 
-  //enter vendor card -> display image
+  //mouse-enter vendor card -> display image
   const enterVendor = (e) => {
-    const foodImageContainer = document.querySelector(".vendorImage");
     const randomX = Math.floor(Math.random() * 100) * 10 + 60;
     const randomY = (Math.floor(Math.random() * 10) * 40)
 
-    foodImageContainer.childNodes.forEach((obj) => {
+    imageContainer.current.childNodes.forEach((obj) => {
       if (obj.id === e.currentTarget.id) {
         obj.style.opacity = "1";
         obj.style.transform = `translate(${randomX}px, ${randomY}px)`;
@@ -18,10 +18,9 @@ function VendorGrid({ vendorData, retail }) {
     });
   };
 
-  //exit vendor card -> hide image
+  //mouse-exit vendor card -> hide image
   const exitVendor = () => {
-    const foodImageContainer = document.querySelector(".vendorImage");
-    foodImageContainer.childNodes.forEach((obj) => {
+    imageContainer.current.childNodes.forEach((obj) => {
       obj.style.opacity = "0";
     });
   };
@@ -30,30 +29,29 @@ function VendorGrid({ vendorData, retail }) {
 
   return (
     <>
-      <div className="vendorImage" aria-hidden={true}>
-        {vendorData.map((obj, index) => {
+      <div className="vendorImage" aria-hidden={true} ref={imageContainer}>
+        {vendorData.map((obj) => {
           const bgImage = `no-repeat url(${obj.imageSrc})`;
           const imageCard = (
-            <div id={obj.vendor.replace(/\s/gi, "")} className="vendorImage__card" style={{ background: bgImage, backgroundSize: "100%" }} key={index}></div>
+            <div id={obj.vendor.replace(/\s/gi, "")} className="vendorImage__card" style={{ background: bgImage, backgroundSize: "100%" }} key={obj.vendor}></div>
           );
           return imageCard;
         })}
       </div>
       <section className="vendorCard">
-        {vendorData.map((obj, index) => {
+        {vendorData.map((obj) => {
           const vendorCard = (
-            <div key={index}>
-              <Link
-                id={obj.vendor.replace(/\s/gi, "")}
-                to={`/${linkCat}/${obj.vendor.replace(/\s/gi, "-")}`}
-                className="vendorCard__anchor"
-                onMouseEnter={enterVendor}
-                onMouseLeave={exitVendor}
-              >
-                <p className="vendorCard__cat">{obj.headline}</p>
-                <p className="vendorCard__vendor">{obj.vendor}</p>
-              </Link>
-            </div>
+            <Link
+              key={obj.vendor}
+              id={obj.vendor.replace(/\s/gi, "")}
+              to={`/${linkCat}/${obj.vendor.replace(/\s/gi, "-")}`}
+              className="vendorCard__anchor"
+              onMouseEnter={enterVendor}
+              onMouseLeave={exitVendor}
+            >
+              <p className="vendorCard__cat">{obj.headline}</p>
+              <p className="vendorCard__vendor">{obj.vendor}</p>
+            </Link>
           );
           return vendorCard;
         })}

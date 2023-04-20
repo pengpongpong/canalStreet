@@ -2,6 +2,7 @@
 
 $headline-font: 'EB Garamond', serif
 $paragraph-font: 'PT Mono', monospace
+$mobile: 400px
 
 .introPageVendor
     margin: 11rem 4rem
@@ -88,7 +89,41 @@ $paragraph-font: 'PT Mono', monospace
         max-height: auto
         will-change: opacity
         opacity: 0
-        animation: 3s forwards linear opacityAnimation
+        animation: 2s forwards linear opacityAnimation
+    @media screen and ( max-width: $mobile )
+        margin: 4em 2em
+        &__headerTextContainer
+            display: none
+        &__buttonContainer
+            padding-top: 2.5em
+            justify-content: flex-end
+        &__returnButton
+            width: 50%
+        &__contentContainer
+            padding-top: 2em
+            flex-direction: column
+            gap: 0
+        &__textContainer
+            margin-bottom: 2em
+        &__headline
+            margin-bottom: .5em
+            font-size: 3em
+            line-height: 1em
+        &__socialLinks
+            width: 100%
+            padding: 1.5em
+        &__imageSocialContainer
+            margin-left: 0
+            min-height: 0
+        &__list
+            width: 100%
+            flex-direction: column
+            justify-content: center
+        &__item
+            width: 100%
+        &__image
+            width: 100%
+        
 
 .vendorImages
     margin: 0rem 4rem
@@ -123,20 +158,13 @@ $paragraph-font: 'PT Mono', monospace
     &__image
         max-width: 100%
         max-height: 100%
-    &__slideImage
-        max-width: 100%
-        height: 100%
-    &__imageContainer
-        width: 25rem
-        height: 30rem
-        opacity: 0
-        transform: translateX(100%)
-        transition: transform .5s
-        &--active 
-            opacity: 1
-            transform: translateX(0)
-    &__container
-        display: flex
+    @media screen and ( max-width: $mobile )
+        margin: 0 2em
+        &__list
+            display: flex
+            flex-direction: column
+        &__item
+            height: 15em
 
 @keyframes opacityAnimation
     0%

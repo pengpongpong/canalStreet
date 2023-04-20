@@ -26,3 +26,21 @@
         font-family: $paragraph-font
 .podcasts
     margin: 0 4rem 4rem 4rem  */
+
+
+
+
+    &__slideImage
+        max-width: 100%
+        height: 100%
+    &__imageContainer
+        width: 25rem
+        height: 30rem
+        opacity: 0
+        transform: translateX(100%)
+        transition: transform .5s
+        &--active 
+            opacity: 1
+            transform: translateX(0)
+    &__container
+        display: flex

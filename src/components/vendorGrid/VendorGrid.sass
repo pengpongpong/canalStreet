@@ -24,6 +24,15 @@ $mobile: 400px
         font-family: $paragraph-font
         margin-bottom: 1rem
     @media screen and ( max-width: $mobile )
+        margin: 4em 2em
+        display: flex
+        flex-direction: column
+        gap: 3em
+        &__vendor
+            font-size: 2em
+        &__cat
+            font-size: .9em
+
     
 .vendorImage
     &__card
@@ -33,3 +42,5 @@ $mobile: 400px
         opacity: 0
         will-change: opacity
         transition: opacity .8s ease-in
+    @media screen and ( max-width: $mobile )
+        display: none

@@ -10,7 +10,7 @@ function PageContainer({ children, left, id, bgColor }) {
 
     if (id) {
         useEffect(() => {
-            window.scrollTo(0, 9999)
+            window.scrollTo(0, 0)
         }, [id])
     } else {
         useEffect(() => {
