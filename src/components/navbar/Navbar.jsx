@@ -15,6 +15,7 @@ const useStyleStore = create((set) => ({
   community: false,
   toggle: false,
   setToggle: () => set((state) => ({ toggle: !state.toggle })),
+  setToggleFalse: () => set((state) => ({toggle: false})),
   setHome: () => set((state) => ({ home: !state.home })),
   setFood: () => set((state) => ({ food: !state.food })),
   setRetail: () => set((state) => ({ retail: !state.retail })),
@@ -94,7 +95,7 @@ function Navbar({
   //hide hamburger menu when changing page after .5s animation
   useEffect(() => {
     setTimeout(() => {
-      store.setToggle()
+      store.setToggleFalse()
       checkboxMenu.current.checked = false
       store.resetState()
     }, 500)
