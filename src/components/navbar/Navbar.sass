@@ -90,12 +90,15 @@ $mobile: 400px
             top: 0
             display: flex
             flex-wrap: wrap
+            position: relative
+        &__anchor
+            padding-top: 0
         &__item
             width: 50vw
-            height: 25em
+            height: 50vh
             position: relative
             &--open
-                transform: scale(3)
+                transform: scale(2)
                 transition: .5s
                 z-index: 5
                 .nav__headline, .nav__text, .nav__anchor
@@ -103,22 +106,26 @@ $mobile: 400px
                     will-change: auto
                     transition: opacity .2s
             &:nth-child(1)
+                transform-origin: top left
                 animation: navStartAnimation .8s ease-in-out
                 .nav__anchor > .nav__text
-                    transform: rotate(-125deg)
+                    transform: translate(-50%, -50%) rotate(-45deg)
             &:nth-child(2)
+                transform-origin: top right
                 animation: navStartAnimation .7s ease-in-out
                 .nav__anchor > .nav__text
-                    transform: rotate(-45deg)
+                    transform: translate(-50%, -50%)  rotate(45deg)
             &:nth-child(3)
+                transform-origin: bottom left
                 animation: navStartAnimation .6s ease-in-out
                 .nav__anchor > .nav__text
-                    transform: rotate(-45deg)
+                    transform: translate(-50%, -50%)  rotate(45deg)
             &:nth-child(4)
+                transform-origin: bottom right
                 animation: navStartAnimation .5s ease-in-out
                 text-align: center
                 .nav__anchor > .nav__text
-                    transform: rotate(-125deg)
+                    transform: translate(-50%, -50%)  rotate(-45deg)
         &__homeIconAnchor, &__icon
             display: none
 

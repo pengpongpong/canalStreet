@@ -59,7 +59,7 @@ function Community({bgColor}) {
         <Banner
           image={PodcastIcon}
           headline="Market Radio"
-          text="Podcasted from the market" />
+          text="Podcasted from the market" />˚
       </BgZickzackTopContainer>
       <EventBanner data={data.communityPodcastData}
         bgColor="#ffb400"

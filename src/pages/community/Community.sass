@@ -30,6 +30,7 @@ $mobile: 400px
         margin: 2em
         &__anchor
             padding: 1.5em 2em
+            font-size: .9em
 
 .events
     position: relative
@@ -149,10 +150,11 @@ $mobile: 400px
         &__item
             height: auto
 
-//features vendor
+//CommunityFeaturesVendor
 .featHeader
     height: 100vh
     background-size: 100%
+    background-repeat: no-repeat
     position: relative
     &__headline
         font-family: $headline-font
@@ -166,6 +168,14 @@ $mobile: 400px
         left: 4rem
     &__buttonContainer
         margin: 10rem 4rem
+    @media screen and ( max-width: $mobile )
+        height: 40vh
+        &__headline
+            font-size: 2em
+            top: -1em
+            left: .5em
+        &__buttonContainer
+            margin: 4em 0 4em 0
 
 .featVendor
     margin: 4rem
@@ -191,6 +201,14 @@ $mobile: 400px
         height: 15rem
         background-size: 100%
         background-repeat: no-repeat
+    @media screen and ( max-width: $mobile )
+        margin: 2em
+        flex-direction: column
+        &__sidebar
+            width: 100%
+            height: auto
+            position: relative
+
 
 .vendorDescription
     font-family: $paragraph-font

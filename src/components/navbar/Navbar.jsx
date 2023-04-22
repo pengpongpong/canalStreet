@@ -13,6 +13,8 @@ const useStyleStore = create((set) => ({
   food: false,
   retail: false,
   community: false,
+  toggle: false,
+  setToggle: () => set((state) => ({ toggle: !state.toggle })),
   setHome: () => set((state) => ({ home: !state.home })),
   setFood: () => set((state) => ({ food: !state.food })),
   setRetail: () => set((state) => ({ retail: !state.retail })),
@@ -26,7 +28,6 @@ function Navbar({
   communityClass,
   foodClass,
 }) {
-  const [toggle, setToggle] = useState(false)
   const navMenu = useRef()
   const checkboxMenu = useRef()
   const screenWidth = window.innerWidth;
@@ -63,7 +64,7 @@ function Navbar({
     { "nav__homeIconAnchor--open": homeClass }
   )
 
-  //set animation style when changing pages with hamburger menu
+  //set animation style when click on pages with hamburger menu
   const setMobileStyle = (e) => {
     e.preventDefault()
     const page = e.currentTarget.innerText
@@ -87,13 +88,13 @@ function Navbar({
 
   //toggle hamburger menu
   const toggleMenu = () => {
-    setToggle(!toggle)
+    store.setToggle()
   }
 
   //hide hamburger menu when changing page after .5s animation
   useEffect(() => {
     setTimeout(() => {
-      setToggle(false)
+      store.setToggle()
       checkboxMenu.current.checked = false
       store.resetState()
     }, 500)
@@ -102,13 +103,15 @@ function Navbar({
 
   //set hide/show hamburger menu
   useEffect(() => {
-    if (toggle && screenWidth < mobileSize) {
+    if (store.toggle && screenWidth < mobileSize) {
       navMenu.current.style.transform = "translate(0, 0)"
+      document.querySelector("body").style.overflow = "hidden"
     }
-    else if (!toggle && screenWidth < mobileSize) {
+    else if (!store.toggle && screenWidth < mobileSize) {
       navMenu.current.style.transform = "translate(100%, 0)"
+      document.querySelector("body").style.overflow = "auto"
     }
-  }, [toggle])
+  }, [store.toggle])
 
   return (
     <header>

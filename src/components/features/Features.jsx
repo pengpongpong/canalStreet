@@ -13,7 +13,7 @@ function Features({ data, vendor }) {
       <div className="features__card" key={index}>
         <Link className="features__anchor" to={`/community/feature/${obj.vendor.replace(/\s/gi, "-")}`}>
           <img className="features__image" src={obj.imageSrc} alt="Community people" />
-          <h3 className="features__imageHeadline"><span className='features__headlineSpan'>{obj.featureText}</span></h3>
+          <h3 className="features__imageHeadline"><span className="features__headlineSpan">{obj.featureText}</span></h3>
         </Link>
       </div>
     )

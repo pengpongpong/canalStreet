@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Footer from "/src/components/footer/Footer"
 import EventBanner from "/src/components/EventBanner/EventBanner";
@@ -37,7 +37,7 @@ function Home({ bgColor }) {
   const data = useLoaderData()
   const screenWidth = window.innerWidth
 
-  window.addEventListener("scroll", (e) => {
+  window.addEventListener("scroll", () => {
     const bgImage = document.getElementById("bgContainer");
     const descriptions = document.querySelector(".descriptions__list");
 
