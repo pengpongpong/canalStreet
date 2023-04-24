@@ -15,7 +15,7 @@ function Footer() {
                     <Link className="footer__anchor" to="/policy"><u>Privacy Policy</u></Link>
                     <Link className="footer__anchor" to=""><u>Vendor Login</u></Link>
                 </div>
-                <p className="footer__text">Site by Phuong</p>
+                <Link className="footer__anchor">Site by tranmp.dev</Link>
             </footer>
         </>
     )
