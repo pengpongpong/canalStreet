@@ -18,7 +18,7 @@ const MarketDescriptionItems = ({ arr }) => (
       <li className="descriptions__item" key={obj.imageAlt}>
         <img
           className="descriptions__image"
-          src={process.env.PUBLIC_URL + obj.imageSrc}
+          src={`${process.env.PUBLIC_URL}${obj.imageSrc}`}
           alt={obj.imageAlt}
         />
         <p className="descriptions__text">{obj.description}</p>
@@ -89,7 +89,7 @@ function Home({ bgColor }) {
           element={<h3 className="address__text">Albert Cuypstraat, Netherlands</h3>}
         />
         <AddressBox
-          element={<img className="address__map" src={process.env.PUBLIC_URL + "/public/images/pages-images/home/map.png"}></img>}
+          element={<img className="address__map" src={`${process.env.PUBLIC_URL}/public/images/pages-images/home/map.png`}></img>}
         />
       </section>
       <VendorRegisterBanner />

@@ -148,17 +148,17 @@ function VendorForm() {
                 <FormCard
                     headline={Object.keys(listDescription)[0]}
                     items={listDescription["How-it-works"]}
-                    imageSrc="/public/images/vendor-form/vendorForm1.jpg"
+                    imageSrc={process.env.PUBLIC_URL + "/public/images/vendor-form/vendorForm1.jpg"}
                 />
                 <FormCard
                     headline={Object.keys(listDescription)[1]}
                     items={listDescription["Why-Street-Market?"]}
-                    imageSrc="/public/images/vendor-form/vendorForm2.jpg"
+                    imageSrc={process.env.PUBLIC_URL + "/public/images/vendor-form/vendorForm2.jpg"}
                 />
                 <FormCard
                     headline={Object.keys(listDescription)[2]}
                     items={listDescription["Benefits"]}
-                    imageSrc="/public/images/vendor-form/vendorForm3.jpg"
+                    imageSrc={process.env.PUBLIC_URL + "/public/images/vendor-form/vendorForm3.jpg"}
                 />
             </div>
             <h2 className="vendorForm__headline">Become a Vendor</h2>
