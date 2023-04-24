@@ -4,7 +4,7 @@ import "./Container.sass"
 function PageContainer({ children, left, id, bgColor }) {
 
     const screenWidth = window.innerWidth;
-    const mobileSize = 400
+    const mobileSize = 800
 
     const containerDistance = left && screenWidth > mobileSize ? left : "0px"
 

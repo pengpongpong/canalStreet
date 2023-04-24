@@ -32,7 +32,7 @@ function Navbar({
   const navMenu = useRef()
   const checkboxMenu = useRef()
   const screenWidth = window.innerWidth;
-  const mobileSize = 400
+  const mobileSize = 800
   const location = useLocation()
 
   //zustand store

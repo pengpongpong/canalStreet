@@ -36,24 +36,21 @@ const AddressBox = ({ element }) => (
 function Home({ bgColor }) {
   const data = useLoaderData()
   const screenWidth = window.innerWidth
+  const mobileSize = 800
 
   window.addEventListener("scroll", () => {
     const bgImage = document.getElementById("bgContainer");
     const descriptions = document.querySelector(".descriptions__list");
 
-    if (window.scrollY > 100 && screenWidth < 400) {
+    if (window.scrollY > 100 && screenWidth < mobileSize) {
+      bgImage.style.opacity = "1";
+    } else if (window.scrollY > 450) {
       bgImage.style.opacity = "1";
     }
 
-    if (window.scrollY > 450 && screenWidth < 400) {
+    if (window.scrollY > 450 && screenWidth < mobileSize) {
       descriptions.style.opacity = "1";
-    }
-
-    if (window.scrollY > 450) {
-      bgImage.style.opacity = "1";
-    }
-
-    if (window.scrollY > 1550) {
+    } else if (window.scrollY > 1550) {
       descriptions.style.opacity = "1";
     }
   });
