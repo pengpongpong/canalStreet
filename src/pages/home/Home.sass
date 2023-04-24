@@ -127,7 +127,6 @@ $mobile: 800px
     display: flex
     gap: 4rem
     &__text
-        padding: 4rem 9rem
         text-align: center
         font-family: $headline-font
         font-size: 3.5rem
@@ -140,6 +139,8 @@ $mobile: 800px
         width: 50%
         height: 25rem
         cursor: pointer
+        display: grid
+        place-items: center
         background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0)
         background-position: 0 0,0 100%,0 0,100% 0
         background-repeat: repeat-x,repeat-x,repeat-y,repeat-y
@@ -154,7 +155,6 @@ $mobile: 800px
         margin: 2em 2em 4em 2em
         flex-direction: column
         &__text
-            padding: 0
             font-size: 3em
         &__box
             width: 100%
