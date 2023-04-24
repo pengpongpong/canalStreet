@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import email from "/public/icons/email.svg";
-import facebook from "/public/icons/facebook.svg";
-import instagram from "/public/icons/instagram.svg";
+import email from "/icons/email.svg";
+import facebook from "/icons/facebook.svg";
+import instagram from "/icons/instagram.svg";
 import "./Footer.sass"
 
 function SocialBanner() {

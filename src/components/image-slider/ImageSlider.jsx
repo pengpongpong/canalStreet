@@ -12,7 +12,7 @@ import 'swiper/css';
 function ImageSlider({ data }) {
         const imageSlider = data.map((obj) => {
             return (
-                <SwiperSlide tag="picture" key={obj}><img className="image" src={process.env.PUBLIC_URL + obj} /></SwiperSlide>
+                <SwiperSlide tag="picture" key={obj}><img className="image" src={obj} /></SwiperSlide>
             )
         })
 

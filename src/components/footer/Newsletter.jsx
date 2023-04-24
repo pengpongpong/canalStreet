@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import emailSend from "/public/icons/emailSend.svg";
+import emailSend from "/icons/emailSend.svg";
 import "./Footer.sass"
 
 function Newsletter() {
@@ -15,7 +15,7 @@ function Newsletter() {
         <section className="newsletter">
             <h3 className="newsletter__headline">Stay up to date with our newsletter</h3>
             <input className="newsletter__emailInput" type="email" placeholder="Email" ref={emailRef} />
-            <img className="newsletter__emailButton" src={process.env.PUBLIC_URL + emailSend} onClick={onSubmit} role="submit" />
+            <img className="newsletter__emailButton" src={emailSend} onClick={onSubmit} role="submit" />
         </section>
     )
 }

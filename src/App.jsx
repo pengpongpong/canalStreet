@@ -16,7 +16,7 @@ import CommunityRadio from "./pages/community/CommunityRadio";
 import CommunityRadioVendor from "./pages/community/CommunityRadioVendor";
 
 export async function getVendorData() {
-  return fetch("/public/data/data.json")
+  return fetch("/data/data.json")
 }
 
 

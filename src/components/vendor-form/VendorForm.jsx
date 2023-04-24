@@ -41,7 +41,7 @@ function SelectEl({ control, name, options, requiredText, methodsFormState, disa
 const FormCard = ({ headline, items, imageSrc }) => {
     return (
         <div className="vendorForm__card">
-            <picture className="vendorForm__imageContainer"><img className="vendorForm__image" src={process.env.PUBLIC_URL + imageSrc} alt={`${headline}-image`} /></picture>
+            <picture className="vendorForm__imageContainer"><img className="vendorForm__image" src={imageSrc} alt={`${headline}-image`} /></picture>
             <div className="vendorForm__cardText">
                 <h2 className="vendorForm__listHeadline">{headline.replace(/-/g, " ")}</h2>
                 <ul className="vendorForm__list">
@@ -148,17 +148,17 @@ function VendorForm() {
                 <FormCard
                     headline={Object.keys(listDescription)[0]}
                     items={listDescription["How-it-works"]}
-                    imageSrc={process.env.PUBLIC_URL + "/public/images/vendor-form/vendorForm1.jpg"}
+                    imageSrc={"/images/vendor-form/vendorForm1.jpg"}
                 />
                 <FormCard
                     headline={Object.keys(listDescription)[1]}
                     items={listDescription["Why-Street-Market?"]}
-                    imageSrc={process.env.PUBLIC_URL + "/public/images/vendor-form/vendorForm2.jpg"}
+                    imageSrc={"/images/vendor-form/vendorForm2.jpg"}
                 />
                 <FormCard
                     headline={Object.keys(listDescription)[2]}
                     items={listDescription["Benefits"]}
-                    imageSrc={process.env.PUBLIC_URL + "/public/images/vendor-form/vendorForm3.jpg"}
+                    imageSrc={"/images/vendor-form/vendorForm3.jpg"}
                 />
             </div>
             <h2 className="vendorForm__headline">Become a Vendor</h2>

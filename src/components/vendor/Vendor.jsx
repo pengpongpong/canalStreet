@@ -23,7 +23,7 @@ function Vendor({ data, headerText, returnButtonText, retail, community, feature
     const imageItems = data[0].imageSrcVendorPage?.map((obj) => {
         return (
             <li className="vendorImages__item" key={obj}>
-                <img className="vendorImages__image" src={process.env.PUBLIC_URL + obj} alt={`${data[0].vendorID} images`} />
+                <img className="vendorImages__image" src={obj} alt={`${data[0].vendorID} images`} />
             </li>
         )
     })
@@ -47,7 +47,7 @@ function Vendor({ data, headerText, returnButtonText, retail, community, feature
                         <p className="introPageVendor__text">{data[0].text}</p>
                     </div>
                     <div className="introPageVendor__imageSocialContainer">
-                        <img className="introPageVendor__image" src={process.env.PUBLIC_URL + data[0].imageSrc} alt={data[0].event} />
+                        <img className="introPageVendor__image" src={data[0].imageSrc} alt={data[0].event} />
                         <ul className="introPageVendor__list">
                             {linksItems}
                         </ul>

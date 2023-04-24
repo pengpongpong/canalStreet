@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams, useLoaderData } from "react-router-dom"
 import VendorBanner from "/src/components/banner/VendorBanner"
-import NoodleBowl from "/public/icons/noodleBowl.svg"
+import NoodleBowl from "/icons/noodleBowl.svg"
 import VendorGrid from "/src/components/vendorGrid/VendorGrid"
 import Footer from "/src/components/footer/Footer"
 import Vendor from "/src/components/vendor/Vendor"

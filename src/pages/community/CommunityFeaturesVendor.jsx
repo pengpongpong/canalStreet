@@ -44,7 +44,7 @@ function CommunityFeaturesVendor({bgColor}) {
                         feature
                         returnButtonText="Community" />
                 </div>
-                <section className="featHeader" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${featureVendorData[0].imageSrc})` }}>
+                <section className="featHeader" style={{ backgroundImage: `url(${featureVendorData[0].imageSrc})` }}>
                     <h1 className="featHeader__headline">{featureVendorData[0].vendor}</h1>
                 </section>
                 <section className="featVendor">
@@ -59,7 +59,7 @@ function CommunityFeaturesVendor({bgColor}) {
                     <div className="featVendor__sidebar">
                         <p className="featVendor__sidebarText">{vendorData[0].headline}</p>
                         <p className="featVendor__sidebarText">{vendorData[0].vendor}</p>
-                        <div className="featVendor__sidebarImage" style={{backgroundImage: `url(${process.env.PUBLIC_URL}${vendorData[0].imageSrc})`}}></div>
+                        <div className="featVendor__sidebarImage" style={{backgroundImage: `url(${vendorData[0].imageSrc})`}}></div>
                         <Link className="communityEvents__anchor" to={vendorLink}>learn more</Link>                   
                     </div>
                 </section>

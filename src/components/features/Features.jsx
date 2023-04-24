@@ -12,7 +12,7 @@ function Features({ data, vendor }) {
     return (
       <div className="features__card" key={obj.vendor}>
         <Link className="features__anchor" to={`/community/feature/${obj.vendor.replace(/\s/gi, "-")}`}>
-          <img className="features__image" src={process.env.PUBLIC_URL + obj.imageSrc} alt="Community people" />
+          <img className="features__image" src={obj.imageSrc} alt="Community people" />
           <h3 className="features__imageHeadline"><span className="features__headlineSpan">{obj.featureText}</span></h3>
         </Link>
       </div>
@@ -21,7 +21,7 @@ function Features({ data, vendor }) {
     return (
       <div className="features__card" key={obj.vendor}>
         <Link className="features__anchor" to={`/community/feature/${obj.vendor.replace(/\s/gi, "-")}`}>
-          <img className="features__image" src={process.env.PUBLIC_URL + obj.imageSrc} alt="Community people" />
+          <img className="features__image" src={obj.imageSrc} alt="Community people" />
           <h3 className="features__imageHeadline"><span className='features__headlineSpan'>{obj.featureText}</span></h3>
         </Link>
       </div>

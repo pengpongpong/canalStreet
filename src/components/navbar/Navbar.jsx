@@ -3,9 +3,9 @@ import React, { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { create } from "zustand"
 import "./Navbar.sass"
-import FoodIcon from "/public/icons/food.svg"
-import CommunityIcon from "/public/icons/community.svg"
-import RetailIcon from "/public/icons/retail.svg"
+import FoodIcon from "/icons/food.svg"
+import CommunityIcon from "/icons/community.svg"
+import RetailIcon from "/icons/retail.svg"
 
 //store for handling mobile nav animation
 const useStyleStore = create((set) => ({

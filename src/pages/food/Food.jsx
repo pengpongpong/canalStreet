@@ -2,9 +2,9 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Intro from "/src/components/intro/Intro";
 import Banner from "/src/components/banner/Banner";
-import SmileyIcon from "/public/icons/smiley.svg";
+import SmileyIcon from "/icons/smiley.svg";
 import Footer from "/src/components/footer/Footer";
-import FoodHall from "/public/images/pages-images/food/foodImage.jpg";
+import FoodHall from "/images/pages-images/food/foodImage.jpg";
 import VendorGrid from "/src/components/vendorGrid/VendorGrid";
 import BgZickZackTopBottomContainer from "/src/components/container/BgZickZackTopBottomContainer";
 import PageContainer from "/src/components/container/PageContainer"

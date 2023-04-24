@@ -4,7 +4,7 @@ import "./Community.sass"
 import Banner from "/src/components/banner/Banner"
 import PageContainer from "/src/components/container/PageContainer"
 import IntroCommunity from "/src/components/intro-community/IntroCommunity"
-import SmileyIcon from "/public/icons/smiley.svg"
+import SmileyIcon from "/icons/smiley.svg"
 import Footer from "/src/components/footer/Footer"
 
 function CommunityRadio({bgColor}) {
@@ -15,7 +15,7 @@ function CommunityRadio({bgColor}) {
         return (
             <li className="eventGrid__item" key={obj.event}>
                 <Link to={`/community/radio/${eventLink}`} className="eventGrid__anchor">
-                    <img className="eventGrid__image" src={process.env.PUBLIC_URL + obj.imageSrc}></img>
+                    <img className="eventGrid__image" src={obj.imageSrc}></img>
                     <p className="eventGrid__text">{obj.event}</p>
                 </Link>
             </li>
