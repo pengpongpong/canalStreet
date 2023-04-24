@@ -1,11 +1,11 @@
 import classNames from "classnames";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { create } from "zustand"
 import "./Navbar.sass"
-import FoodIcon from "/src/assets/icons/food.svg"
-import CommunityIcon from "/src/assets/icons/community.svg"
-import RetailIcon from "/src/assets/icons/retail.svg"
+import FoodIcon from "/public/icons/food.svg"
+import CommunityIcon from "/public/icons/community.svg"
+import RetailIcon from "/public/icons/retail.svg"
 
 //store for handling mobile nav animation
 const useStyleStore = create((set) => ({

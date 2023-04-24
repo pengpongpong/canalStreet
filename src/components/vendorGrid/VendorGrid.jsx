@@ -31,7 +31,7 @@ function VendorGrid({ vendorData, retail }) {
     <>
       <div className="vendorImage" aria-hidden={true} ref={imageContainer}>
         {vendorData.map((obj) => {
-          const bgImage = `no-repeat url(${obj.imageSrc})`;
+          const bgImage = `no-repeat url(${process.env.PUBLIC_URL}${obj.imageSrc})`;
           const imageCard = (
             <div id={obj.vendor.replace(/\s/gi, "")} className="vendorImage__card" style={{ background: bgImage, backgroundSize: "100%" }} key={obj.vendor}></div>
           );

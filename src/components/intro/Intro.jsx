@@ -10,7 +10,7 @@ function Intro({ page, text, headline, image, imageAlt }) {
             </div>
             <div className='introPage__headlineContainer'>
                 <h1 className="introPage__headline">{headline}</h1>
-                {image ? <img className="introPage__image" src={image} alt={imageAlt} /> : ""}
+                {image ? <img className="introPage__image" src={process.env.PUBLIC_URL + image} alt={imageAlt} /> : ""}
             </div>
         </section>
     )

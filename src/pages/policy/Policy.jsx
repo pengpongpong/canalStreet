@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from "../../components/footer/Footer"
+import Footer from "/src/components/footer/Footer"
 import PageContainer from "/src/components/container/PageContainer"
 import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import "./Policy.sass"

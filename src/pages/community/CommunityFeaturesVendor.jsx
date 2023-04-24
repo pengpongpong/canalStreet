@@ -1,8 +1,8 @@
 import React from 'react'
 import PageContainer from "/src/components/container/PageContainer"
 import { useLoaderData, useParams, Link } from "react-router-dom"
-import ReturnButtonEl from "../../components/vendor/returnButtonEl"
-import Features from "../../components/features/Features"
+import ReturnButtonEl from "/src/components/vendor/returnButtonEl"
+import Features from "/src/components/features/Features"
 import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import Footer from "/src/components/footer/Footer"
 import "./Community.sass"
@@ -21,18 +21,18 @@ function CommunityFeaturesVendor({bgColor}) {
         const vendorData = vendorType.filter(obj => obj.vendor === featureVendorData[0].vendor)
         const vendorLink = `/${vendorLinkType}/${vendorData[0].vendor.replace(/\s/gi, "-")}`
 
-        const qaItem = featureVendorData[0].interview.map((obj, index) => {
+        const qaItem = featureVendorData[0].interview.map((obj) => {
             return (
-                <li className="vendorDescription__item" key={index}>
+                <li className="vendorDescription__item" key={obj.question}>
                     <p className="vendorDescription__question">{obj.question}</p>
                     <p className="vendorDescription__text">{obj.answer}</p>
                 </li>
             )
         })
 
-        const descriptionItem = featureVendorData[0].description.map((obj, index) => {
+        const descriptionItem = featureVendorData[0].description.map((obj) => {
             return (
-                <li className="vendorDescription__item" key={index}><p>{obj}</p></li>
+                <li className="vendorDescription__item" key={obj}><p>{obj}</p></li>
             )
         })
 
@@ -44,7 +44,7 @@ function CommunityFeaturesVendor({bgColor}) {
                         feature
                         returnButtonText="Community" />
                 </div>
-                <section className="featHeader" style={{ backgroundImage: `url(${featureVendorData[0].imageSrc})` }}>
+                <section className="featHeader" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${featureVendorData[0].imageSrc})` }}>
                     <h1 className="featHeader__headline">{featureVendorData[0].vendor}</h1>
                 </section>
                 <section className="featVendor">
@@ -59,7 +59,7 @@ function CommunityFeaturesVendor({bgColor}) {
                     <div className="featVendor__sidebar">
                         <p className="featVendor__sidebarText">{vendorData[0].headline}</p>
                         <p className="featVendor__sidebarText">{vendorData[0].vendor}</p>
-                        <div className="featVendor__sidebarImage" style={{backgroundImage: `url(${vendorData[0].imageSrc})`}}></div>
+                        <div className="featVendor__sidebarImage" style={{backgroundImage: `url(${process.env.PUBLIC_URL}${vendorData[0].imageSrc})`}}></div>
                         <Link className="communityEvents__anchor" to={vendorLink}>learn more</Link>                   
                     </div>
                 </section>

@@ -1,11 +1,10 @@
 import React from 'react'
 import PageContainer from "/src/components/container/PageContainer"
-import IntroCommunity from "../../components/intro-community/IntroCommunity"
-import Features from "../../components/features/Features"
+import IntroCommunity from "/src/components/intro-community/IntroCommunity"
+import Features from "/src/components/features/Features"
 import Footer from "/src/components/footer/Footer"
 import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import { useLoaderData } from "react-router-dom"
-/* import "./Community.sass" */
 
 function CommunityFeatures({bgColor}) {
   const data = useLoaderData()

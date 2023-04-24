@@ -2,13 +2,13 @@ import React from 'react'
 import { Link, useLoaderData } from "react-router-dom"
 import EventBanner from "/src/components/EventBanner/EventBanner"
 import Banner from "/src/components/banner/Banner"
-import PodcastIcon from "/src/assets/icons/podcastLogo.svg"
+import PodcastIcon from "/public/icons/podcastLogo.svg"
 import Footer from "/src/components/footer/Footer"
 import Intro from "/src/components/intro/Intro"
 import BgZickzackTopContainer from "../../components/container/BgZickzackTopContainer"
 import PageContainer from "/src/components/container/PageContainer"
 import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
-import Features from "../../components/features/Features"
+import Features from "/src/components/features/Features"
 import "./Community.sass"
 
 function Community({bgColor}) {

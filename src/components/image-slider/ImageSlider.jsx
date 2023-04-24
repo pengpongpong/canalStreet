@@ -1,20 +1,18 @@
 import React from 'react'
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import "./ImageSlider.sass"
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-// Import Swiper styles
 import 'swiper/css';
 
 
 function ImageSlider({ data }) {
         const imageSlider = data.map((obj) => {
             return (
-                <SwiperSlide tag="picture" key={obj}><img className="image" src={obj} /></SwiperSlide>
+                <SwiperSlide tag="picture" key={obj}><img className="image" src={process.env.PUBLIC_URL + obj} /></SwiperSlide>
             )
         })
 

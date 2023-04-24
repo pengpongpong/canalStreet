@@ -3,8 +3,8 @@ import { Link, useLoaderData } from "react-router-dom"
 import "./Community.sass"
 import Banner from "/src/components/banner/Banner"
 import PageContainer from "/src/components/container/PageContainer"
-import IntroCommunity from "../../components/intro-community/IntroCommunity"
-import SmileyIcon from "/src/assets/icons/smiley.svg"
+import IntroCommunity from "/src/components/intro-community/IntroCommunity"
+import SmileyIcon from "/public/icons/smiley.svg"
 import Footer from "/src/components/footer/Footer"
 
 function CommunityEvents({bgColor}) {
@@ -15,7 +15,7 @@ function CommunityEvents({bgColor}) {
         return (
             <li className="eventGrid__item" key={index}>
                 <Link to={`/community/event/${eventLink}`} className="eventGrid__anchor">
-                    <img className="eventGrid__image" src={obj.imageSrc}></img>
+                    <img className="eventGrid__image" src={process.env.PUBLIC_URL + obj.imageSrc} aria-hidden={true}></img>
                     <p className="eventGrid__text">{obj.event}</p>
                 </Link>
             </li>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLoaderData, useParams } from "react-router-dom"
-import Vendor from "../../components/vendor/Vendor"
+import Vendor from "/src/components/vendor/Vendor"
 import PageContainer from "/src/components/container/PageContainer"
 import Footer from "/src/components/footer/Footer"
 

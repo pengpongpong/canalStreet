@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import VendorRegisterBanner from "./VendorRegisterBanner";
 import SocialBanner from "./SocialBanner";
 import Newsletter from "./Newsletter"
 import "./Footer.sass"

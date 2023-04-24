@@ -1,11 +1,11 @@
 import React from 'react'
 import { useParams, useLoaderData } from "react-router-dom"
 import VendorBanner from "/src/components/banner/VendorBanner"
-import NoodleBowl from "/src/assets/icons/noodleBowl.svg"
+import NoodleBowl from "/public/icons/noodleBowl.svg"
 import VendorGrid from "/src/components/vendorGrid/VendorGrid"
 import Footer from "/src/components/footer/Footer"
 import Vendor from "/src/components/vendor/Vendor"
-import BgZickzackTopContainer from "../../components/container/BgZickzackTopContainer"
+import BgZickzackTopContainer from "/src/components/container/BgZickzackTopContainer"
 import PageContainer from "/src/components/container/PageContainer"
 import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 

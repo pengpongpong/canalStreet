@@ -7,9 +7,9 @@ import VendorRegisterBanner from "/src/components/footer/VendorRegisterBanner"
 import "./Home.sass"
 
 const marketDescription = [
-  { imageSrc: "src/assets/images/pages-images/home/canalStreetMarket.jpg", imageAlt: "Canal Street Market", description: "Merging retail, food, art, and culture, Canal Street Market highlights top retail and design concepts, restaurants, and up-and-coming players in the downtown New York City community." },
-  { imageSrc: "src/assets/images/pages-images/home/retailMarket.jpg", imageAlt: "Retail Market", description: `Retail Market Hours:\nFri– Sun: 11:00AM - 7:00PM` },
-  { imageSrc: "src/assets/images/pages-images/home/foodHall.jpg", imageAlt: "Food Hall", description: `Food Hall Hours:\nMon – Sun: 11:00AM - 8:00PM` }
+  { imageSrc: "/public/images/pages-images/home/canalStreetMarket.jpg", imageAlt: "Canal Street Market", description: "Merging retail, food, art, and culture, Canal Street Market highlights top retail and design concepts, restaurants, and up-and-coming players in the downtown New York City community." },
+  { imageSrc: "/public/images/pages-images/home/retailMarket.jpg", imageAlt: "Retail Market", description: `Retail Market Hours:\nFri– Sun: 11:00AM - 7:00PM` },
+  { imageSrc: "/public/images/pages-images/home/foodHall.jpg", imageAlt: "Food Hall", description: `Food Hall Hours:\nMon – Sun: 11:00AM - 8:00PM` }
 ]
 
 const MarketDescriptionItems = ({ arr }) => (
@@ -18,7 +18,7 @@ const MarketDescriptionItems = ({ arr }) => (
       <li className="descriptions__item" key={obj.imageAlt}>
         <img
           className="descriptions__image"
-          src={obj.imageSrc}
+          src={process.env.PUBLIC_URL + obj.imageSrc}
           alt={obj.imageAlt}
         />
         <p className="descriptions__text">{obj.description}</p>
@@ -89,7 +89,7 @@ function Home({ bgColor }) {
           element={<h3 className="address__text">Albert Cuypstraat, Netherlands</h3>}
         />
         <AddressBox
-          element={<img className="address__map" src="src/assets/images/pages-images/home/map.png"></img>}
+          element={<img className="address__map" src={process.env.PUBLIC_URL + "/public/images/pages-images/home/map.png"}></img>}
         />
       </section>
       <VendorRegisterBanner />

@@ -10,7 +10,7 @@ function EventBanner({ data, bgColor, radio }) {
                 {data.map((obj, index) => {
                     if (index < 3) {
                         return (
-                            <Link to={`/community/${communityLink}/${obj.href.replace(/\s/gi, "-")}`} className="pageEvents__anchor" key={index}>
+                            <Link to={`/community/${communityLink}/${obj.href.replace(/\s/gi, "-")}`} className="pageEvents__anchor" key={obj.href}>
                                 <li className="pageEvents__item">
                                     <p className="pageEvents__date">{obj.date || obj.podcast}</p>
                                     <p className="pageEvents__headline">
