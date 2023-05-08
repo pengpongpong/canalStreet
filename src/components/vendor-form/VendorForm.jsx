@@ -235,7 +235,7 @@ function VendorForm() {
                     </div>
                     <textarea {...methods.register("about", { required: false })} className="form__textarea" placeholder="Tell us a little about you..." cols="30" rows="10"></textarea>
                     <p className="form__submitText" ref={submitText}>Successfully submitted</p>
-                    <input type="submit" className="form__submitButton" onClick={methods.handleSubmit(onSubmit)} defaultValue="Submit" />
+                    <input className="form__submitButton" onClick={methods.handleSubmit(onSubmit)} defaultValue="Submit" />
                 </form>
             </FormProvider>
         </section>
